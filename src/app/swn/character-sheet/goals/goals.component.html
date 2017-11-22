@@ -1,0 +1,30 @@
+<form>
+  <div class="container-4 well bs-component" style="text-align:center">
+
+    <h2>Goals <button class="btn btn-dark" type="button"><span class="glyphicon glyphicon-edit"></span></button></h2>
+
+    <div *ngFor="let goal of character.goals; let i = index">
+
+      <div class="input-group">
+        <input type="text" class="form-control" id="name" [(value)]="goal.description" placeholder="Name">
+        <span class="input-group-addon">{{goal.xp}} xp</span>
+        <span class="input-group-btn">
+              <button class="btn btn-dark" 
+                  type="button"
+                  data-toggle="collapse" 
+                  [attr.data-target]="'#' + 'goal' + i">   
+                  detail          
+              </button>
+            </span>
+      </div>
+
+      <div class="collapse" [attr.id]="'goal' + i">
+
+        <div class="col- input-group">
+          <textarea class="col" rows="5" placeholder="What's up?" [(value)]="goal.details"></textarea>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</form>

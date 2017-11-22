@@ -1,0 +1,6 @@
+<form>
+  <div class="container-4 well bs-component" style="text-align:center">
+    <h2>Armor <button class="btn btn-dark" type="button"><span class="glyphicon glyphicon-edit"></span></button></h2>
+    <app-armor *ngFor="let armor of character.armor; let i = index" [armor]="armor" [index]="i"></app-armor>
+  </div>
+</form>

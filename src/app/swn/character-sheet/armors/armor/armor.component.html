@@ -1,0 +1,34 @@
+<div>
+  <div class="input-group">
+    <input type="text" class="form-control" name="name" [(ngModel)]="armor.name" placeholder="Name">
+    <span class="input-group-addon">ac {{armor.ac}}</span>
+    <span class="input-group-btn">
+      <button class="btn btn-dark" 
+          type="button"
+          data-toggle="collapse" 
+          [attr.data-target]="'#' + 'armor' + index">   
+          details          
+      </button>
+    </span>
+  </div>
+
+  <div class="collapse container-fluid" [attr.id]="'armor' + index">
+
+    <div class="row">
+      <div class="col-4 input-group">
+        <span class="input-group-addon" id="basic-addon1">enc</span>
+        <input type="number" class="form-control" name="encumbrance" [(ngModel)]="armor.encumbrance">
+      </div>
+
+      <div class="col-4 input-group">
+        <span class="input-group-addon" id="basic-addon1">TL</span>
+        <input type="number" class="form-control" name="tl" [(ngModel)]="armor.tl">
+      </div>
+
+      <div class="col-4 input-group">
+        <span class="input-group-addon" id="basic-addon1">acbonus</span>
+        <input type="number" class="form-control" name="acbonus" [(ngModel)]="armor.acbonus">
+      </div>
+    </div>
+  </div>
+</div>

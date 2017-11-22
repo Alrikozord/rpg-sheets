@@ -1,0 +1,11 @@
+<form>
+  <div class="container-4 well bs-component" style="text-align:center">
+    <h2>Attributes</h2>
+    <app-attribute label="Strength" [(value)]="character.stats.str" [modifier]="character.dynamics.getStrModifier()"></app-attribute>
+    <app-attribute label="Desterity" [(value)]="character.stats.dex" [modifier]="character.dynamics.getDexModifier()"></app-attribute>
+    <app-attribute label="Constitution" [(value)]="character.stats.con" [modifier]="character.dynamics.getConModifier()"></app-attribute>
+    <app-attribute label="Inteligence" [(value)]="character.stats.int" [modifier]="character.dynamics.getIntModifier()"></app-attribute>
+    <app-attribute label="Wisdom" [(value)]="character.stats.wis" [modifier]="character.dynamics.getWisModifier()"></app-attribute>
+    <app-attribute label="Charisma" [(value)]="character.stats.cha" [modifier]="character.dynamics.getChaModifier()"></app-attribute>
+  </div>
+</form>

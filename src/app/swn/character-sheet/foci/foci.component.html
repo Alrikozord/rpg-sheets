@@ -1,0 +1,30 @@
+<form>
+    <div class="container-4 well bs-component" style="text-align:center">
+
+      <h2>Foci <button class="btn btn-dark" type="button"><span class="glyphicon glyphicon-edit"></span></button></h2>
+
+      <div *ngFor="let focus of character.foci; let i = index">
+  
+        <div class="input-group">
+          <input type="text" class="form-control" id="name" [(value)]="focus.name" placeholder="Name">
+          <span class="input-group-addon">lvl {{focus.level}}</span>
+          <span class="input-group-btn">
+                <button class="btn btn-dark" 
+                    type="button"
+                    data-toggle="collapse" 
+                    [attr.data-target]="'#' + 'focus' + i">   
+                    detail          
+                </button>
+              </span>
+        </div>
+  
+        <div class="collapse" [attr.id]="'focus' + i">  
+          <div class="col- input-group" style="padding-bottom: 5px">
+            <textarea class="col" rows="7" placeholder="What's up?" [(value)]="focus.details"></textarea>
+          </div>
+        </div>
+
+      </div>
+      
+    </div>
+  </form>

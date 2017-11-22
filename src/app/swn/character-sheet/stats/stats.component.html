@@ -1,0 +1,49 @@
+<form>
+  <div class="container-4 well bs-component" style="text-align:center">
+
+    <h2>Stats</h2>
+
+    <div class="form-group row justify-content-center">
+      <div class="col-5 input-group">
+        <span class="input-group-addon">XP</span>
+        <input type="number" class="form-control" id="input" [(ngModel)]="character.xp" name="xp">
+      </div>
+      <div class="col-5 input-group">
+        <span class="input-group-addon">Level</span>
+        <input type="text" class="form-control" readonly [value]="character.dynamics.getLevel()">
+      </div>
+
+      <div class="col-5 input-group">
+        <span class="input-group-addon"> <span class="glyphicon glyphicon-heart"></span></span>
+        <input type="number" class="form-control" id="input" [(ngModel)]="character.hp.current" name="hp">
+        <span class="input-group-addon">max {{character.hp.max}}</span>
+      </div>
+      <div class="col-5 input-group">
+        <span class="input-group-addon"> strain</span>
+        <input type="number" class="form-control" id="input" [(ngModel)]="character.systemstrain.current" name="strain">
+        <span class="input-group-addon">max {{character.systemstrain.max}}</span>
+      </div>
+    </div>
+
+    <div class="form-group row justify-content-center">
+      <label class="col-3 col-form-label" style="text-align:right;">Attack Bonus</label>
+      <label class="col-3 col-form-label" style="text-align:left;">{{character.dynamics.getAttackBonus()}}</label>
+    </div>
+
+    <h6 class="col">Saves</h6>
+
+    <div class="form-group row">
+      <div class="col" style="text-align:right;">Physical</div>
+      <div class="col" style="text-align:left;">{{character.dynamics.getPhysicalSave()}}</div>
+      <div class="col" style="text-align:right;">Evasion</div>
+      <div class="col" style="text-align:left;">{{character.dynamics.getEvasionSave()}}</div>
+    </div>
+    <div class="form-group row">
+      <div class="col" style="text-align:right;">Mental</div>
+      <div class="col" style="text-align:left;">{{character.dynamics.getMentalSave()}}</div>
+      <div class="col" style="text-align:right;">Luck</div>
+      <div class="col" style="text-align:left;">{{character.dynamics.getBaseSave()}}</div>
+    </div>
+
+  </div>
+</form>
