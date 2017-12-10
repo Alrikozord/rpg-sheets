@@ -10,7 +10,7 @@
       </div>
       <div class="col-5 input-group">
         <span class="input-group-addon">Level</span>
-        <input type="text" class="form-control" readonly [value]="character.dynamics.getLevel()">
+        <input type="text" class="form-control" readonly [value]="character.derived.getLevel()">
       </div>
 
       <div class="col-5 input-group">
@@ -27,22 +27,22 @@
 
     <div class="form-group row justify-content-center">
       <label class="col-3 col-form-label" style="text-align:right;">Attack Bonus</label>
-      <label class="col-3 col-form-label" style="text-align:left;">{{character.dynamics.getAttackBonus()}}</label>
+      <label class="col-3 col-form-label" style="text-align:left;">{{character.derived.attackBonus}}</label>
     </div>
 
     <h6 class="col">Saves</h6>
 
     <div class="form-group row">
       <div class="col" style="text-align:right;">Physical</div>
-      <div class="col" style="text-align:left;">{{character.dynamics.getPhysicalSave()}}</div>
+      <div class="col" style="text-align:left;">{{character.derived.physicalSave}}</div>
       <div class="col" style="text-align:right;">Evasion</div>
-      <div class="col" style="text-align:left;">{{character.dynamics.getEvasionSave()}}</div>
+      <div class="col" style="text-align:left;">{{character.derived.evasionSave}}</div>
     </div>
     <div class="form-group row">
       <div class="col" style="text-align:right;">Mental</div>
-      <div class="col" style="text-align:left;">{{character.dynamics.getMentalSave()}}</div>
+      <div class="col" style="text-align:left;">{{character.derived.mentalSave}}</div>
       <div class="col" style="text-align:right;">Luck</div>
-      <div class="col" style="text-align:left;">{{character.dynamics.getBaseSave()}}</div>
+      <div class="col" style="text-align:left;">{{character.derived.baseSave}}</div>
     </div>
 
   </div>

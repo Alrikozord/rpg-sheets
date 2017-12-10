@@ -1,8 +1,8 @@
-import { Attributes, Focus, Skill, Armor, Weapon, Cyberware, Goal } from "./index";
+import { Attributes, Focus, Skill, Armor, Weapon, Cyberware, Goal, CharacterClass } from "./index";
 
 export class SerializableProperties {
     public name: string;
-    public class: string;
+    public class: CharacterClass;
     public species: string;
     public background: string;
     public homeworld: string;
