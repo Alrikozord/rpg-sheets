@@ -17,6 +17,7 @@ import { WeaponsComponent } from './swn/character-sheet/weapons/weapons.componen
 import { FociComponent } from './swn/character-sheet/foci/foci.component';
 import { WeaponComponent } from './swn/character-sheet/weapons/weapon/weapon.component';
 import { SkillComponent } from './swn/character-sheet/skills/skill/skill.component';
+import { EditToggleButtonComponent } from './basic-components/edit-toggle-components/edit-toggle-button/edit-toggle-button.component';
 
 
 @NgModule({
@@ -35,7 +36,8 @@ import { SkillComponent } from './swn/character-sheet/skills/skill/skill.compone
     WeaponsComponent,
     FociComponent,
     WeaponComponent,
-    SkillComponent
+    SkillComponent,
+    EditToggleButtonComponent
   ],
   imports: [
     BrowserModule,

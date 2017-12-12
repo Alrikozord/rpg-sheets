@@ -1,18 +1,25 @@
-import { Component, OnInit, Input, Output } from '@angular/core';
+import { Component, OnInit, Input, Output } from "@angular/core";
 import { Character } from "../../models/index";
+import { EditToggleBaseComponent } from "../../../basic-components/edit-toggle-components/edit-toggle-base-component.class";
 
 @Component({
-  selector: 'app-attributes',
-  templateUrl: './attributes.component.html',
-  styleUrls: ['./attributes.component.css']
+  selector: "app-attributes",
+  templateUrl: "./attributes.component.html",
+  styleUrls: ["./attributes.component.css"]
 })
-export class AttributesComponent implements OnInit {
-
+export class AttributesComponent extends EditToggleBaseComponent
+  implements OnInit {
   @Input()
-  @Output() character: Character;
+  @Output()
+  character: Character;
 
-  constructor() { }
+  constructor() {
+    super();
+  }
 
-  ngOnInit() {
+  ngOnInit() {}
+
+  onToggle() {
+    this.ToggleEditMode();
   }
 }

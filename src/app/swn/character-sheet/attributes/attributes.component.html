@@ -1,11 +1,13 @@
 <form>
   <div class="container-4 well bs-component" style="text-align:center">
-    <h2>Attributes</h2>
-    <app-attribute label="Strength" [(attribute)]="character.stats.str" ></app-attribute>
-    <app-attribute label="Desterity" [(attribute)]="character.stats.dex"></app-attribute>
-    <app-attribute label="Constitution" [(attribute)]="character.stats.con"></app-attribute>
-    <app-attribute label="Inteligence" [(attribute)]="character.stats.int"></app-attribute>
-    <app-attribute label="Wisdom" [(attribute)]="character.stats.wis"></app-attribute>
-    <app-attribute label="Charisma" [(attribute)]="character.stats.cha"></app-attribute>
+    <h2>Attributes
+      <app-edit-toggle-button [(editMode)]="editMode" (click)="ToggleEditMode()"></app-edit-toggle-button>
+    </h2>
+    <app-attribute label="Strength" [(attribute)]="character.stats.str" [editMode]="editMode"></app-attribute>
+    <app-attribute label="Desterity" [(attribute)]="character.stats.dex" [editMode]="editMode"></app-attribute>
+    <app-attribute label="Constitution" [(attribute)]="character.stats.con" [editMode]="editMode"></app-attribute>
+    <app-attribute label="Inteligence" [(attribute)]="character.stats.int" [editMode]="editMode"></app-attribute>
+    <app-attribute label="Wisdom" [(attribute)]="character.stats.wis" [editMode]="editMode"></app-attribute>
+    <app-attribute label="Charisma" [(attribute)]="character.stats.cha" [editMode]="editMode"></app-attribute>
   </div>
 </form>

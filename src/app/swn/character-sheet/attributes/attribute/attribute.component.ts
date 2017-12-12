@@ -1,16 +1,20 @@
 import { Component, OnInit, Input, Output } from "@angular/core";
 import { Attribute } from "../../../models/attribute.model";
+import { EditToggleBaseComponent } from "../../../../basic-components/edit-toggle-components/edit-toggle-base-component.class";
 
 @Component({
   selector: "app-attribute",
   templateUrl: "./attribute.component.html",
   styleUrls: ["./attribute.component.css"]
 })
-export class AttributeComponent implements OnInit {
+export class AttributeComponent extends EditToggleBaseComponent
+  implements OnInit {
   @Input() label: string;
   @Input() attribute: Attribute;
 
-  constructor() {}
+  constructor() {
+    super();
+  }
 
   ngOnInit() {}
 
