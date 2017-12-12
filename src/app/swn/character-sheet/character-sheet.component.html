@@ -1,11 +1,13 @@
 <div class="container-fluid" style="text-align:center">
   <div class="row">
     <div class="col-4">
-      <button class="col-5 btn btn-dark" type="button" (click)="onSave()"><span class="glyphicon glyphicon-floppy-disk"></span></button>
+      <button class="col-5 btn btn-dark" type="button" (click)="onSave()">
+        <span class="glyphicon glyphicon-floppy-disk"></span>
+      </button>
       <label class="col-5 btn  btn-dark">
-                <span class="glyphicon glyphicon-open"></span>
-                <input accept=".json" type="file" style="display: none;"(change)="onLoad($event)">
-        </label>
+        <span class="glyphicon glyphicon-open"></span>
+        <input accept=".json" type="file" style="display: none;" (change)="onLoad($event)">
+      </label>
 
       <app-info [character]="character"></app-info>
       <app-stats [character]="character"></app-stats>
@@ -22,4 +24,5 @@
       <app-notes [character]="character"></app-notes>
     </div>
   </div>
+  <pre>{{character.serializables|json}}</pre>
 </div>

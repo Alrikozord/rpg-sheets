@@ -1,5 +1,6 @@
 export * from "./armor.model";
 export * from "./attributes.model";
+export * from "./attribute.model";
 export * from "./character.model";
 export * from "./cyberware.model";
 export * from "./dynamic-character-data";

@@ -1,8 +1,10 @@
-export class Attributes{
-    cha: number;
-    con: number;
-    dex: number;
-    int: number;
-    str: number;
-    wis: number;
+import { Attribute } from "./attribute.model";
+
+export class Attributes {
+  cha: Attribute;
+  con: Attribute;
+  dex: Attribute;
+  int: Attribute;
+  str: Attribute;
+  wis: Attribute;
 }

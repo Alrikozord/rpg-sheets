@@ -12,7 +12,7 @@ import { CharacterClass } from "./character-class.enum";
 import { CharacterBase } from "../../basic-components/models/character-base.class";
 
 export class Character extends CharacterBase {
-  private serializables: SerializableProperties;
+  public serializables: SerializableProperties;
 
   public derived: DynamicCharacterValueProvider;
 

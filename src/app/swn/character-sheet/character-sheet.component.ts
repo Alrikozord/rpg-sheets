@@ -7,6 +7,7 @@ import {
 } from "@angular/core";
 import {
   Character,
+  Attribute,
   Attributes,
   Weapon,
   Armor,
@@ -53,12 +54,12 @@ export class CharacterSheetComponent implements OnInit {
     this.character.systemstrain = { current: 14, max: 14 };
 
     this.character.stats = new Attributes();
-    this.character.stats.str = 14;
-    this.character.stats.cha = 15;
-    this.character.stats.con = 14;
-    this.character.stats.dex = 14;
-    this.character.stats.int = 12;
-    this.character.stats.wis = 14;
+    this.character.stats.str = new Attribute(14);
+    this.character.stats.cha = new Attribute(15);
+    this.character.stats.con = new Attribute(14);
+    this.character.stats.dex = new Attribute(14);
+    this.character.stats.int = new Attribute(12);
+    this.character.stats.wis = new Attribute(14);
 
     let weapon: Weapon;
     this.character.weapons = new Array<Weapon>();

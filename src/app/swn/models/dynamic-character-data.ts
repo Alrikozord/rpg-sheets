@@ -13,22 +13,22 @@ export class DynamicCharacterValueProvider {
   }
 
   public get physicalSave() {
-    const strMod = this.getModifier(this.character.stats.str);
-    const conMod = this.getModifier(this.character.stats.con);
+    const strMod = this.character.stats.str.modifier;
+    const conMod = this.character.stats.con.modifier;
 
     return this.baseSave - Math.max(strMod, conMod);
   }
 
   public get evasionSave() {
-    const intMod = this.getModifier(this.character.stats.int);
-    const dexMod = this.getModifier(this.character.stats.dex);
+    const intMod = this.character.stats.int.modifier;
+    const dexMod = this.character.stats.dex.modifier;
 
     return this.baseSave - Math.max(intMod, dexMod);
   }
 
   public get mentalSave() {
-    const wisMod = this.getModifier(this.character.stats.wis);
-    const chaMod = this.getModifier(this.character.stats.cha);
+    const wisMod = this.character.stats.wis.modifier;
+    const chaMod = this.character.stats.cha.modifier;
 
     return this.baseSave - Math.max(wisMod, chaMod);
   }
@@ -74,45 +74,6 @@ export class DynamicCharacterValueProvider {
       ++level;
     }
     return level - 1;
-  }
-
-  // ** Attribute Mods **
-  public get chaModifier() {
-    return this.getModifier(this.character.stats.cha);
-  }
-
-  public get conModifier() {
-    return this.getModifier(this.character.stats.con);
-  }
-
-  public get dexModifier() {
-    return this.getModifier(this.character.stats.dex);
-  }
-
-  public get intModifier() {
-    return this.getModifier(this.character.stats.int);
-  }
-
-  public get strModifier() {
-    return this.getModifier(this.character.stats.str);
-  }
-
-  public get wisModifier() {
-    return this.getModifier(this.character.stats.wis);
-  }
-
-  private getModifier(attribute: number) {
-    if (attribute < 4) {
-      return -2;
-    } else if (attribute < 8) {
-      return -1;
-    } else if (attribute < 14) {
-      return 0;
-    } else if (attribute < 18) {
-      return 1;
-    } else {
-      return 2;
-    }
   }
 
   // ** Attack Bonus **

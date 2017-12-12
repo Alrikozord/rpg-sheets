@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output } from '@angular/core';
 import { Character } from "../../models/index";
 
 @Component({
@@ -8,7 +8,8 @@ import { Character } from "../../models/index";
 })
 export class AttributesComponent implements OnInit {
 
-  @Input() character: Character;
+  @Input()
+  @Output() character: Character;
 
   constructor() { }
 
