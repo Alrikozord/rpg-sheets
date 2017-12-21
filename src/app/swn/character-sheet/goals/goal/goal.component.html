@@ -1,0 +1,18 @@
+<div>
+  <div class="input-group">
+    <input type="text" class="form-control" id="name" [(ngModel)]="goal.description" placeholder="Name">
+    <span class="input-group-addon">{{goal.xp}} xp</span>
+    <span class="input-group-btn">
+      <button class="btn btn-dark" type="button" data-toggle="collapse" [attr.data-target]="'#' + 'goal' + index">
+        detail
+      </button>
+    </span>
+  </div>
+
+  <div class="collapse" [attr.id]="'goal' + index">
+
+    <div class="col- input-group">
+      <textarea class="col" rows="5" placeholder="What's up?" [(ngModel)]="goal.details"></textarea>
+    </div>
+  </div>
+</div>
