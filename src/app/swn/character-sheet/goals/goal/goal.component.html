@@ -1,7 +1,10 @@
 <div>
   <div class="input-group">
-    <input type="text" class="form-control" id="name" [(ngModel)]="goal.description" placeholder="Name">
-    <span class="input-group-addon">{{goal.xp}} xp</span>
+    <input [readonly]="!editMode" type="text" [ngClass]="editMode?'form-control col-9':'form-control'" id="name" [(ngModel)]="goal.description" placeholder="Summary">
+
+    <input *ngIf="editMode" type="number" [ngClass]="editMode?'form-control col-3':'form-control'" id="xp" [(ngModel)]="goal.xp" placeholder="Xp">
+    <span *ngIf="!editMode" class="input-group-addon">{{goal.xp}} xp</span>
+
     <span class="input-group-btn">
       <button class="btn btn-dark" type="button" data-toggle="collapse" [attr.data-target]="'#' + 'goal' + index">
         detail
@@ -10,9 +13,9 @@
   </div>
 
   <div class="collapse" [attr.id]="'goal' + index">
-
-    <div class="col- input-group">
-      <textarea class="col" rows="5" placeholder="What's up?" [(ngModel)]="goal.details"></textarea>
+    <div class="input-group">
+      <textarea [readonly]="!editMode" class="col" rows="5" placeholder="Goal" [(ngModel)]="goal.details"></textarea>
     </div>
   </div>
+
 </div>

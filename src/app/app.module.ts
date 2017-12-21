@@ -18,8 +18,11 @@ import { WeaponsComponent } from "./swn/character-sheet/weapons/weapons.componen
 import { FociComponent } from "./swn/character-sheet/foci/foci.component";
 import { WeaponComponent } from "./swn/character-sheet/weapons/weapon/weapon.component";
 import { SkillComponent } from "./swn/character-sheet/skills/skill/skill.component";
-import { EditToggleButtonComponent } from "./basic-components/edit-toggle-components/edit-toggle-button/edit-toggle-button.component";
-import { EditToggleListComponent } from "./basic-components/edit-toggle-components/index";
+import {
+  ListRemoveButtonComponent,
+  EditToggleButtonComponent,
+  ListAddButtonComponent
+} from "./basic-components/edit-toggle-components/index";
 
 @NgModule({
   declarations: [
@@ -40,7 +43,8 @@ import { EditToggleListComponent } from "./basic-components/edit-toggle-componen
     WeaponComponent,
     SkillComponent,
     EditToggleButtonComponent,
-    EditToggleListComponent
+    ListAddButtonComponent,
+    ListRemoveButtonComponent
   ],
   imports: [BrowserModule, FormsModule],
   providers: [],

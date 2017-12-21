@@ -3,7 +3,7 @@ import { Output, Input } from "@angular/core";
 export abstract class EditToggleBaseComponent {
   protected _editMode: boolean;
 
-  constructor(){
+  constructor() {
     this._editMode = false;
   }
 

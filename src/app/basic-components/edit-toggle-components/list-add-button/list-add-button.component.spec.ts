@@ -3,21 +3,21 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 
-import { EditToggleListComponent } from './edit-toggle-list.component';
+import { ListAddButtonComponent } from './list-add-button.component';
 
-describe('EditToggleListComponent', () => {
-  let component: EditToggleListComponent;
-  let fixture: ComponentFixture<EditToggleListComponent>;
+describe('ListAddButtonComponent', () => {
+  let component: ListAddButtonComponent;
+  let fixture: ComponentFixture<ListAddButtonComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ EditToggleListComponent ]
+      declarations: [ ListAddButtonComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(EditToggleListComponent);
+    fixture = TestBed.createComponent(ListAddButtonComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
