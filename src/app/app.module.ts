@@ -16,6 +16,7 @@ import { ArmorComponent } from "./swn/character-sheet/armors/armor/armor.compone
 import { AttributeComponent } from "./swn/character-sheet/attributes/attribute/attribute.component";
 import { WeaponsComponent } from "./swn/character-sheet/weapons/weapons.component";
 import { FociComponent } from "./swn/character-sheet/foci/foci.component";
+import { FocusComponent } from "./swn/character-sheet/foci/focus/focus.component";
 import { WeaponComponent } from "./swn/character-sheet/weapons/weapon/weapon.component";
 import { SkillComponent } from "./swn/character-sheet/skills/skill/skill.component";
 import {
@@ -40,6 +41,7 @@ import {
     AttributeComponent,
     WeaponsComponent,
     FociComponent,
+    FocusComponent,
     WeaponComponent,
     SkillComponent,
     EditToggleButtonComponent,

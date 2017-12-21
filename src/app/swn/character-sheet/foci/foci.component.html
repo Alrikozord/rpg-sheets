@@ -1,30 +1,15 @@
 <form>
-    <div class="container-4 well bs-component" style="text-align:center">
+  <div class="container-4 well bs-component" style="text-align:center">
 
-      <h2>Foci <button class="btn btn-dark" type="button"><span class="glyphicon glyphicon-edit"></span></button></h2>
+    <h2>Foci
+      <app-edit-toggle-button [(editMode)]="editMode" (click)="ToggleEditMode()"></app-edit-toggle-button>
+    </h2>
 
-      <div *ngFor="let focus of character.foci; let i = index">
-  
-        <div class="input-group">
-          <input type="text" class="form-control" id="name" [(value)]="focus.name" placeholder="Name">
-          <span class="input-group-addon">lvl {{focus.level}}</span>
-          <span class="input-group-btn">
-                <button class="btn btn-dark" 
-                    type="button"
-                    data-toggle="collapse" 
-                    [attr.data-target]="'#' + 'focus' + i">   
-                    detail          
-                </button>
-              </span>
-        </div>
-  
-        <div class="collapse" [attr.id]="'focus' + i">  
-          <div class="col- input-group" style="padding-bottom: 5px">
-            <textarea class="col" rows="7" placeholder="What's up?" [(value)]="focus.details"></textarea>
-          </div>
-        </div>
-
-      </div>
-      
+    <div class="row" *ngFor="let focus of character.foci; let i = index">
+      <app-focus [class.col-10]="editMode" [focus]="focus" [index]="i" [editMode]="editMode"></app-focus>
+      <app-list-remove-button class="col-1" [(editMode)]="editMode" [index]="i" (click)="onRemove(i)"></app-list-remove-button>
     </div>
-  </form>
+
+    <app-list-add-button [(editMode)]="editMode" (click)="onAdd()"></app-list-add-button>
+  </div>
+</form>

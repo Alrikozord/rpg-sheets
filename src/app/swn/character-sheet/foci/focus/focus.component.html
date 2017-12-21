@@ -1,0 +1,22 @@
+<div>
+  <div class="input-group">
+    <input [readonly]="!editMode" type="text" [ngClass]="editMode?'form-control col-9':'form-control'" id="name" [(ngModel)]="focus.name"
+      placeholder="Name">
+
+    <input *ngIf="editMode" type="number" [ngClass]="editMode?'form-control col-3':'form-control'" id="xp" [(ngModel)]="focus.level"
+      placeholder="level">
+    <span *ngIf="!editMode" class="input-group-addon">lvl {{focus.level}}</span>
+
+    <span class="input-group-btn">
+      <button class="btn btn-dark" type="button" data-toggle="collapse" [attr.data-target]="'#' + 'focus' + index">
+        detail
+      </button>
+    </span>
+  </div>
+
+  <div class="collapse" [attr.id]="'focus' + index">
+    <div class="input-group">
+      <textarea [readonly]="!editMode" class="col" rows="7" placeholder="Description" [(ngModel)]="focus.details"></textarea>
+    </div>
+  </div>
+</div>
