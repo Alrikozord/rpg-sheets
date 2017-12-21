@@ -1,11 +1,16 @@
 <form>
   <div class="container-4 well bs-component" style="text-align:center">
 
-    <h2>Skills <button class="btn btn-dark" type="button"><span class="glyphicon glyphicon-edit"></span></button></h2>
+    <h2>Skills
+      <app-edit-toggle-button [(editMode)]="editMode" (click)="ToggleEditMode()"></app-edit-toggle-button>
+    </h2>
 
-    <app-skill *ngFor="let skill of character.skills; let i = index;" [skill]="skill" [index]="i"></app-skill>
-      
-     
+    <div class="row" *ngFor="let skill of character.skills; let i = index;">
+      <app-skill [class.col-10]="editMode" [skill]="skill" [index]="i" [editMode]="editMode"></app-skill>
+      <app-list-remove-button class="col-1" [(editMode)]="editMode" [index]="i" (click)="onRemove(i)"></app-list-remove-button>
+    </div>
+
+    <app-list-add-button [(editMode)]="editMode" (click)="onAdd()"></app-list-add-button>
 
   </div>
 </form>

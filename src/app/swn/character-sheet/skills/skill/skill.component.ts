@@ -1,19 +1,19 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input } from "@angular/core";
 import { Skill } from "../../../models/index";
+import { EditToggleBaseComponent } from "../../../../basic-components/edit-toggle-components/index";
 
 @Component({
-  selector: 'app-skill',
-  templateUrl: './skill.component.html',
-  styleUrls: ['./skill.component.css']
+  selector: "app-skill",
+  templateUrl: "./skill.component.html",
+  styleUrls: ["./skill.component.css"]
 })
-export class SkillComponent implements OnInit {
+export class SkillComponent extends EditToggleBaseComponent implements OnInit {
+  @Input() skill: Skill;
+  @Input() index: number;
 
-  @Input() skill:Skill;
-  @Input() index:number;
-
-  constructor() { }
-
-  ngOnInit() {
+  constructor() {
+    super();
   }
 
+  ngOnInit() {}
 }

@@ -1,10 +1,17 @@
 <div>
-    <div class="form-group row row-bottom-margin">
-        <button type="button" class="col-8 col-sm-offset-1 btn btn-dark" data-toggle="collapse" [attr.data-target]="'#' + 'skill' + index">
-                {{skill.name}}
-        </button>
-        <input type="number" class="col-2 form-control" name="level" [(ngModel)]="skill.level"> 
-      </div>
+  <div class="input-group">
+    <input *ngIf="editMode" type="text" class="col-9 form-control" name="name" placeholder="Skill Name" [(ngModel)]="skill.name">
 
-      <p class="col collapse" [attr.id]=" 'skill' + index" style="text-align:center;">{{skill.details}}</p>
+    <span *ngIf="!editMode" class="input-group-btn">
+      <button class="btn btn-dark btn-block" type="button" data-toggle="collapse" [attr.data-target]="'#' + 'skill' + index">
+        {{skill.name}}
+      </button>
+    </span>
+
+    <input *ngIf="editMode" type="number" class="col-3 form-control" name="level" placeholder="level" [(ngModel)]="skill.level">
+
+    <span *ngIf="!editMode" class="input-group-addon">lvl {{skill.level}}</span>
+  </div>
+
+  <p class="col collapse" [attr.id]=" 'skill' + index" style="text-align:center;">{{skill.details}}</p>
 </div>
