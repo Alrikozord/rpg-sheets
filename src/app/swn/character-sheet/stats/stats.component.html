@@ -1,12 +1,14 @@
 <form>
   <div class="container-4 well bs-component" style="text-align:center">
 
-    <h2>Stats</h2>
+    <h2>Stats
+      <app-edit-toggle-button [(editMode)]="editMode" (click)="ToggleEditMode()"></app-edit-toggle-button>
+    </h2>
 
     <div class="form-group row justify-content-center">
       <div class="col-5 input-group">
         <span class="input-group-addon">XP</span>
-        <input type="number" class="form-control" id="input" [(ngModel)]="character.xp" name="xp">
+        <input [readonly]="!editMode" type="number" class="form-control" id="input" [(ngModel)]="character.xp" name="xp">
       </div>
       <div class="col-5 input-group">
         <span class="input-group-addon">Level</span>
@@ -14,14 +16,19 @@
       </div>
 
       <div class="col-5 input-group">
-        <span class="input-group-addon"> <span class="glyphicon glyphicon-heart"></span></span>
-        <input type="number" class="form-control" id="input" [(ngModel)]="character.hp.current" name="hp">
-        <span class="input-group-addon">max {{character.hp.max}}</span>
+        <span class="input-group-addon">
+          <span class="glyphicon glyphicon-heart"></span>
+        </span>
+        <input type="number" [class.col-6]="editMode" class="form-control" id="input" [(ngModel)]="character.hp.current" name="hp" placeholder="hp">
+        <span *ngIf="!editMode" class="input-group-addon">max {{character.hp.max}}</span>
+        <input *ngIf="editMode" type="number" class="form-control col-6" id="input" [(ngModel)]="character.hp.max" name="hpmax" placeholder="max">
       </div>
       <div class="col-5 input-group">
-        <span class="input-group-addon"> strain</span>
-        <input type="number" class="form-control" id="input" [(ngModel)]="character.systemstrain.current" name="strain">
-        <span class="input-group-addon">max {{character.systemstrain.max}}</span>
+        <span class="input-group-addon">strain</span>
+        <input type="number" [class.col-6]="editMode" class="form-control" id="input" [(ngModel)]="character.systemstrain.current" name="strain" placeholder="strain">
+        <span *ngIf="!editMode" class="input-group-addon">max {{character.systemstrain.max}}</span>
+        <input *ngIf="editMode" type="number" class="form-control col-6" id="input" [(ngModel)]="character.systemstrain.max" name="strainmax"
+          placeholder="max">
       </div>
     </div>
 
