@@ -1,6 +1,14 @@
 <form>
   <div class="container-4 well bs-component" style="text-align:center">
-    <h2>Weapons <button class="btn btn-dark" type="button" (click)="onAdd()"><span class="glyphicon glyphicon-edit"></span></button></h2>
-    <app-weapon *ngFor="let weapon of character.weapons;let i = index" [index]="i" [weapon]="weapon"></app-weapon>
+    <h2>Weapons
+      <app-edit-toggle-button [(editMode)]="editMode" (click)="ToggleEditMode()"></app-edit-toggle-button>
+    </h2>
+
+    <div class="row" *ngFor="let weapon of character.weapons; let i = index;">
+      <app-weapon [class.col-10]="editMode" [index]="i" [weapon]="weapon" [(editMode)]="editMode"></app-weapon>
+      <app-list-remove-button class="col-1" [(editMode)]="editMode" [index]="i" (click)="onRemove(i)"></app-list-remove-button>
+    </div>
+
+    <app-list-add-button [(editMode)]="editMode" (click)="onAdd()"></app-list-add-button>
   </div>
 </form>
