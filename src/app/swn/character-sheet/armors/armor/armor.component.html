@@ -1,6 +1,7 @@
 <div>
   <div class="input-group">
-    <input [readonly]="!editMode" type="text" [ngClass]="editMode?'form-control col-9':'form-control'" name="name" [(ngModel)]="armor.name" placeholder="Name">
+    <input [readonly]="!editMode" type="text" [ngClass]="editMode?'form-control col-9':'form-control'" name="name" [(ngModel)]="armor.name"
+      placeholder="Name">
 
     <input *ngIf="editMode" type="number" [ngClass]="editMode?'form-control col-3':'form-control'" id="ac" [(ngModel)]="armor.ac"
       placeholder="AC">
@@ -18,17 +19,17 @@
     <div class="row">
       <div class="col-4 input-group">
         <span class="input-group-addon" id="basic-addon1">enc</span>
-        <input [readonly]="!editMode" type="number" class="form-control" name="encumbrance" [(ngModel)]="armor.encumbrance"  placeholder="Encumberance">
+        <input [readonly]="!editMode" type="number" class="form-control" name="encumbrance" [(ngModel)]="armor.encumbrance" placeholder="Encumberance">
       </div>
 
       <div [ngClass]="editMode?'col-3 input-group':'col-4 input-group'">
         <span class="input-group-addon" id="basic-addon1">TL</span>
-        <input [readonly]="!editMode" type="number" class="form-control" name="tl" [(ngModel)]="armor.tl"  placeholder="Tech Level">
+        <input [readonly]="!editMode" type="number" class="form-control" name="tl" [(ngModel)]="armor.tl" placeholder="Tech Level">
       </div>
 
       <div [ngClass]="editMode?'col-5 input-group':'col-4 input-group'">
         <span class="input-group-addon" id="basic-addon1">acbonus</span>
-        <input [readonly]="!editMode" type="number" class="form-control" name="acbonus" [(ngModel)]="armor.acbonus"  placeholder="AC Bonus">
+        <input [readonly]="!editMode" type="number" class="form-control" name="acbonus" [(ngModel)]="armor.acbonus" placeholder="AC Bonus">
       </div>
 
     </div>
