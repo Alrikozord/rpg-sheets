@@ -1,27 +1,23 @@
 import { Component, OnInit, Input, Output } from "@angular/core";
 import { Character, CharacterClass } from "../../models/index";
+import { EditToggleBaseComponent } from "../../../basic-components/edit-toggle-components/index";
 
 @Component({
   selector: "app-info",
   templateUrl: "./info.component.html",
   styleUrls: ["./info.component.css"]
 })
-export class InfoComponent implements OnInit {
-  private _character: Character;
+export class InfoComponent extends EditToggleBaseComponent implements OnInit {
+  @Input() character: Character;
 
-  public get character(): Character {
-    return this._character;
+  @Output()
+  public get className(): string {
+    return CharacterClass[this.character.class];
   }
 
-  @Input()
-  public set character(value: Character) {
-    this._character = value;
-    this.className = CharacterClass[this.character.class];
+  constructor() {
+    super();
   }
-
-  @Output() className: string;
-
-  constructor() {}
 
   ngOnInit() {}
 }

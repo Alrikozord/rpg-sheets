@@ -1,10 +1,46 @@
 <form>
-    <div class="container-4 well bs-component" style="text-align:center">
-        <img src="../../../favicon.ico">
-        <br><br>
+  <div class="container-4 well bs-component" style="text-align:center">
+    <img src="../../../favicon.ico">
+    <app-edit-toggle-button [(editMode)]="editMode" (click)="ToggleEditMode()"></app-edit-toggle-button>
 
-        <h1><b>{{character.name}}</b></h1>
-        <h4><b>{{character.species}} {{className}}</b></h4>
-        <h4><b>{{character.background}}</b> from <b>{{character.homeworld}}</b></h4>
+    <br>
+    <br>
+
+    <div *ngIf="!editMode">
+      <h1>
+        <b>{{character.name}}</b>
+      </h1>
+      <h4>
+        <b>{{character.species}} {{className}}</b>
+      </h4>
+      <h4>
+        <b>{{character.background}}</b> from
+        <b>{{character.homeworld}}</b>
+      </h4>
+
     </div>
+
+    <div *ngIf="editMode">
+      <div class="input-group">
+        <span class="input-group-addon">Name</span>
+        <input type="text" class="form-control" id="input" [(ngModel)]="character.name" name="name">
+      </div>
+      <div class="input-group">
+        <span class="input-group-addon">Species</span>
+        <input type="text" class="form-control" id="input" [(ngModel)]="character.species"  name="species">
+      </div>
+      <div class="input-group">
+        <span class="input-group-addon">Class</span>
+        <input type="text" class="form-control" id="input" [(ngModel)]="character.class"  name="class">
+      </div>
+      <div class="input-group">
+        <span class="input-group-addon">Background</span>
+        <input type="text" class="form-control" id="input" [(ngModel)]="character.background" name="background">
+      </div>
+      <div class="input-group">
+        <span class="input-group-addon">Homeworld</span>
+        <input type="text" class="form-control" id="input" [(ngModel)]="character.homeworld" name="homeworld">
+      </div>
+    </div>
+  </div>
 </form>
