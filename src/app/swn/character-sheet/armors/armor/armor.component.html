@@ -1,13 +1,14 @@
 <div>
   <div class="input-group">
-    <input type="text" class="form-control" name="name" [(ngModel)]="armor.name" placeholder="Name">
-    <span class="input-group-addon">ac {{armor.ac}}</span>
+    <input [readonly]="!editMode" type="text" [ngClass]="editMode?'form-control col-9':'form-control'" name="name" [(ngModel)]="armor.name" placeholder="Name">
+
+    <input *ngIf="editMode" type="number" [ngClass]="editMode?'form-control col-3':'form-control'" id="ac" [(ngModel)]="armor.ac"
+      placeholder="AC">
+    <span *ngIf="!editMode" class="input-group-addon">ac {{armor.ac}}</span>
+
     <span class="input-group-btn">
-      <button class="btn btn-dark" 
-          type="button"
-          data-toggle="collapse" 
-          [attr.data-target]="'#' + 'armor' + index">   
-          details          
+      <button class="btn btn-dark" type="button" data-toggle="collapse" [attr.data-target]="'#' + 'armor' + index">
+        details
       </button>
     </span>
   </div>
@@ -17,18 +18,19 @@
     <div class="row">
       <div class="col-4 input-group">
         <span class="input-group-addon" id="basic-addon1">enc</span>
-        <input type="number" class="form-control" name="encumbrance" [(ngModel)]="armor.encumbrance">
+        <input [readonly]="!editMode" type="number" class="form-control" name="encumbrance" [(ngModel)]="armor.encumbrance"  placeholder="Encumberance">
       </div>
 
-      <div class="col-4 input-group">
+      <div [ngClass]="editMode?'col-3 input-group':'col-4 input-group'">
         <span class="input-group-addon" id="basic-addon1">TL</span>
-        <input type="number" class="form-control" name="tl" [(ngModel)]="armor.tl">
+        <input [readonly]="!editMode" type="number" class="form-control" name="tl" [(ngModel)]="armor.tl"  placeholder="Tech Level">
       </div>
 
-      <div class="col-4 input-group">
+      <div [ngClass]="editMode?'col-5 input-group':'col-4 input-group'">
         <span class="input-group-addon" id="basic-addon1">acbonus</span>
-        <input type="number" class="form-control" name="acbonus" [(ngModel)]="armor.acbonus">
+        <input [readonly]="!editMode" type="number" class="form-control" name="acbonus" [(ngModel)]="armor.acbonus"  placeholder="AC Bonus">
       </div>
+
     </div>
   </div>
 </div>
