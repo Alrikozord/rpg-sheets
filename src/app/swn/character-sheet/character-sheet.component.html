@@ -1,27 +1,31 @@
 <div class="container-fluid" style="text-align:center">
   <div class="row">
     <div class="col-4">
-      <button class="col-5 btn btn-dark" type="button" (click)="onSave()">
-        <span class="glyphicon glyphicon-floppy-disk"></span>
-      </button>
-      <label class="col-5 btn  btn-dark">
-        <span class="glyphicon glyphicon-open"></span>
-        <input accept=".json" type="file" style="display: none;" (change)="onLoad($event)">
-      </label>
-
       <app-info [character]="character"></app-info>
       <app-stats [character]="character"></app-stats>
       <app-attributes [character]="character"></app-attributes>
     </div>
+
     <div class="col-4">
       <app-weapons [character]="character"></app-weapons>
       <app-armors [character]="character"></app-armors>
       <app-foci [character]="character"></app-foci>
+      <app-cyberwares [character]="character"></app-cyberwares>
     </div>
+
     <div class="col-4">
       <app-skills [character]="character"></app-skills>
       <app-goals [character]="character"></app-goals>
       <app-notes [character]="character"></app-notes>
+
+      <button class="col-5 btn btn-dark" type="button" (click)="onSave()">
+        <span class="glyphicon glyphicon-floppy-disk"></span>
+      </button>
+      <label class="col-5 btn btn-dark">
+        <span class="glyphicon glyphicon-open"></span>
+        <input accept=".json" type="file" style="display: none;" (change)="onLoad($event)">
+      </label>
+
     </div>
   </div>
   <pre>{{character.serializables|json}}</pre>

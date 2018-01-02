@@ -32,6 +32,8 @@ import {
   SkillDataService,
   WeaponDataService
 } from "./swn/data-files/index";
+import { CyberwaresComponent } from "./swn/character-sheet/cyberwares/cyberwares.component";
+import { CyberwareComponent } from "./swn/character-sheet/cyberwares/cyberware/cyberware.component";
 
 @NgModule({
   declarations: [
@@ -52,6 +54,8 @@ import {
     FocusComponent,
     WeaponComponent,
     SkillComponent,
+    CyberwaresComponent,
+    CyberwareComponent,
     EditToggleButtonComponent,
     ListAddButtonComponent,
     ListRemoveButtonComponent

@@ -15,7 +15,8 @@ import {
   Goal,
   Focus,
   DynamicCharacterValueProvider,
-  CharacterClass
+  CharacterClass,
+  Cyberware
 } from "../models/index";
 
 @Component({
@@ -60,6 +61,8 @@ export class CharacterSheetComponent implements OnInit {
     this.character.stats.dex = new Attribute(14);
     this.character.stats.int = new Attribute(12);
     this.character.stats.wis = new Attribute(14);
+
+    this.character.cyberware = new Array<Cyberware>();
 
     let weapon: Weapon;
     this.character.weapons = new Array<Weapon>();
