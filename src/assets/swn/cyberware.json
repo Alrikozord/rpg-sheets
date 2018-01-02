@@ -1,0 +1,158 @@
+{
+  "cyberware": [
+    {
+      "name": "Adrenal Suppression Pump",
+      "cost": 30000,
+      "systemstrain": 1,
+      "tl": 4,
+      "details": ["Eliminates emotion and improves initiative"]
+    },
+    {
+      "name": "Bioadaptation Augments",
+      "cost": 10000,
+      "systemstrain": 1,
+      "tl": 4,
+      "details": ["Survive near-habitable planetary conditions"]
+    },
+    {
+      "name": "Body Arsenal Array",
+      "cost": 10000,
+      "systemstrain": 1,
+      "tl": 4,
+      "details": ["Provides retractable body weaponry"]
+    },
+    {
+      "name": "Body Sculpting",
+      "cost": 10000,
+      "systemstrain": 1,
+      "tl": 4,
+      "details": ["Complete external physical reconstruction"]
+    },
+    {
+      "name": "Dermal Armor",
+      "cost": 20000,
+      "systemstrain": 2,
+      "tl": 4,
+      "details": ["AC 16, immune to primitive weapon Shock"]
+    },
+    {
+      "name": "Drone Control Link",
+      "cost": 20000,
+      "systemstrain": 1,
+      "tl": 4,
+      "details": ["Allows easier remote control of drones"]
+    },
+    {
+      "name": "Eelskin Capacitor Mesh",
+      "cost": 25000,
+      "systemstrain": 1,
+      "tl": 4,
+      "details": ["Allows bare-handed hacking and electrical shocks"]
+    },
+    {
+      "name": "Gecko Anchors",
+      "cost": 15000,
+      "systemstrain": 1,
+      "tl": 4,
+      "details": ["Can climb sheer surfaces as if they were flat"]
+    },
+    {
+      "name": "Ghost Talker Transceiver",
+      "cost": 15000,
+      "systemstrain": 1,
+      "tl": 4,
+      "details": ["Integral compad with audiovisual transmission"]
+    },
+    {
+      "name": "Holdout Cavity",
+      "cost": 10000,
+      "systemstrain": 1,
+      "tl": 4,
+      "details": ["Shielded body cavity for holdout storage"]
+    },
+    {
+      "name": "Identity Submersion Trigger",
+      "cost": 25000,
+      "systemstrain": 1,
+      "tl": 4,
+      "details": ["Allows a false identity to be perfectly assumed"]
+    },
+    {
+      "name": "Immunofiltration System",
+      "cost": 25000,
+      "systemstrain": 2,
+      "tl": 4,
+      "details": ["Immune to almost all diseases and poisons"]
+    },
+    {
+      "name": "Induced Coma Trigger",
+      "cost": 20000,
+      "systemstrain": 1,
+      "tl": 4,
+      "details": ["Feigns death and halts bodily processes for up to two weeks"]
+    },
+    {
+      "name": "Neurointruder Alert",
+      "cost": 50000,
+      "systemstrain": 1,
+      "tl": 5,
+      "details": ["Grants +3 to save vs. telepathy, alerts of intrusion"]
+    },
+    {
+      "name": "Panspectral Optics",
+      "cost": 15000,
+      "systemstrain": 1,
+      "tl": 4,
+      "details": ["Integral low-light and thermal vision"]
+    },
+    {
+      "name": "Pressure Sheathing",
+      "cost": 15000,
+      "systemstrain": 1,
+      "tl": 4,
+      "details": ["Integral emergency vacc suit"]
+    },
+    {
+      "name": "Prosthetic Limb",
+      "cost": 2500,
+      "systemstrain": 1,
+      "tl": 4,
+      "details": ["Replaces a limb lost to misadventure"]
+    },
+    {
+      "name": "Revenant Wiring",
+      "cost": 50000,
+      "systemstrain": 3,
+      "tl": 5,
+      "details": ["Keeps the user fighting even after they’re dead"]
+    },
+    {
+      "name": "Slowtime Window",
+      "cost": 30000,
+      "systemstrain": 2,
+      "tl": 5,
+      "details": ["Prevents surprise and speeds up the user’s cogitation"]
+    },
+    {
+      "name": "Stabilization Overrides",
+      "cost": 25000,
+      "systemstrain": 2,
+      "tl": 4,
+      "details": ["Automatically stabilizes a mortally-wounded user"]
+    },
+    {
+      "name": "Tagger Nanites",
+      "cost": 15000,
+      "systemstrain": 1,
+      "tl": 4,
+      "details": ["Lets the user tag others with tracking nanites"]
+    },
+    {
+      "name": "Twitchlock Actuators",
+      "cost": 30000,
+      "systemstrain": 2,
+      "tl": 4,
+      "details": ["Allows brief moments of hyper-precise accuracy"]
+    }
+  ]
+}

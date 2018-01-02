@@ -1,0 +1,164 @@
+[
+  {
+    "name": "Shield",
+    "ac": "13",
+    "acbonus": 1,
+    "cost": 10,
+    "encumbrance": 2,
+    "tl": 0,
+    "type": "Primitive"
+  },
+  {
+    "name": "Leather jack",
+    "ac": "13",
+    "acbonus": 0,
+    "cost": 10,
+    "encumbrance": 1,
+    "tl": 0,
+    "type": "Primitive"
+  },
+  {
+    "name": "Cuirass",
+    "ac": "15",
+    "acbonus": 0,
+    "cost": 50,
+    "encumbrance": 1,
+    "tl": 1,
+    "type": "Primitive"
+  },
+  {
+    "name": "Full plate",
+    "ac": "17",
+    "acbonus": 0,
+    "cost": 100,
+    "encumbrance": 2,
+    "tl": 1,
+    "type": "Primitive"
+  },
+  {
+    "name": "Warpaint",
+    "ac": "12",
+    "acbonus": 0,
+    "cost": 300,
+    "encumbrance": 0,
+    "tl": 4,
+    "type": "Street"
+  },
+  {
+    "name": "Armored Undersuit",
+    "ac": "13",
+    "acbonus": 0,
+    "cost": 600,
+    "encumbrance": 0,
+    "tl": 4,
+    "type": "Street"
+  },
+  {
+    "name": "Secure Clothing",
+    "ac": "13",
+    "acbonus": 0,
+    "cost": 300,
+    "encumbrance": 1,
+    "tl": 4,
+    "type": "Street"
+  },
+  {
+    "name": "Armored Vacc Suit",
+    "ac": "13",
+    "acbonus": 0,
+    "cost": 400,
+    "encumbrance": 2,
+    "tl": 4,
+    "type": "Street"
+  },
+  {
+    "name": "Deflector Array",
+    "ac": "18",
+    "acbonus": 0,
+    "cost": 30000,
+    "encumbrance": 0,
+    "tl": 5,
+    "type": "Street"
+  },
+  {
+    "name": "Security Armor",
+    "ac": "14",
+    "acbonus": 0,
+    "cost": 700,
+    "encumbrance": 1,
+    "tl": 4,
+    "type": "Combat"
+  },
+  {
+    "name": "Woven Body Armor",
+    "ac": "15",
+    "acbonus": 0,
+    "cost": 400,
+    "encumbrance": 2,
+    "tl": 3,
+    "type": "Combat"
+  },
+  {
+    "name": "Combat Field Uniform",
+    "ac": "16",
+    "acbonus": 0,
+    "cost": 1000,
+    "encumbrance": 1,
+    "tl": 4,
+    "type": "Combat"
+  },
+  {
+    "name": "Icarus Harness",
+    "ac": "16",
+    "acbonus": 0,
+    "cost": 8000,
+    "encumbrance": 1,
+    "tl": 4,
+    "type": "Combat"
+  },
+  {
+    "name": "Vestimentum",
+    "ac": "18",
+    "acbonus": 0,
+    "cost": 15000,
+    "encumbrance": 0,
+    "tl": 5,
+    "type": "Powered"
+  },
+  {
+    "name": "Assault Suit",
+    "ac": "18",
+    "acbonus": 0,
+    "cost": 10000,
+    "encumbrance": 2,
+    "tl": 4,
+    "type": "Powered"
+  },
+  {
+    "name": "Storm Armor",
+    "ac": "19",
+    "acbonus": 0,
+    "cost": 20000,
+    "encumbrance": 2,
+    "tl": 5,
+    "type": "Powered"
+  },
+  {
+    "name": "Field Emitter Panoply",
+    "ac": "20",
+    "acbonus": 0,
+    "cost": 40000,
+    "encumbrance": 1,
+    "tl": 5,
+    "type": "Powered"
+  },
+  {
+    "name": "Force Pavis",
+    "ac": "15",
+    "acbonus": 1,
+    "cost": 10000,
+    "encumbrance": 1,
+    "tl": 5,
+    "type": "Powered"
+  }
+]

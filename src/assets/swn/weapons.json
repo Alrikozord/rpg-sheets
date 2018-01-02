@@ -1,0 +1,615 @@
+{
+  "weapons": [
+    {
+      "name": "Small primitive weapon",
+      "type": "melee",
+      "damage": "1d4",
+      "shock": 1,
+      "shockac": 15,
+      "attribute": "Str/Dex",
+      "cost": 0,
+      "encumbrance": 1,
+      "tl": 0,
+      "details": [
+        "Small weapons are small one-handed implements no larger than a baton or knife. These weapons are easily concealed in normal clothing, and can even be kept Readied up sleeves or in tailored pockets. Many can be thrown at a range up to 10 meters."
+      ]
+    },
+    {
+      "name": "Medium primitive weapon",
+      "type": "melee",
+      "damage": "1d6+1",
+      "shock": 2,
+      "shockac": 13,
+      "attribute": "Str/Dex",
+      "cost": 20,
+      "encumbrance": 1,
+      "tl": 0,
+      "details": [
+        "Medium weapons are one-handed swords, axes, spears, or other obvious implements of war. While they can't be effectively concealed in anything smaller than an enveloping cloak or coat, they're also more damaging to an unfortunate victim struck by them, albeit they're somewhat less nimble when the wielder needs to strike at unprotected flesh. Spears and similar aerodynamic weapons can be thrown up to 30 meters."
+      ]
+    },
+    {
+      "name": "Large primitive weapon",
+      "type": "melee",
+      "damage": "1d8+1",
+      "shock": 2,
+      "shockac": 15,
+      "attribute": "Str",
+      "cost": 30,
+      "encumbrance": 2,
+      "tl": 0,
+      "details": [
+        "Large weapons are two-handed implements of bodily ruin such as claymores, halberds, tetsubos, or other such weapons. Unlike smaller weapons, they rely largely on Strength for their employ, and can bash through lighter forms of armor. Large weapons count as two encumbrance items."
+      ]
+    },
+    {
+      "name": "Small advanced weapon",
+      "type": "melee",
+      "damage": "1d6",
+      "shock": 1,
+      "shockac": 15,
+      "attribute": "Str/Dex",
+      "cost": 40,
+      "encumbrance": 1,
+      "tl": 4,
+      "details": [
+        "Small weapons are small one-handed implements no larger than a baton or knife. These weapons are easily concealed in normal clothing, and can even be kept Readied up sleeves or in tailored pockets. Many can be thrown at a range up to 10 meters."
+      ]
+    },
+    {
+      "name": "Medium advanced weapon",
+      "type": "melee",
+      "damage": "1d8+1",
+      "shock": 2,
+      "shockac": 13,
+      "attribute": "Str/Dex",
+      "cost": 60,
+      "encumbrance": 1,
+      "tl": 4,
+      "details": [
+        "Medium weapons are one-handed swords, axes, spears, or other obvious implements of war. While they can't be effectively concealed in anything smaller than an enveloping cloak or coat, they're also more damaging to an unfortunate victim struck by them, albeit they're somewhat less nimble when the wielder needs to strike at unprotected flesh. Spears and similar aerodynamic weapons can be thrown up to 30 meters."
+      ]
+    },
+    {
+      "name": "Large advanced weapon",
+      "type": "melee",
+      "damage": "1d10+1",
+      "shock": 2,
+      "shockac": 15,
+      "attribute": "Str",
+      "cost": 80,
+      "encumbrance": 2,
+      "tl": 4,
+      "details": [
+        "Large weapons are two-handed implements of bodily ruin such as claymores, halberds, tetsubos, or other such weapons. Unlike smaller weapons, they rely largely on Strength for their employ, and can bash through lighter forms of armor. Large weapons count as two encumbrance items."
+      ]
+    },
+    {
+      "name": "Stun baton",
+      "type": "melee",
+      "damage": "1d8",
+      "shock": 1,
+      "shockac": 15,
+      "attribute": "Str/Dex",
+      "cost": 50,
+      "encumbrance": 1,
+      "tl": 4,
+      "details": [
+        "Stun batons are common law enforcement tools. The damage they do can drop a target to zero hit points, but will not kill them, the victim awakening in ten minutes with one hit point. Stun batons trickle-charge from normal movement and will not run out of electrical energy under normal use conditions."
+      ]
+    },
+    {
+      "name": "Suit ripper",
+      "type": "melee",
+      "damage": "1d6",
+      "attribute": "Str/Dex",
+      "cost": 75,
+      "encumbrance": 1,
+      "tl": 4,
+      "details": [
+        "Suit rippers are rods with fractal cutting surfaces designed to cripple vacc suit auto-repair routines. Every hit with a suit ripper counts as a suit tear on a vacc suit-wearing enemy. Unsurprisingly, these weapons are strictly illegal in space environments."
+      ]
+    },
+    {
+      "name": "Unarmed attack",
+      "type": "melee",
+      "damage": "1d2*",
+      "attribute": "Str/Dex",
+      "details": [
+        "Unarmed attacks reflect ordinary kicks and punches. Unarmed attacks always add the attacker's Punch skill to damage rolls, unlike other weapons. A combatant must have at least one hand free to fight with unarmed attacks; kicks have their uses, but if both your hands are full of a plasma projector you can't then claim to be wielding a melee weapon when it comes time to bind up an enemy's mag rifle."
+      ]
+    },
+    {
+      "name": "Primitive Bow",
+      "type": "projectile",
+      "damage": "1d6",
+      "range": 50,
+      "maxrange": 75,
+      "cost": 15,
+      "magazine": 1,
+      "encumbrance": 2,
+      "attribute": "Dex",
+      "tl": 1,
+      "details": [
+        "Bows are uncommon weapons in the far future, though some lostworlder barbarians have nothing better. Bows can be reloaded with a Move action, or faster if the Gunslinger focus is applied."
+      ]
+    },
+    {
+      "name": "Advanced Bow",
+      "type": "projectile",
+      "damage": "1d6",
+      "range": 100,
+      "maxrange": 150,
+      "cost": 50,
+      "magazine": 1,
+      "encumbrance": 2,
+      "attribute": "Dex",
+      "tl": 3,
+      "details": [
+        "Bows are uncommon weapons in the far future, though some lostworlder barbarians have nothing better. Bows can be reloaded with a Move action, or faster if the Gunslinger focus is applied."
+      ]
+    },
+    {
+      "name": "Conversion Bow",
+      "type": "projectile",
+      "damage": "1d8",
+      "range": 150,
+      "maxrange": 300,
+      "cost": 500,
+      "magazine": 1,
+      "encumbrance": 2,
+      "attribute": "Dex",
+      "tl": 4,
+      "details": [
+        "Sophisticated \"conversion bows\" use special materials to convert the kinetic energy of the draw into into a force field \"glazing\" around the arrow. improving penetration. Bows can be reloaded with a Move action, or faster if the Gunslinger focus is applied."
+      ]
+    },
+    {
+      "name": "Grenade",
+      "type": "thrown",
+      "damage": "2d6",
+      "range": 10,
+      "maxrange": 30,
+      "cost": 25,
+      "encumbrance": 1,
+      "attribute": "Dex",
+      "tl": 3,
+      "details": [
+        "Grenade users always roll to attack AC 10. On a miss, the grenade lands 1d10 meters away from the target in a random direction. Hit or miss, the grenade then explodes for 2d6 damage to all targets within 5 meters. Victims are allowed an Evasion save for half damage. Targets take 1 less point of damage for each point of AC above 14. Grenades can be thrown with the Exert skill instead of Shoot, if desired."
+      ]
+    },
+    {
+      "name": "Crude Pistol",
+      "type": "projectile",
+      "damage": "1d6",
+      "range": 5,
+      "maxrange": 15,
+      "cost": 20,
+      "magazine": 1,
+      "encumbrance": 1,
+      "attribute": "Dex",
+      "tl": 2,
+      "details": [
+        "Crude pistols and muskets represent the rawest and most primitive forms of gunpowder weaponry, usually makeshift weapons improvised by criminals or the desperate. Reloading a crude pistol or a musket requires two rounds instead of one."
+      ]
+    },
+    {
+      "name": "Musket",
+      "type": "projectile",
+      "damage": "1d12",
+      "range": 25,
+      "maxrange": 50,
+      "cost": 30,
+      "magazine": 1,
+      "encumbrance": 2,
+      "attribute": "Dex",
+      "tl": 2,
+      "details": [
+        "Crude pistols and muskets represent the rawest and most primitive forms of gunpowder weaponry, usually makeshift weapons improvised by criminals or the desperate. Reloading a crude pistol or a musket requires two rounds instead of one."
+      ]
+    },
+    {
+      "name": "Revolver",
+      "type": "projectile",
+      "damage": "1d8",
+      "range": 30,
+      "maxrange": 100,
+      "cost": 50,
+      "magazine": 6,
+      "encumbrance": 1,
+      "attribute": "Dex",
+      "tl": 2,
+      "details": [
+        "Revolvers are quite popular on frontier worlds, as the weapons are extremely reliable and can be repaired and manufactured even by primitive metallurgists. Some revolver variants are specially built to handle atmospheres that would destroy more fragile weapons."
+      ]
+    },
+    {
+      "name": "Rifle",
+      "type": "projectile",
+      "damage": "1d10+2",
+      "range": 200,
+      "maxrange": 400,
+      "cost": 75,
+      "magazine": 6,
+      "encumbrance": 2,
+      "attribute": "Dex",
+      "tl": 2,
+      "details": [
+        "Rifles are the mainstays of most TL2 armies and hunters, thanks to their superior range and power."
+      ]
+    },
+    {
+      "name": "Shotgun",
+      "type": "projectile",
+      "damage": "3d4",
+      "range": 10,
+      "maxrange": 30,
+      "cost": 50,
+      "magazine": 2,
+      "encumbrance": 2,
+      "attribute": "Dex",
+      "tl": 2,
+      "details": [
+        "Shotguns are cheaper and more easily manufactured than rifles, and are popular weapons for home defense on the frontier. The statistics given are for shot ammunition. Slug rounds do 2d6 damage and have ranges of 50/75 meters."
+      ]
+    },
+    {
+      "name": "Semi-Auto Pistol",
+      "type": "projectile",
+      "damage": "1d6+1",
+      "range": 30,
+      "maxrange": 100,
+      "cost": 75,
+      "magazine": 12,
+      "encumbrance": 1,
+      "attribute": "Dex",
+      "tl": 3,
+      "details": [
+        "Semi-automatic pistols trade some of the reliability of the revolver for a larger magazine size. They tend to be the favorite sidearm for locals on planets that lack the harsh conditions or uncertain maintenance opportunities of a frontier world."
+      ]
+    },
+    {
+      "name": "Submachine Gun",
+      "type": "projectile",
+      "damage": "1d8*",
+      "range": 30,
+      "maxrange": 100,
+      "cost": 200,
+      "magazine": 20,
+      "encumbrance": 1,
+      "attribute": "Dex",
+      "tl": 3,
+      "details": [
+        "Submachine guns take pistol ammunition but fire it at a high rate of speed. These weapons can fire in burst mode."
+      ]
+    },
+    {
+      "name": "Combat Rifle",
+      "type": "projectile",
+      "damage": "1d12*",
+      "range": 100,
+      "maxrange": 300,
+      "cost": 300,
+      "magazine": 30,
+      "encumbrance": 2,
+      "attribute": "Dex",
+      "tl": 3,
+      "details": [
+        "Combat rifles are favored by the militaries of tech level 3 worlds, trading some of the often-unnecessary range and penetration of a conventional rifle for a larger ammunition capacity and burst fire capabilities. On more strait-laced worlds such military weaponry is often illegal for civilians to possess."
+      ]
+    },
+    {
+      "name": "Combat Shotgun",
+      "type": "projectile",
+      "damage": "3d4*",
+      "range": 10,
+      "maxrange": 30,
+      "cost": 300,
+      "magazine": 12,
+      "encumbrance": 2,
+      "attribute": "Dex",
+      "tl": 3,
+      "details": [
+        "Combat shotguns are more complicated and temperamental versions of conventional shotguns. These weapons have substantially larger ammunition capacity and are capable of firing in burst mode. Combat shotguns can fire slug rounds just as normal shotguns."
+      ]
+    },
+    {
+      "name": "Sniper Rifle",
+      "type": "projectile",
+      "damage": "2d8",
+      "range": 1000,
+      "maxrange": 2000,
+      "cost": 400,
+      "magazine": 1,
+      "encumbrance": 2,
+      "attribute": "Dex",
+      "tl": 3,
+      "details": [
+        "Sniper rifles are designed to be exceptionally effective at dropping unsuspecting targets at long range. Aside from the additional effective range of a sniper rifle, any target it mortally wounds via a surprise attack will die instantly, with no chance for stabilization. The surprise attack must qualify according to the terms on p. XX. If the rifle is used outside of such conditions, it has no special qualities."
+      ]
+    },
+    {
+      "name": "Void Carbine",
+      "type": "projectile",
+      "damage": "2d6",
+      "range": 100,
+      "maxrange": 300,
+      "cost": 400,
+      "magazine": 10,
+      "encumbrance": 2,
+      "attribute": "Dex",
+      "tl": 4,
+      "details": [
+        "Void carbines are designed for vacuum and zero-gee use, and have essentially no recoil. Their rounds cannot penetrate ordinary ship equipment plating."
+      ]
+    },
+    {
+      "name": "Mag Pistol",
+      "type": "projectile",
+      "damage": "2d6+2",
+      "range": 100,
+      "maxrange": 300,
+      "cost": 400,
+      "magazine": 6,
+      "encumbrance": 1,
+      "attribute": "Dex",
+      "tl": 4,
+      "details": [
+        "Mag weaponry involves the magnetic acceleration of metal flechettes, while spike throwers are the shotgun equivalents of these weapons. Mag ammunition is packaged with integral power supplies, so no additional power cells are necessary to fire these weapons."
+      ]
+    },
+    {
+      "name": "Mag Rifle",
+      "type": "projectile",
+      "damage": "2d8+2",
+      "range": 300,
+      "maxrange": 600,
+      "cost": 500,
+      "magazine": 10,
+      "encumbrance": 2,
+      "attribute": "Dex",
+      "tl": 4,
+      "details": [
+        "Mag weaponry involves the magnetic acceleration of metal flechettes, while spike throwers are the shotgun equivalents of these weapons. Mag ammunition is packaged with integral power supplies, so no additional power cells are necessary to fire these weapons."
+      ]
+    },
+    {
+      "name": "Spike Thrower",
+      "type": "projectile",
+      "damage": "3d8*",
+      "range": 20,
+      "maxrange": 40,
+      "cost": 600,
+      "magazine": 15,
+      "encumbrance": 2,
+      "attribute": "Dex",
+      "tl": 4,
+      "details": [
+        "Mag weaponry involves the magnetic acceleration of metal flechettes, while spike throwers are the shotgun equivalents of these weapons. Mag ammunition is packaged with integral power supplies, so no additional power cells are necessary to fire these weapons."
+      ]
+    },
+    {
+      "name": "Laser Pistol",
+      "type": "energy",
+      "damage": "1d6",
+      "range": 100,
+      "maxrange": 300,
+      "cost": 200,
+      "magazine": 10,
+      "encumbrance": 1,
+      "attribute": "Dex",
+      "tl": 4,
+      "details": [
+        "Laser pistols and laser rifles are the most common type of energy weapon, though pistols are considerably less energy-efficient. Depending on the tech used in the sector, they might produce silent, invisible beams of death or noisy, brightly-colored streaks of lethal light. The phased multifrequency beam is capable of penetrating any ordinary mist or haze, but a thick cloud of thermally-resistant particulate matter such as ash or sand can seriously degrade the beam, applying up to a -4 penalty to hit and cutting ranges in half."
+      ]
+    },
+    {
+      "name": "Laser Rifle",
+      "type": "energy",
+      "damage": "1d10*",
+      "range": 300,
+      "maxrange": 500,
+      "cost": 300,
+      "magazine": 20,
+      "encumbrance": 2,
+      "attribute": "Dex",
+      "tl": 4,
+      "details": [
+        "Laser pistols and laser rifles are the most common type of energy weapon, though pistols are considerably less energy-efficient. Depending on the tech used in the sector, they might produce silent, invisible beams of death or noisy, brightly-colored streaks of lethal light. The phased multifrequency beam is capable of penetrating any ordinary mist or haze, but a thick cloud of thermally-resistant particulate matter such as ash or sand can seriously degrade the beam, applying up to a -4 penalty to hit and cutting ranges in half."
+      ]
+    },
+    {
+      "name": "Thermal Pistol",
+      "type": "energy",
+      "damage": "2d6",
+      "range": 25,
+      "maxrange": 50,
+      "cost": 300,
+      "magazine": 5,
+      "encumbrance": 1,
+      "attribute": "Dex",
+      "tl": 4,
+      "details": [
+        "Thermal pistols and their larger, two-handed plasma projector cousins replace the beam of a laser with a small sphere of magnetically-shaped plasma. The spheres tend to dissipate at much shorter ranges than a laser beam, but do significantly more damage to targets within range and are not affected by ambient particulates. They tend to be extremely loud in operation."
+      ]
+    },
+    {
+      "name": "Plasma Projector",
+      "type": "energy",
+      "damage": "2d8",
+      "range": 50,
+      "maxrange": 100,
+      "cost": 400,
+      "magazine": 6,
+      "encumbrance": 2,
+      "attribute": "Dex",
+      "tl": 4,
+      "details": [
+        "Thermal pistols and their larger, two-handed plasma projector cousins replace the beam of a laser with a small sphere of magnetically-shaped plasma. The spheres tend to dissipate at much shorter ranges than a laser beam, but do significantly more damage to targets within range and are not affected by ambient particulates. They tend to be extremely loud in operation."
+      ]
+    },
+    {
+      "name": "Shear Rifle",
+      "type": "energy",
+      "damage": "2d8*",
+      "range": 100,
+      "maxrange": 300,
+      "cost": 600,
+      "magazine": 10,
+      "encumbrance": 2,
+      "attribute": "Dex",
+      "tl": 5,
+      "details": [
+        "Shear rifles are the product of a relatively few functioning pretech manufactories. These weapons use miniaturized grav projectors to create dangerous repulsor fields inside a target, tearing the object apart along perfectly smooth planes. Shear rifles are completely silent in operation."
+      ]
+    },
+    {
+      "name": "Thunder Gun",
+      "type": "energy",
+      "damage": "2d10",
+      "range": 100,
+      "maxrange": 300,
+      "cost": 1000,
+      "magazine": 6,
+      "encumbrance": 2,
+      "attribute": "Dex",
+      "tl": 5,
+      "details": [
+        "Thunder guns are named for the basso vibrations caused by their operation, a sound that can be felt as far as thirty meters away from an operator. This two-handed weapon uses grav plates to create rapid, randomized disruptions in a target that increase the chance of complete structural collapse. If a thunder gun hits a target with an unmodified hit roll of 16 or higher an extra 1d10 damage is rolled. This bonus damage always applies to inanimate targets."
+      ]
+    },
+    {
+      "name": "Distortion Cannon",
+      "type": "energy",
+      "damage": "2d12",
+      "range": 100,
+      "maxrange": 300,
+      "cost": 1250,
+      "magazine": 6,
+      "encumbrance": 2,
+      "attribute": "Dex",
+      "tl": 5,
+      "details": [
+        "Distortion cannons are among the most sophisticated man-portable weapons designed before the Scream. These two-handed energy weapons rely on the same principle as does a spike drive, manipulating the underlying fabric of space to disrupt a target. Provided the wielder can see a target within range or accurately fix its location within one meter, the distortion cannon can ignore up to one meter of solid cover between the gun and its target."
+      ]
+    },
+    {
+      "name": "Heavy Machine Gun",
+      "type": "heavy",
+      "damage": "3d6#",
+      "range": 500,
+      "maxrange": 2000,
+      "cost": 5000,
+      "magazine": 10,
+      "encumbrance": 3,
+      "attribute": "Dex",
+      "tl": 3,
+      "details": [
+        "Heavy machine guns represent a large family of air- or water-cooled projectile weapons that are usually fed with belts of linked ammunition. HMGs require a vehicle mounting or emplaced firing position for best results. Attempting to shoot one without bedding it down properly on a tripod or other secure mount inflicts a -6 on all hit rolls and makes effective suppressive fire impossible. An HMG magazine contains enough ammunition for 10 rounds of firing, but each round of firing eats 25 credits worth of projectile ammunition."
+      ]
+    },
+    {
+      "name": "Rocket Launcher",
+      "type": "heavy",
+      "damage": "3d10",
+      "range": 2000,
+      "maxrange": 4000,
+      "cost": 4000,
+      "magazine": 1,
+      "encumbrance": 2,
+      "attribute": "Dex",
+      "tl": 3,
+      "details": [
+        "Rocket launchers cover a wide variety of man-portable missile launchers of varying degrees of sophistication. The weapons are usually equipped with basic tracking sensors, but are of limited accuracy against human-sized targets. Rocket launchers take a -4 hit penalty against targets of human size or smaller. Unlike most Heavy weapons, rocket launchers can be shoulder-fired without a prepared emplacement to support them."
+      ]
+    },
+    {
+      "name": "Demo Charge",
+      "type": "heavy",
+      "damage": "3d10",
+      "range": 20,
+      "maxrange": 40,
+      "cost": 250,
+      "encumbrance": 1,
+      "tl": 3,
+      "details": [
+        "Demo Charges are the general run of placed explosives beloved of terrorists and adventurers the world over. The usual variety can be detonated by radio signals, timers, or electrical charges, and inflict their damage on any objects within twenty meters, with an Evasion saving throw for half damage. Victims within forty meters take half damage, with an Evasion save for none. The charge is sufficient to blow a four-meter wide hole in anything short of a reinforced wall. PCs with a background in demolitions or Fix-0 skill can shape the charge so it directs the blast in only one direction, sparing all but two meters of the rest."
+      ]
+    },
+    {
+      "name": "Railgun",
+      "type": "heavy",
+      "damage": "3d8#",
+      "range": 4000,
+      "maxrange": 8000,
+      "cost": 8000,
+      "magazine": 20,
+      "encumbrance": "*",
+      "attribute": "Dex",
+      "tl": 4,
+      "details": [
+        "Railguns are simply scaled-up versions of personal mag rifles. They accelerate large metallic slugs along the weapon’s barrel, creating a steady spray of hypervelocity rounds. Ammunition sufficient for one round of firing costs 50 credits."
+      ]
+    },
+    {
+      "name": "Anti-Vehicle Laser",
+      "type": "heavy",
+      "damage": "3d10",
+      "range": 2000,
+      "maxrange": 4000,
+      "cost": 10000,
+      "magazine": 15,
+      "encumbrance": "*",
+      "attribute": "Dex",
+      "tl": 4,
+      "details": [
+        "Anti-vehicle lasers are less useful against soft targets, but excel at penetrating vehicle armor. Against vehicles and other hard-skinned targets, damage is rolled twice and the better result is used."
+      ]
+    },
+    {
+      "name": "Hydra Array",
+      "type": "heavy",
+      "damage": "3d6#",
+      "range": 4000,
+      "maxrange": 8000,
+      "cost": 20000,
+      "magazine": 10,
+      "encumbrance": "*",
+      "attribute": "Dex",
+      "tl": 4,
+      "details": [
+        "Hydra arrays sequence a number of missile launchers to fire at once. The gunner designates up to three targets and can then make three rolls to hit divided among them. Each successful hit on a target allows the gunner to roll damage once, but only the highest damage roll is applied to the target. Thus, if all three volleys were aimed at a single target and two of them hit, the gunner would roll damage twice and apply the best result. A volley of Hydra missile fire costs 150 credits."
+      ]
+    },
+    {
+      "name": "Wheatcutter Belt",
+      "type": "heavy",
+      "damage": "2d12",
+      "range": 10,
+      "maxrange": 20,
+      "cost": 10000,
+      "magazine": 5,
+      "encumbrance": "*",
+      "attribute": "Dex",
+      "tl": 4,
+      "details": [
+        "Wheatcutter belts are one of several different antipersonnel measures often installed on gravtanks and other fighting vehicles. When triggered, a belt of explosives fires off a scything blast of shrapnel on any side of the vehicle. All creatures within 10 meters of that side of the vehicle must make an Evasion save for half damage. Those within 20 meters take half damage, and can make an Evasion save to take none at all. Wheatcutter belts do not ignore a vehicle’s Armor like other Heavy weapons do. Reloading a wheatcutter belt costs 200 credits per round."
+      ]
+    },
+    {
+      "name": "Vortex Cannon",
+      "type": "heavy",
+      "damage": "5d12",
+      "range": 1000,
+      "maxrange": 2000,
+      "cost": 75000,
+      "magazine": 5,
+      "encumbrance": "*",
+      "attribute": "Dex",
+      "tl": 5,
+      "details": [
+        "Vortex cannons use controlled gravitic shear planes to cause a target to simply fall apart into component fragments. The cannons are silent in operation, but so heavy and complex that they can only be mounted on gravtanks and other similar dedicated fighting vehicles."
+      ]
+    }
+  ]
+}

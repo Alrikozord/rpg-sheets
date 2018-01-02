@@ -24,6 +24,14 @@ import {
   EditToggleButtonComponent,
   ListAddButtonComponent
 } from "./basic-components/edit-toggle-components/index";
+import { HttpClientModule } from "@angular/common/http";
+import {
+  ArmorDataService,
+  CyberwareDataService,
+  FocusDataService,
+  SkillDataService,
+  WeaponDataService
+} from "./swn/data-files/index";
 
 @NgModule({
   declarations: [
@@ -48,8 +56,14 @@ import {
     ListAddButtonComponent,
     ListRemoveButtonComponent
   ],
-  imports: [BrowserModule, FormsModule],
-  providers: [],
+  imports: [BrowserModule, FormsModule, HttpClientModule],
+  providers: [
+    ArmorDataService,
+    CyberwareDataService,
+    FocusDataService,
+    SkillDataService,
+    WeaponDataService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

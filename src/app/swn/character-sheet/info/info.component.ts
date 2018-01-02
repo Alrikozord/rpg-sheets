@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Output } from "@angular/core";
+import { Component, OnInit, Input } from "@angular/core";
 import { Character, CharacterClass } from "../../models/index";
 import { EditToggleBaseComponent } from "../../../basic-components/edit-toggle-components/index";
 
@@ -10,13 +10,42 @@ import { EditToggleBaseComponent } from "../../../basic-components/edit-toggle-c
 export class InfoComponent extends EditToggleBaseComponent implements OnInit {
   @Input() character: Character;
 
-  @Output()
+  characterClasses = CharacterClass;
+  classKeys;
+
   public get className(): string {
-    return CharacterClass[this.character.class];
+    return this.prettyClassName(this.character.class);
   }
 
   constructor() {
     super();
+    this.classKeys = Object.keys(this.characterClasses)
+      .filter(Number)
+      .sort((a, b) => {
+        const aName = this.prettyClassName(+a);
+        const bName = this.prettyClassName(+b);
+        if (aName < bName) {
+          return -1;
+        } else if (aName > bName) {
+          return 1;
+        } else {
+          return 0;
+        }
+      });
+      let x = 5;
+  }
+
+  prettyClassName(characterClass: CharacterClass): string {
+    switch (+characterClass) {
+      case CharacterClass.expertPsychic:
+        return "expert / psychic";
+      case CharacterClass.warriorExpert:
+        return "warrior / expert";
+      case CharacterClass.warriorPsychic:
+        return "warrior / psychic";
+      default:
+        return CharacterClass[characterClass];
+    }
   }
 
   ngOnInit() {}

@@ -27,11 +27,14 @@
       </div>
       <div class="input-group">
         <span class="input-group-addon">Species</span>
-        <input type="text" class="form-control" id="input" [(ngModel)]="character.species"  name="species">
+        <input type="text" class="form-control" id="input" [(ngModel)]="character.species" name="species">
       </div>
+
       <div class="input-group">
         <span class="input-group-addon">Class</span>
-        <input type="text" class="form-control" id="input" [(ngModel)]="character.class"  name="class">
+        <select [(ngModel)]="character.class" name="Select name" class="input-group" id="class">
+          <option *ngFor="let key of classKeys" [attr.value]="key">{{prettyClassName(key)}}</option>
+        </select>
       </div>
       <div class="input-group">
         <span class="input-group-addon">Background</span>

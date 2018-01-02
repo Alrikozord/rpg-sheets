@@ -1,4 +1,6 @@
-export class Weapon {
+import { DataFileObject } from "./data-file-object.interface";
+
+export class Weapon implements DataFileObject {
   name: string;
   type: string;
   damage: string;

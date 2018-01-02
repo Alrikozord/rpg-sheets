@@ -1,0 +1,382 @@
+{
+  "equipment": [
+    {
+      "name": "Black slab",
+      "cost": 10000,
+      "encumbrance": 1,
+      "tl": 4,
+      "details": [""]
+    },
+    {
+      "name": "Data phase tap",
+      "cost": 5000,
+      "encumbrance": 1,
+      "tl": 4,
+      "details": [""]
+    },
+    {
+      "name": "Data protocol",
+      "cost": 1000,
+      "encumbrance": 0,
+      "tl": 4,
+      "details": [""]
+    },
+    {
+      "name": "Dataslab",
+      "cost": 300,
+      "encumbrance": 1,
+      "tl": 4,
+      "details": [""]
+    },
+    {
+      "name": "Line shunt",
+      "cost": 100,
+      "encumbrance": 0,
+      "tl": 4,
+      "details": [""]
+    },
+    {
+      "name": "Remote link unit",
+      "cost": 250,
+      "encumbrance": 1,
+      "tl": 4,
+      "details": [""]
+    },
+    {
+      "name": "Stiletto charge",
+      "cost": "N/A",
+      "encumbrance": 1,
+      "tl": 5,
+      "details": [""]
+    },
+    {
+      "name": "Storage unit",
+      "cost": 500,
+      "encumbrance": 3,
+      "tl": 4,
+      "details": [""]
+    },
+    {
+      "name": "Tightbeam link unit",
+      "cost": 1000,
+      "encumbrance": 1,
+      "tl": 4,
+      "details": [""]
+    },
+    {
+      "name": "Power cell, type A",
+      "cost": 10,
+      "encumbrance": 1 / 6,
+      "tl": 4,
+      "details": [""]
+    },
+    {
+      "name": "Power cell, type B",
+      "cost": 100,
+      "encumbrance": 1,
+      "tl": 7,
+      "details": [""]
+    },
+    {
+      "name": "Solar recharger",
+      "cost": 500,
+      "encumbrance": 3,
+      "tl": 4,
+      "details": [""]
+    },
+    {
+      "name": "Telekinetic generator",
+      "cost": 500,
+      "encumbrance": 2,
+      "tl": 4,
+      "details": [""]
+    },
+    {
+      "name": "Comm server",
+      "cost": 1000,
+      "encumbrance": 3,
+      "tl": 4,
+      "details": [""]
+    },
+    {
+      "name": "Compad",
+      "cost": 100,
+      "encumbrance": 0,
+      "tl": 4,
+      "details": [""]
+    },
+    {
+      "name": "Field radio",
+      "cost": 200,
+      "encumbrance": 1,
+      "tl": 4,
+      "details": [""]
+    },
+    {
+      "name": "Translator torc",
+      "cost": 200,
+      "encumbrance": 0,
+      "tl": 4,
+      "details": [""]
+    },
+    {
+      "name": "Bioscanner",
+      "cost": 300,
+      "encumbrance": 1,
+      "tl": 4,
+      "details": [""]
+    },
+    {
+      "name": "Lazarus patch",
+      "cost": 30,
+      "encumbrance": 1 / 6,
+      "tl": 4,
+      "details": [""]
+    },
+    {
+      "name": "Medkit",
+      "cost": 100,
+      "encumbrance": 2,
+      "tl": 4,
+      "details": [""]
+    },
+    {
+      "name": "Metatool",
+      "cost": 200,
+      "encumbrance": 1,
+      "tl": 4,
+      "details": [""]
+    },
+    {
+      "name": "Spare parts",
+      "cost": 50,
+      "encumbrance": 1 / 6,
+      "tl": 4,
+      "details": [""]
+    },
+    {
+      "name": "Tailored antiallergens",
+      "cost": 5,
+      "encumbrance": 0,
+      "tl": 4,
+      "details": [""]
+    },
+    {
+      "name": "Toolkit/Postech",
+      "cost": 300,
+      "encumbrance": 3,
+      "tl": 4,
+      "details": [""]
+    },
+    {
+      "name": "Toolkit/Pretech",
+      "cost": 1000,
+      "encumbrance": 1,
+      "tl": 5,
+      "details": [""]
+    },
+    {
+      "name": "Atmofilter",
+      "cost": 100,
+      "encumbrance": 1,
+      "tl": 4,
+      "details": [""]
+    },
+    {
+      "name": "Backpack",
+      "cost": 5,
+      "encumbrance": 1,
+      "tl": 0,
+      "details": [""]
+    },
+    {
+      "name": "Backpack (modern)",
+      "cost": 50,
+      "encumbrance": 0,
+      "tl": 4,
+      "details": [""]
+    },
+    {
+      "name": "Binoculars",
+      "cost": 20,
+      "encumbrance": 1,
+      "tl": 3,
+      "details": [""]
+    },
+    {
+      "name": "Binoculars (modern)",
+      "cost": 200,
+      "encumbrance": 1,
+      "tl": 4,
+      "details": [""]
+    },
+    {
+      "name": "Climbing harness",
+      "cost": 50,
+      "encumbrance": 1,
+      "tl": 3,
+      "details": [""]
+    },
+    {
+      "name": "Glowbug",
+      "cost": 5,
+      "encumbrance": 0,
+      "tl": 3,
+      "details": [""]
+    },
+    {
+      "name": "Grapnel launcher",
+      "cost": 200,
+      "encumbrance": 1,
+      "tl": 3,
+      "details": [""]
+    },
+    {
+      "name": "Grav chute",
+      "cost": 300,
+      "encumbrance": 1,
+      "tl": 4,
+      "details": [""]
+    },
+    {
+      "name": "Grav chute (pretech)",
+      "cost": 1000,
+      "encumbrance": 1,
+      "tl": 5,
+      "details": [""]
+    },
+    {
+      "name": "Grav harness",
+      "cost": 5000,
+      "encumbrance": 3,
+      "tl": 5,
+      "details": [""]
+    },
+    {
+      "name": "Instapanel",
+      "cost": 50,
+      "encumbrance": 1 / 6,
+      "tl": 4,
+      "details": [""]
+    },
+    {
+      "name": "Low-light goggles",
+      "cost": 200,
+      "encumbrance": 1,
+      "tl": 3,
+      "details": [""]
+    },
+    {
+      "name": "Navcomp",
+      "cost": 500,
+      "encumbrance": 1,
+      "tl": 4,
+      "details": [""]
+    },
+    {
+      "name": "Portabox",
+      "cost": 50,
+      "encumbrance": 1,
+      "tl": 4,
+      "details": [""]
+    },
+    {
+      "name": "Pressure tent",
+      "cost": 100,
+      "encumbrance": 4,
+      "tl": 3,
+      "details": [""]
+    },
+    {
+      "name": "Rations, 1 day",
+      "cost": 5,
+      "encumbrance": 1 / 6,
+      "tl": 1,
+      "details": [""]
+    },
+    {
+      "name": "Rope, 20 meters",
+      "cost": 4,
+      "encumbrance": 2,
+      "tl": 0,
+      "details": [""]
+    },
+    {
+      "name": "Rope, 20 meters (modern)",
+      "cost": 40,
+      "encumbrance": 1,
+      "tl": 4,
+      "details": [""]
+    },
+    {
+      "name": "Scout report",
+      "cost": 200,
+      "encumbrance": 0,
+      "tl": 4,
+      "details": [""]
+    },
+    {
+      "name": "Survey scanner",
+      "cost": 250,
+      "encumbrance": 1,
+      "tl": 4,
+      "details": [""]
+    },
+    {
+      "name": "Survival kit",
+      "cost": 60,
+      "encumbrance": 1,
+      "tl": 4,
+      "details": [""]
+    },
+    {
+      "name": "Telescoping pole",
+      "cost": 10,
+      "encumbrance": 0,
+      "tl": 4,
+      "details": [""]
+    },
+    {
+      "name": "Thermal flare",
+      "cost": 5,
+      "encumbrance": 0,
+      "tl": 3,
+      "details": [""]
+    },
+    {
+      "name": "Trade goods",
+      "cost": 50,
+      "encumbrance": 1 / 6,
+      "tl": 4,
+      "details": [""]
+    },
+    {
+      "name": "Trade metals",
+      "cost": 10,
+      "encumbrance": 1 / 6,
+      "tl": 4,
+      "details": [""]
+    },
+    {
+      "name": "Vacc fresher",
+      "cost": 400,
+      "encumbrance": 1,
+      "tl": 4,
+      "details": [""]
+    },
+    {
+      "name": "Vacc skin",
+      "cost": 1000,
+      "encumbrance": 1,
+      "tl": 5,
+      "details": [""]
+    },
+    {
+      "name": "Vacc suit",
+      "cost": 100,
+      "encumbrance": 2,
+      "tl": 4,
+      "details": [""]
+    }
+  ]
+}
