@@ -62,6 +62,8 @@ export class CharacterSheetComponent implements OnInit {
     this.character.stats.int = new Attribute(12);
     this.character.stats.wis = new Attribute(14);
 
+    this.character.finances = { credits: 0, items: new Array<any>() };
+
     this.character.cyberware = new Array<Cyberware>();
 
     let weapon: Weapon;

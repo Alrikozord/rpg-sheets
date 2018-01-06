@@ -34,6 +34,7 @@ import {
 } from "./swn/data-files/index";
 import { CyberwaresComponent } from "./swn/character-sheet/cyberwares/cyberwares.component";
 import { CyberwareComponent } from "./swn/character-sheet/cyberwares/cyberware/cyberware.component";
+import { FinancesComponent } from "./swn/character-sheet/finances/finances.component";
 
 @NgModule({
   declarations: [
@@ -57,6 +58,7 @@ import { CyberwareComponent } from "./swn/character-sheet/cyberwares/cyberware/c
     CyberwaresComponent,
     CyberwareComponent,
     EditToggleButtonComponent,
+    FinancesComponent,
     ListAddButtonComponent,
     ListRemoveButtonComponent
   ],

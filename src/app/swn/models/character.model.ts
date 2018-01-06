@@ -41,9 +41,11 @@ export class Character extends CharacterBase {
   }
 
   public save() {
+    const date: string = new Date(Date.now()).toISOString();
+
     super.generateDownload(
       JSON.stringify(this.serializables),
-      this.name + "_" + Date.now() + ".json"
+      this.name + "_" + date + ".json"
     );
   }
 
