@@ -3,7 +3,8 @@
 
     <div *ngIf="!editMode">
       <h1>
-        <b>{{character.name}}</b> <app-edit-toggle-button [(editMode)]="editMode" (click)="ToggleEditMode()"></app-edit-toggle-button>
+        <b>{{character.name}}</b>
+        <app-edit-toggle-button [(editMode)]="editMode" (click)="ToggleEditMode()"></app-edit-toggle-button>
       </h1>
       <h4>
         <b>{{character.species}} {{className}}</b>
@@ -16,6 +17,7 @@
     </div>
 
     <div *ngIf="editMode">
+      <app-edit-toggle-button [(editMode)]="editMode" (click)="ToggleEditMode()"></app-edit-toggle-button>
       <div class="input-group">
         <span class="input-group-addon">Name</span>
         <input type="text" class="form-control" id="input" [(ngModel)]="character.name" name="name">
