@@ -35,6 +35,7 @@ import {
 import { CyberwaresComponent } from "./swn/character-sheet/cyberwares/cyberwares.component";
 import { CyberwareComponent } from "./swn/character-sheet/cyberwares/cyberware/cyberware.component";
 import { FinancesComponent } from "./swn/character-sheet/finances/finances.component";
+import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
 
 @NgModule({
   declarations: [
@@ -62,7 +63,7 @@ import { FinancesComponent } from "./swn/character-sheet/finances/finances.compo
     ListAddButtonComponent,
     ListRemoveButtonComponent
   ],
-  imports: [BrowserModule, FormsModule, HttpClientModule],
+  imports: [BrowserModule, FormsModule, HttpClientModule, NgbModule.forRoot()],
   providers: [
     ArmorDataService,
     CyberwareDataService,

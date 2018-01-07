@@ -1,7 +1,7 @@
 <div>
   <div class="input-group">
     <input [readonly]="!editMode" type="text" [ngClass]="editMode?'form-control col-9':'form-control'" name="name" [(ngModel)]="armor.name"
-      placeholder="Name">
+      placeholder="Name" [ngbTypeahead]="search" (selectItem)="onSelectItem($event)">
 
     <input *ngIf="editMode" type="number" [ngClass]="editMode?'form-control col-3':'form-control'" id="ac" [(ngModel)]="armor.ac"
       placeholder="AC">
