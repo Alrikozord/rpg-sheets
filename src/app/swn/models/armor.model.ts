@@ -1,7 +1,6 @@
-import { DataFileObject } from "./data-file-object.interface";
+import { DataFileObject } from "./data-file-object.class";
 
-export class Armor implements DataFileObject {
-  name: string;
+export class Armor extends DataFileObject {
   ac: number;
   acbonus: number;
   cost: number;

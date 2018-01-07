@@ -8,4 +8,10 @@ export class ArmorDataService extends DataServiceBase<Armor> {
   constructor(_http: HttpClient) {
     super("armors.json", _http);
   }
+
+  protected parseJson(fileRepresentation: any): Armor {
+    const instance = new Armor();
+    this.deepishCopy(instance, fileRepresentation);
+    return instance;
+  }
 }

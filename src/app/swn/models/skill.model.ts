@@ -1,7 +1,6 @@
-import { DataFileObject } from "./data-file-object.interface";
+import { DataFileObject } from "./data-file-object.class";
 
-export class Skill implements DataFileObject {
-  name: string;
+export class Skill extends DataFileObject {
   level: number;
   type: string;
   details: string;

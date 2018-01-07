@@ -8,22 +8,44 @@ import { DataFileObject } from "../models/data-file-object.interface";
 import { observableToBeFn } from "rxjs/testing/TestScheduler";
 
 @Injectable()
-export class DataServiceBase<T extends DataFileObject> {
+export abstract class DataServiceBase<T extends DataFileObject> {
   private _file: string;
 
   constructor(fileName: string, private _http: HttpClient) {
     this._file = "/assets/swn/" + fileName;
+
+    // this.getAll().subscribe(next => console.log(next));
   }
 
   getAll(): Observable<T[]> {
-    return this._http.get(this._file).map(result => <T[]>result);
+    return this._http
+      .get(this._file)
+      .map(result => (<T[]>result).map(item => this.parseJson(item)));
+  }
+
+  protected abstract parseJson(fileRepresentation: any): T;
+
+  protected deepishCopy(freshInstance: T, fileRepresentation: any) {
+    freshInstance.applyRemoteData(fileRepresentation);
   }
 
   getNames(): Observable<string[]> {
     return this.getAll().map(elements => elements.map(item => item.name));
   }
 
+  getFilteredNames(term: string): Observable<string[]> {
+    return this.getNames().map(item =>
+      item.filter(v => {
+        return v.toLowerCase().indexOf(term.toLowerCase()) > -1;
+      })
+    );
+  }
+
   getByName(name: string): Observable<T> {
-    return this.getAll().map(elements => elements.find(item => item.name === name));
+    return this.getAll().map(elements =>
+      elements.find((item: T) => {
+        return item.name === name;
+      })
+    );
   }
 }

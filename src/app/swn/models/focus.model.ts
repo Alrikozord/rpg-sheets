@@ -1,7 +1,6 @@
-import { DataFileObject } from "./data-file-object.interface";
+import { DataFileObject } from "./data-file-object.class";
 
-export class Focus implements DataFileObject {
-  name: string;
+export class Focus extends DataFileObject {
   type: string;
   level: number;
   details: string;

@@ -1,7 +1,6 @@
-import { DataFileObject } from "./data-file-object.interface";
+import { DataFileObject } from "./data-file-object.class";
 
-export class Cyberware implements DataFileObject {
-  name: string;
+export class Cyberware extends DataFileObject {
   cost: number;
   systemstrain: number;
   tl: number;
