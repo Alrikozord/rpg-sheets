@@ -3,7 +3,8 @@ import {
   OnInit,
   ApplicationRef,
   NgZone,
-  ChangeDetectorRef
+  ChangeDetectorRef,
+  isDevMode
 } from "@angular/core";
 import {
   Character,
@@ -28,6 +29,10 @@ export class CharacterSheetComponent implements OnInit {
   public character: Character;
 
   constructor(private cd: ChangeDetectorRef) {}
+
+  protected get isDevMode() {
+    return isDevMode();
+  }
 
   ngOnInit() {
     this.initCharacter();

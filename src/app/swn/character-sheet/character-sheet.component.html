@@ -29,5 +29,5 @@
 
     </div>
   </div>
-  <pre>{{character.serializables|json}}</pre>
+  <pre *ngIf="isDevMode" align="left">{{character.serializables|json}}</pre>
 </div>
