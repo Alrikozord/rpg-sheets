@@ -1,223 +1,221 @@
-{
-  "skills": [
-    {
-      "name": "Administer",
-      "type": "normal",
-      "details": [
-        "Manage an organization, handle paperwork, analyze records, and keep an institution functioning on a daily basis. Roll it for bureaucratic expertise, organizational management, legal knowledge, dealing with government agencies, and understanding how institutions really work."
-      ]
-    },
-    {
-      "name": "Connect",
-      "type": "normal",
-      "details": [
-        "Find people who can be helpful to your purposes and get them to cooperate with you. Roll it to make useful connections with others, find people you know, know where to get illicit goods and services, and be familiar with foreign cultures and languages. You can use it in place of Talk for persuading people you find via this skill."
-      ]
-    },
-    {
-      "name": "Exert",
-      "type": "normal",
-      "details": [
-        "Apply trained speed, strength, or stamina in some feat of physical exertion. Roll it to run, jump, lift, swim, climb, throw, and so forth. You can use it as a combat skill when throwing things, though it doesn't qualify as a combat skill for other ends."
-      ]
-    },
-    {
-      "name": "Fix",
-      "type": "normal",
-      "details": [
-        "Create and repair devices both simple and complex. How complex will depend on your character's background; a lostworlder blacksmith is going to need some study time before he's ready to fix that broken fusion reactor, though he can do it eventually. Roll it to fix things, build things, and identify what something is supposed to do."
-      ]
-    },
-    {
-      "name": "Heal",
-      "type": "normal",
-      "details": [
-        "Employ medical and psychological treatment for the injured or disturbed. Roll it to cure diseases, stabilize the critically injured, treat psychological disorders, or diagnose illnesses."
-      ]
-    },
-    {
-      "name": "Know",
-      "type": "normal",
-      "details": [
-        "Know facts about academic or scientific fields. Roll it to understand planetary ecologies, remember relevant history, solve science mysteries, and know the basic facts about rare or esoteric topics."
-      ]
-    },
-    {
-      "name": "Lead",
-      "type": "normal",
-      "details": [
-        "Convince others to also do whatever it is you're trying to do. Talk might persuade them that following you is smart, but Lead can make them do it even when they think it's a bad idea. Roll it to lead troops in combat, convince others to follow you, or maintain morale and discipline."
-      ]
-    },
-    {
-      "name": "Notice",
-      "type": "normal",
-      "details": [
-        "Spot anomalies or interesting facts about your environment. Roll it for searching places, detecting ambushes, spotting things, and reading the emotional state of other people."
-      ]
-    },
-    {
-      "name": "Perform",
-      "type": "normal",
-      "details": [
-        "Exhibit some performative skill. Roll it to dance, sing, orate, act, or otherwise put on a convincing or emotionally moving performance."
-      ]
-    },
-    {
-      "name": "Pilot",
-      "type": "normal",
-      "details": [
-        "Use this skill to pilot vehicles or riding beasts. Roll it to fly spaceships, drive vehicles, ride animals, or tend to basic vehicle repair. This skill doesn’t help you with things entirely outside the scope of your background or experience, though with some practice a PC can expand their expertise."
-      ]
-    },
-    {
-      "name": "Program",
-      "type": "normal",
-      "details": [
-        "Operating or hacking computing and communications hardware. Roll it to program or hack computers, control computer-operated hardware, operate communications tech, or decrypt things."
-      ]
-    },
-    {
-      "name": "Punch",
-      "type": "combat",
-      "details": [
-        "Use it as a combat skill when fighting unarmed. If your PC means to make a habit of this rather than as a recourse of desperation, you should take the Unarmed Fighter focus described later."
-      ]
-    },
-    {
-      "name": "Shoot",
-      "type": "combat",
-      "details": [
-        "Use it as a combat skill when using ranged weaponry, whether hurled rocks, bows, laser pistols, combat rifles, or ship’s gunnery."
-      ]
-    },
-    {
-      "name": "Sneak",
-      "type": "normal",
-      "details": [
-        "Move without drawing notice. Roll it for stealth, disguise, infiltration, manual legerdemain, pickpocketing, and the defeat of security measures."
-      ]
-    },
-    {
-      "name": "Stab",
-      "type": "combat",
-      "details": [
-        "Use it as a combat skill when wielding melee weapons, whether primitive or complex."
-      ]
-    },
-    {
-      "name": "Survive",
-      "type": "normal",
-      "details": [
-        "Obtain the basics of food, water, and shelter in hostile environments, along with avoiding their natural perils. Roll it to handle animals, navigate difficult terrain, scrounge urban resources, make basic tools, and avoid wild beasts or gangs."
-      ]
-    },
-    {
-      "name": "Talk",
-      "type": "normal",
-      "details": [
-        "Convince other people of the facts you want them to believe. What they do with that conviction may not be completely predictable. Roll it to persuade, charm, or deceive others in conversation."
-      ]
-    },
-    {
-      "name": "Trade",
-      "type": "normal",
-      "details": [
-        "Find what you need on the market and sell what you have. Roll it to sell or buy things, figure out where to purchase hard-to-get or illicit goods, deal with customs agents, or run a business."
-      ]
-    },
-    {
-      "name": "Work",
-      "type": "normal",
-      "details": [
-        "This is a catch-all skill for professions not represented by other skills. Roll it to work at a particular profession, art, or trade."
-      ]
-    },
-    {
-      "name": "Biopsion",
-      "type": "psychic",
-      "details": [
-        "Core Technique: <i>Psychic Succor</i>",
-        "The adept’s touch stabilizes critically-wounded organisms. More sophisticated practitioners can heal tissue injuries, though curing diseases, detoxifying poisons, and fixing congenital deformities require additional techniques. Each use of Psychic Succor adds one point of System Strain to the target, or two points if they were mortally wounded at the time.<br>Activating Psychic Succor requires the biopsion to Commit Effort for the day. Once used, they can continue to use it for the rest of that scene without Committing Effort again.",
-        "<b>Level-0</b>: The psychic’s touch can automatically stabilize a critically-wounded target as a Main Action. This power must be used on a target within six rounds of their collapse, and does not function on targets that have been decapitated or killed by Heavy weapons. It’s the GM’s decision as to whether a target is intact enough for this power to work.",
-        "<b>Level-1</b>: As level-0, and heal 1d6+1 hit points of damage. If used on a mortally-wounded target, they revive with the rolled hit points and can act normally on the next round.",
-        "<b>Level-2</b>: As level-1, but healing 2d6+2 hit points instead.",
-        "<b>Level-3</b>: As level-2, but healing 2d6+6 hit points instead.",
-        "<b>Level-4</b>: As level-3, but healing 3d6+8 hit points instead."
-      ]
-    },
-    {
-      "name": "Metapsion",
-      "type": "psychic",
-      "details": [
-        "Core Technique: <i>Psychic Refinement</i>",
-        "The metapsion gains improved mastery over their own powers and an innate sensitivity to the use of psionic abilities in their presence.",
-        "<b>Level-0</b>: The adept can visually and audibly detect the use of psychic powers. If both the source and target are visible to the metapsion, they can tell who’s using the power, even if it’s normally imperceptible. They gain a +2 bonus on any saving throw versus a psionic power.",
-        "<b>Level-1</b>: The metapsion’s maximum Effort increases by an additional point.",
-        "<b>Level-2</b>: The adept can determine whether or not a person is a psychic or has latent psionic abilities through one round of visual inspection. Their saving throw bonus against psionic powers increases to +3.",
-        "<b>Level-3</b>: The metapsion’s maximum Effort increases by an additional point.",
-        "<b>Level-4</b>: The metapsion can perform a slightly safer version of torching. Instead of rolling the torching damage die, they simply suffer 10 hit points of damage after torching is used. The damage occurs after the fueled power activates, allowing a psychic at low hit points to trigger a power before falling unconscious. This damage cannot be healed by anything but natural bed rest, though a psychic can be stabilized if this technique drops her to zero hit points."
-      ]
-    },
-    {
-      "name": "Precognition",
-      "type": "psychic",
-      "details": [
-        "Core Technique: <i>Oracle</i>",
-        "The precog gains a progressively-greater intuitive understanding of their own future. Each invocation of the Oracle technique requires a Main Action and that the user Commit Effort for the day. Once triggered, the adept gets a single brief vision related to the question about the future that they’re asking. This vision is always from their own personal vantage point and never reveals more than a minute of insight, though the psychic processes it almost instantly as part of the power’s use.",
-        "The GM should answer the question as if the PC were about to perform the act or engage in the investigation pertinent to the question. Thus, if the adept wanted to know what pressing a button would do and the GM knows that it’s connected to a bomb, the psychic might get a vision of sudden death. If the bomb were on a time delay that extended past the time horizon of the oracle, however, the psychic might just see a vision of herself waiting patiently, with nothing happening.",
-        "Visions should relate to actions and events, not abstract facts. Oracle couldn’t tell a psychic who the crime boss of a slum neighborhood is, for example, but it could give a vision of the psychic caught in the next bloody riot and the gang boss who’s directing the myriad thugs. It couldn’t reveal the name of a security guard, but it could show the seer the impending moment that the next guard patrol will enter the area the psychic plans to infiltrate. Only the most important or significant information is conveyed by the technique, even if multiple events of interest might transpire during the time horizon.",
-        "Oracle can only be used on a given question or topic once until the situation changes substantially or a week goes by. The maximum time horizon of the Oracle increases as the adept’s Precognition skill improves.",
-        "<b>Level-0</b>: One minute into the future.",
-        "<b>Level-1</b>: One day into the future.",
-        "<b>Level-2</b>: One week into the future.",
-        "<b>Level-3</b>: Three months into the future.",
-        "<b>Level-4</b>: One year into the future."
-      ]
-    },
-    {
-      "name": "Telekinesis",
-      "type": "psychic",
-      "details": [
-        "Core Technique: <i>Telekinetic Manipulation</i>",
-        "The adept may Commit Effort for the scene as a Main Action to direct telekinetic force toward an object or person within unaided visual range or with tactile contact with the psychic. The strength and precision of the force increases with the expertise of the psychic. This force isn’t responsive enough to be usable as a weapon without further refinement of technique, and cannot cause damage to living or mobile targets. If used to crush or harm immobile unliving objects, it does 1d6 damage per skill level of the psychic per round of focus.",
-        "A telekinetic force can be maintained over multiple rounds without expending further actions, such as holding a metal platform in place under a group of allies, but the psychic cannot use this technique on a second object until they release the first.",
-        "<b>Level-0</b>: The psychic can exert force as if with one hand and their own physical strength.",
-        "<b>Level-1</b>: The psychic can manipulate objects as if with both hands and can lift up to two hundred kilograms with this ability.",
-        "<b>Level-2</b>: The psychic can lift or manipulate up to four hundred kilograms and blast a human-sized hole in structures of light wooden construction or lighter as a Main Action.",
-        "<b>Level-3</b>: The psychic can manipulate up to eight hundred kilograms and can affect as many individual objects at once as they have Telekinesis skill levels.",
-        "<b>Level-4</b>: The psychic can manipulate up to a metric ton and can smash human-sized holes in TL4-constructed exterior walls, light stone walls, or similar barriers as a Main Action."
-      ]
-    },
-    {
-      "name": "Telepathy",
-      "type": "psychic",
-      "details": [
-        "Core Technique: <i>Telepathic Contact</i>",
-        "The telepath can obtain a progressively-deeper understanding of a sentient target’s thoughts. The target must be visible or otherwise perceptible to the telepath’s unaided senses. Opening a contact requires the telepath to Commit Effort for the day as a Main Action, and the contact lasts for a scene at most unless augmented by other techniques.",
-        "The depth of contact that can be made depends on the psychic’s Telepathy skill. A single contact can use any or all of the effects permitted to a telepath of the user’s skill level. Basic forms of contact do not allow for a saving throw, though more advanced probes allow the target to make a Mental saving throw to resist. On a successful save, no form of of this technique that allows a save can be used on them for the rest of the scene.",
-        "<b>Level-0</b>: Observe emotional states in a target. Intense emotions provide a single word or image related to the focus of the feelings.",
-        "<b>Level-1</b>: A shallow gestalt with the target’s language centers allows the telepath to understand any form of communication made by the target. If the psychic has the requisite body parts to speak the target’s language, they can communicate with it in turn.",
-        "<b>Level-2</b>: The psychic’s awareness of the target’s surface cognition is sophisticated enough to read their current thoughts, though it can’t pick up memories or non-obvious connections. The target gets a Mental saving throw to resist this.",
-        "<b>Level-3</b>: The psychic can drill down into the target’s memory to get a one or two-sentence answer to any single question they ask, or receive a single answering vision of the target’s recollections. The target can attempt a Mental saving throw to resist this power, and whether or not it succeeds the contact is automatically ended. It can be re-established, but only by activating this technique again.",
-        "<b>Level-4</b>: The psychic instantly gets a full and nuanced awareness of everything the target can remember about a particular topic. The target can attempt a Mental saving throw to resist this power, and whether or not it succeeds the contact is automatically ended afterwards. It can be re-established, but only by activating this technique again."
-      ]
-    },
-    {
-      "name": "Teleportation",
-      "type": "psychic",
-      "details": [
-        "Core Technique: <i>Personal Apportation</i>",
-        "The teleporter can translocate to another location they have either occupied before or can see with their unaided vision. Locations are fixed in reference to the nearest major gravity well. For example, it is not possible to teleport to the cockpit of a distant moving vehicle they once occupied, but they can teleport to another point on a planet’s surface even though the planet has since moved far through the stellar void.",
-        "The core technique allows the teleporter to move himself and any mass he is able to carry with his own natural strength. Resisting targets cannot be carried along, and unresisting ones must be touched. A teleporter can leave any clothing, shackles, adhesions, or other matter behind when he teleports, but he cannot leave behind matter that has been inserted into his body, such as cybernetics or shrapnel. Matter cannot be partially left behind.",
-        "A teleporter will instinctively abort any apportation that would leave him embedded in a solid object or in an environment of imminent physical harm. Any Committed Effort on such aborted jumps is wasted, as is any action spent triggering the power.",
-        "The maximum range of Personal Apportation depends on the teleporter’s skill level. Teleporting with Personal Apportation counts as a Main Action and requires that the psychic Commit Effort for the scene.",
-        "<b>Level-0</b>: The psychic can teleport up to 10 meters.",
-        "<b>Level-1</b>: The psychic can teleport up to 100 meters.",
-        "<b>Level-2</b>: The psychic can teleport up to 10 kilometers.",
-        "<b>Level-3</b>: The psychic can teleport up to 1,000 kilometers.",
-        "<b>Level-4</b>: The psychic can teleport anywhere on a planet’s surface or near orbit."
-      ]
-    }
-  ]
-}
+[
+  {
+    "name": "Administer",
+    "type": "normal",
+    "details": [
+      "Manage an organization, handle paperwork, analyze records, and keep an institution functioning on a daily basis. Roll it for bureaucratic expertise, organizational management, legal knowledge, dealing with government agencies, and understanding how institutions really work."
+    ]
+  },
+  {
+    "name": "Connect",
+    "type": "normal",
+    "details": [
+      "Find people who can be helpful to your purposes and get them to cooperate with you. Roll it to make useful connections with others, find people you know, know where to get illicit goods and services, and be familiar with foreign cultures and languages. You can use it in place of Talk for persuading people you find via this skill."
+    ]
+  },
+  {
+    "name": "Exert",
+    "type": "normal",
+    "details": [
+      "Apply trained speed, strength, or stamina in some feat of physical exertion. Roll it to run, jump, lift, swim, climb, throw, and so forth. You can use it as a combat skill when throwing things, though it doesn't qualify as a combat skill for other ends."
+    ]
+  },
+  {
+    "name": "Fix",
+    "type": "normal",
+    "details": [
+      "Create and repair devices both simple and complex. How complex will depend on your character's background; a lostworlder blacksmith is going to need some study time before he's ready to fix that broken fusion reactor, though he can do it eventually. Roll it to fix things, build things, and identify what something is supposed to do."
+    ]
+  },
+  {
+    "name": "Heal",
+    "type": "normal",
+    "details": [
+      "Employ medical and psychological treatment for the injured or disturbed. Roll it to cure diseases, stabilize the critically injured, treat psychological disorders, or diagnose illnesses."
+    ]
+  },
+  {
+    "name": "Know",
+    "type": "normal",
+    "details": [
+      "Know facts about academic or scientific fields. Roll it to understand planetary ecologies, remember relevant history, solve science mysteries, and know the basic facts about rare or esoteric topics."
+    ]
+  },
+  {
+    "name": "Lead",
+    "type": "normal",
+    "details": [
+      "Convince others to also do whatever it is you're trying to do. Talk might persuade them that following you is smart, but Lead can make them do it even when they think it's a bad idea. Roll it to lead troops in combat, convince others to follow you, or maintain morale and discipline."
+    ]
+  },
+  {
+    "name": "Notice",
+    "type": "normal",
+    "details": [
+      "Spot anomalies or interesting facts about your environment. Roll it for searching places, detecting ambushes, spotting things, and reading the emotional state of other people."
+    ]
+  },
+  {
+    "name": "Perform",
+    "type": "normal",
+    "details": [
+      "Exhibit some performative skill. Roll it to dance, sing, orate, act, or otherwise put on a convincing or emotionally moving performance."
+    ]
+  },
+  {
+    "name": "Pilot",
+    "type": "normal",
+    "details": [
+      "Use this skill to pilot vehicles or riding beasts. Roll it to fly spaceships, drive vehicles, ride animals, or tend to basic vehicle repair. This skill doesn’t help you with things entirely outside the scope of your background or experience, though with some practice a PC can expand their expertise."
+    ]
+  },
+  {
+    "name": "Program",
+    "type": "normal",
+    "details": [
+      "Operating or hacking computing and communications hardware. Roll it to program or hack computers, control computer-operated hardware, operate communications tech, or decrypt things."
+    ]
+  },
+  {
+    "name": "Punch",
+    "type": "combat",
+    "details": [
+      "Use it as a combat skill when fighting unarmed. If your PC means to make a habit of this rather than as a recourse of desperation, you should take the Unarmed Fighter focus described later."
+    ]
+  },
+  {
+    "name": "Shoot",
+    "type": "combat",
+    "details": [
+      "Use it as a combat skill when using ranged weaponry, whether hurled rocks, bows, laser pistols, combat rifles, or ship’s gunnery."
+    ]
+  },
+  {
+    "name": "Sneak",
+    "type": "normal",
+    "details": [
+      "Move without drawing notice. Roll it for stealth, disguise, infiltration, manual legerdemain, pickpocketing, and the defeat of security measures."
+    ]
+  },
+  {
+    "name": "Stab",
+    "type": "combat",
+    "details": [
+      "Use it as a combat skill when wielding melee weapons, whether primitive or complex."
+    ]
+  },
+  {
+    "name": "Survive",
+    "type": "normal",
+    "details": [
+      "Obtain the basics of food, water, and shelter in hostile environments, along with avoiding their natural perils. Roll it to handle animals, navigate difficult terrain, scrounge urban resources, make basic tools, and avoid wild beasts or gangs."
+    ]
+  },
+  {
+    "name": "Talk",
+    "type": "normal",
+    "details": [
+      "Convince other people of the facts you want them to believe. What they do with that conviction may not be completely predictable. Roll it to persuade, charm, or deceive others in conversation."
+    ]
+  },
+  {
+    "name": "Trade",
+    "type": "normal",
+    "details": [
+      "Find what you need on the market and sell what you have. Roll it to sell or buy things, figure out where to purchase hard-to-get or illicit goods, deal with customs agents, or run a business."
+    ]
+  },
+  {
+    "name": "Work",
+    "type": "normal",
+    "details": [
+      "This is a catch-all skill for professions not represented by other skills. Roll it to work at a particular profession, art, or trade."
+    ]
+  },
+  {
+    "name": "Biopsion",
+    "type": "psychic",
+    "details": [
+      "Core Technique: <i>Psychic Succor</i>",
+      "The adept’s touch stabilizes critically-wounded organisms. More sophisticated practitioners can heal tissue injuries, though curing diseases, detoxifying poisons, and fixing congenital deformities require additional techniques. Each use of Psychic Succor adds one point of System Strain to the target, or two points if they were mortally wounded at the time.<br>Activating Psychic Succor requires the biopsion to Commit Effort for the day. Once used, they can continue to use it for the rest of that scene without Committing Effort again.",
+      "<b>Level-0</b>: The psychic’s touch can automatically stabilize a critically-wounded target as a Main Action. This power must be used on a target within six rounds of their collapse, and does not function on targets that have been decapitated or killed by Heavy weapons. It’s the GM’s decision as to whether a target is intact enough for this power to work.",
+      "<b>Level-1</b>: As level-0, and heal 1d6+1 hit points of damage. If used on a mortally-wounded target, they revive with the rolled hit points and can act normally on the next round.",
+      "<b>Level-2</b>: As level-1, but healing 2d6+2 hit points instead.",
+      "<b>Level-3</b>: As level-2, but healing 2d6+6 hit points instead.",
+      "<b>Level-4</b>: As level-3, but healing 3d6+8 hit points instead."
+    ]
+  },
+  {
+    "name": "Metapsion",
+    "type": "psychic",
+    "details": [
+      "Core Technique: <i>Psychic Refinement</i>",
+      "The metapsion gains improved mastery over their own powers and an innate sensitivity to the use of psionic abilities in their presence.",
+      "<b>Level-0</b>: The adept can visually and audibly detect the use of psychic powers. If both the source and target are visible to the metapsion, they can tell who’s using the power, even if it’s normally imperceptible. They gain a +2 bonus on any saving throw versus a psionic power.",
+      "<b>Level-1</b>: The metapsion’s maximum Effort increases by an additional point.",
+      "<b>Level-2</b>: The adept can determine whether or not a person is a psychic or has latent psionic abilities through one round of visual inspection. Their saving throw bonus against psionic powers increases to +3.",
+      "<b>Level-3</b>: The metapsion’s maximum Effort increases by an additional point.",
+      "<b>Level-4</b>: The metapsion can perform a slightly safer version of torching. Instead of rolling the torching damage die, they simply suffer 10 hit points of damage after torching is used. The damage occurs after the fueled power activates, allowing a psychic at low hit points to trigger a power before falling unconscious. This damage cannot be healed by anything but natural bed rest, though a psychic can be stabilized if this technique drops her to zero hit points."
+    ]
+  },
+  {
+    "name": "Precognition",
+    "type": "psychic",
+    "details": [
+      "Core Technique: <i>Oracle</i>",
+      "The precog gains a progressively-greater intuitive understanding of their own future. Each invocation of the Oracle technique requires a Main Action and that the user Commit Effort for the day. Once triggered, the adept gets a single brief vision related to the question about the future that they’re asking. This vision is always from their own personal vantage point and never reveals more than a minute of insight, though the psychic processes it almost instantly as part of the power’s use.",
+      "The GM should answer the question as if the PC were about to perform the act or engage in the investigation pertinent to the question. Thus, if the adept wanted to know what pressing a button would do and the GM knows that it’s connected to a bomb, the psychic might get a vision of sudden death. If the bomb were on a time delay that extended past the time horizon of the oracle, however, the psychic might just see a vision of herself waiting patiently, with nothing happening.",
+      "Visions should relate to actions and events, not abstract facts. Oracle couldn’t tell a psychic who the crime boss of a slum neighborhood is, for example, but it could give a vision of the psychic caught in the next bloody riot and the gang boss who’s directing the myriad thugs. It couldn’t reveal the name of a security guard, but it could show the seer the impending moment that the next guard patrol will enter the area the psychic plans to infiltrate. Only the most important or significant information is conveyed by the technique, even if multiple events of interest might transpire during the time horizon.",
+      "Oracle can only be used on a given question or topic once until the situation changes substantially or a week goes by. The maximum time horizon of the Oracle increases as the adept’s Precognition skill improves.",
+      "<b>Level-0</b>: One minute into the future.",
+      "<b>Level-1</b>: One day into the future.",
+      "<b>Level-2</b>: One week into the future.",
+      "<b>Level-3</b>: Three months into the future.",
+      "<b>Level-4</b>: One year into the future."
+    ]
+  },
+  {
+    "name": "Telekinesis",
+    "type": "psychic",
+    "details": [
+      "Core Technique: <i>Telekinetic Manipulation</i>",
+      "The adept may Commit Effort for the scene as a Main Action to direct telekinetic force toward an object or person within unaided visual range or with tactile contact with the psychic. The strength and precision of the force increases with the expertise of the psychic. This force isn’t responsive enough to be usable as a weapon without further refinement of technique, and cannot cause damage to living or mobile targets. If used to crush or harm immobile unliving objects, it does 1d6 damage per skill level of the psychic per round of focus.",
+      "A telekinetic force can be maintained over multiple rounds without expending further actions, such as holding a metal platform in place under a group of allies, but the psychic cannot use this technique on a second object until they release the first.",
+      "<b>Level-0</b>: The psychic can exert force as if with one hand and their own physical strength.",
+      "<b>Level-1</b>: The psychic can manipulate objects as if with both hands and can lift up to two hundred kilograms with this ability.",
+      "<b>Level-2</b>: The psychic can lift or manipulate up to four hundred kilograms and blast a human-sized hole in structures of light wooden construction or lighter as a Main Action.",
+      "<b>Level-3</b>: The psychic can manipulate up to eight hundred kilograms and can affect as many individual objects at once as they have Telekinesis skill levels.",
+      "<b>Level-4</b>: The psychic can manipulate up to a metric ton and can smash human-sized holes in TL4-constructed exterior walls, light stone walls, or similar barriers as a Main Action."
+    ]
+  },
+  {
+    "name": "Telepathy",
+    "type": "psychic",
+    "details": [
+      "Core Technique: <i>Telepathic Contact</i>",
+      "The telepath can obtain a progressively-deeper understanding of a sentient target’s thoughts. The target must be visible or otherwise perceptible to the telepath’s unaided senses. Opening a contact requires the telepath to Commit Effort for the day as a Main Action, and the contact lasts for a scene at most unless augmented by other techniques.",
+      "The depth of contact that can be made depends on the psychic’s Telepathy skill. A single contact can use any or all of the effects permitted to a telepath of the user’s skill level. Basic forms of contact do not allow for a saving throw, though more advanced probes allow the target to make a Mental saving throw to resist. On a successful save, no form of of this technique that allows a save can be used on them for the rest of the scene.",
+      "<b>Level-0</b>: Observe emotional states in a target. Intense emotions provide a single word or image related to the focus of the feelings.",
+      "<b>Level-1</b>: A shallow gestalt with the target’s language centers allows the telepath to understand any form of communication made by the target. If the psychic has the requisite body parts to speak the target’s language, they can communicate with it in turn.",
+      "<b>Level-2</b>: The psychic’s awareness of the target’s surface cognition is sophisticated enough to read their current thoughts, though it can’t pick up memories or non-obvious connections. The target gets a Mental saving throw to resist this.",
+      "<b>Level-3</b>: The psychic can drill down into the target’s memory to get a one or two-sentence answer to any single question they ask, or receive a single answering vision of the target’s recollections. The target can attempt a Mental saving throw to resist this power, and whether or not it succeeds the contact is automatically ended. It can be re-established, but only by activating this technique again.",
+      "<b>Level-4</b>: The psychic instantly gets a full and nuanced awareness of everything the target can remember about a particular topic. The target can attempt a Mental saving throw to resist this power, and whether or not it succeeds the contact is automatically ended afterwards. It can be re-established, but only by activating this technique again."
+    ]
+  },
+  {
+    "name": "Teleportation",
+    "type": "psychic",
+    "details": [
+      "Core Technique: <i>Personal Apportation</i>",
+      "The teleporter can translocate to another location they have either occupied before or can see with their unaided vision. Locations are fixed in reference to the nearest major gravity well. For example, it is not possible to teleport to the cockpit of a distant moving vehicle they once occupied, but they can teleport to another point on a planet’s surface even though the planet has since moved far through the stellar void.",
+      "The core technique allows the teleporter to move himself and any mass he is able to carry with his own natural strength. Resisting targets cannot be carried along, and unresisting ones must be touched. A teleporter can leave any clothing, shackles, adhesions, or other matter behind when he teleports, but he cannot leave behind matter that has been inserted into his body, such as cybernetics or shrapnel. Matter cannot be partially left behind.",
+      "A teleporter will instinctively abort any apportation that would leave him embedded in a solid object or in an environment of imminent physical harm. Any Committed Effort on such aborted jumps is wasted, as is any action spent triggering the power.",
+      "The maximum range of Personal Apportation depends on the teleporter’s skill level. Teleporting with Personal Apportation counts as a Main Action and requires that the psychic Commit Effort for the scene.",
+      "<b>Level-0</b>: The psychic can teleport up to 10 meters.",
+      "<b>Level-1</b>: The psychic can teleport up to 100 meters.",
+      "<b>Level-2</b>: The psychic can teleport up to 10 kilometers.",
+      "<b>Level-3</b>: The psychic can teleport up to 1,000 kilometers.",
+      "<b>Level-4</b>: The psychic can teleport anywhere on a planet’s surface or near orbit."
+    ]
+  }
+]

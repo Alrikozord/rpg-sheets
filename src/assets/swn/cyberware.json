@@ -1,5 +1,4 @@
-{
-  "cyberware": [
+ [
     {
       "name": "Adrenal Suppression Pump",
       "cost": 30000,
@@ -155,4 +154,3 @@
       "details": ["Allows brief moments of hyper-precise accuracy"]
     }
   ]
-}

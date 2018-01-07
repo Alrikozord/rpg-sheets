@@ -1,5 +1,4 @@
-{
-  "equipment": [
+ [
     {
       "name": "Black slab",
       "cost": 10000,
@@ -379,4 +378,3 @@
       "details": [""]
     }
   ]
-}
