@@ -1,13 +1,11 @@
-import {
-  Attributes,
-  Focus,
-  Skill,
-  Armor,
-  Weapon,
-  Cyberware,
-  Goal,
-  CharacterClass
-} from "./index";
+import { Attributes } from "./attributes.model";
+import { Focus } from "./focus.model";
+import { Skill } from "./skill.model";
+import { Armor } from "./armor.model";
+import { Weapon } from "./weapon.model";
+import { Cyberware } from "./cyberware.model";
+import { Goal } from "./goal.model";
+import { CharacterClass } from "./character-class.enum";
 
 export class SerializableProperties {
   public name: string;
