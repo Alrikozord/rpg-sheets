@@ -12,7 +12,7 @@ export abstract class DataServiceBase<T extends DataFileObject> {
   private _file: string;
 
   constructor(fileName: string, private _http: HttpClient) {
-    this._file = "/assets/swn/" + fileName;
+    this._file = "./assets/swn/" + fileName;
 
     // this.getAll().subscribe(next => console.log(next));
   }
