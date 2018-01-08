@@ -6,6 +6,19 @@
     <span *ngIf="!editMode" class="input-group-addon">{{item.damage}}</span>
     <input *ngIf="editMode" type="text" class="form-control col-3" [attr.name]="item.name" [(ngModel)]="item.damage" placeholder="Damage">
 
+    <span *ngIf="!editMode" class="input-group-btn">
+      <button type="button" class="btn btn-dark dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <a *ngIf="item.readied">readied</a>
+        <a *ngIf="item.stowed">stowed</a>
+        <a *ngIf="!item.readied && !item.stowed">stored</a>
+      </button>
+      <div class="dropdown-menu dropdown-menu-right">
+        <a class="dropdown-item" (click)="item.readied = true; item.stowed = false;" href="#">ready</a>
+        <a class="dropdown-item" (click)="item.readied = false; item.stowed = true;" href="#">stow</a>
+        <a class="dropdown-item" (click)="item.readied = false; item.stowed = false;" href="#">store</a>
+      </div>
+    </span>
+
     <span class="input-group-btn">
       <button class="btn btn-dark" type="button" data-toggle="collapse" [attr.data-target]="'#' + 'weapon' + index">
         detail

@@ -1,6 +1,9 @@
 import { DataFileObject } from "./data-file-object.class";
+import { Equipable } from "./equipable.interface";
 
-export class Weapon extends DataFileObject {
+export class Weapon extends DataFileObject implements Equipable {
+  readied: boolean = false;
+  stowed: boolean = false;
   type: string;
   damage: string;
   shock: number;

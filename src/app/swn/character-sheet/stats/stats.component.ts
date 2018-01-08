@@ -14,14 +14,7 @@ export class StatsComponent extends EditToggleBaseComponent implements OnInit {
     super();
   }
 
-  protected get isEffortLimitReached(): boolean {
-    return (
-      this.character.effort.day +
-        this.character.effort.scene +
-        this.character.effort.other >=
-      this.character.effort.max
-    );
-  }
+
 
   ngOnInit() {}
 }

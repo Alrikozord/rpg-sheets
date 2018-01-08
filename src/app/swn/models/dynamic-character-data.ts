@@ -1,4 +1,6 @@
 import { Character } from "./index";
+import { toInteger } from "@ng-bootstrap/ng-bootstrap/util/util";
+import { Equipable } from "./equipable.interface";
 
 export class DynamicCharacterValueProvider {
   private character: Character;
@@ -93,5 +95,57 @@ export class DynamicCharacterValueProvider {
       }
     }
     return attackBonus;
+  }
+
+  // ** Encumbrance **
+
+  public get maxEncumbranceReadied(): number {
+    return toInteger(this.character.stats.str.value / 2);
+  }
+
+  public get maxEncumbranceStowed(): number {
+    return this.character.stats.str.value;
+  }
+
+  public get sumEncumbranceReadied(): number {
+    return this.getAllEquipables()
+      .filter(item => item.readied)
+      .map(item => item.encumbrance)
+      .reduce((total, encumbrance) => total + encumbrance, 0);
+  }
+
+  private getAllEquipables() {
+    return this.character.armor
+      .map(item => <Equipable>item)
+      .concat(this.character.equipment)
+      .concat(this.character.weapons);
+  }
+
+  public get sumEncumbranceStowed(): number {
+    return this.getAllEquipables()
+      .filter(item => item.stowed)
+      .map(item => item.encumbrance)
+      .reduce((total, encumbrance) => total + encumbrance, 0);
+  }
+
+  public get isEncumbered(): boolean {
+    return (
+      this.sumEncumbranceReadied - this.maxEncumbranceReadied >= 2 ||
+      this.sumEncumbranceStowed - this.maxEncumbranceStowed >= 4
+    );
+  }
+
+  public get isHeavylyEncumbered(): boolean {
+    return (
+      this.sumEncumbranceReadied - this.maxEncumbranceReadied >= 4 ||
+      this.sumEncumbranceStowed - this.maxEncumbranceStowed >= 8
+    );
+  }
+
+  public get isOverEncumbered(): boolean {
+    return (
+      this.sumEncumbranceReadied - this.maxEncumbranceReadied > 4 ||
+      this.sumEncumbranceStowed - this.maxEncumbranceStowed > 8
+    );
   }
 }

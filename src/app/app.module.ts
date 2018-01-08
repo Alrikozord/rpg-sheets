@@ -42,6 +42,7 @@ import { EquipmentDataService } from "./swn/data-files/equipment-data-service";
 import { TechniquesComponent } from "./swn/character-sheet/techniques/techniques.component";
 import { TechniqueComponent } from "./swn/character-sheet/techniques/technique/technique.component";
 import { TechniqueDataService } from "./swn/data-files/technique-data-service";
+import { EffortComponent } from "./swn/character-sheet/stats/effort/effort.component";
 
 @NgModule({
   declarations: [
@@ -71,7 +72,8 @@ import { TechniqueDataService } from "./swn/data-files/technique-data-service";
     EquipmentComponent,
     EquipmentItemComponent,
     TechniquesComponent,
-    TechniqueComponent
+    TechniqueComponent,
+    EffortComponent
   ],
   imports: [BrowserModule, FormsModule, HttpClientModule, NgbModule.forRoot()],
   providers: [

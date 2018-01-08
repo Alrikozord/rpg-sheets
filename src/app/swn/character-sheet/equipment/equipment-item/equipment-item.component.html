@@ -11,6 +11,19 @@
       placeholder="tl">
     <span *ngIf="!editMode" class="input-group-addon">tl {{item.tl}}</span>
 
+    <span *ngIf="!editMode" class="input-group-btn">
+      <button type="button" class="btn btn-dark dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <a *ngIf="item.readied">readied</a>
+        <a *ngIf="item.stowed">stowed</a>
+        <a *ngIf="!item.readied && !item.stowed">stored</a>
+      </button>
+      <div class="dropdown-menu dropdown-menu-right">
+        <a class="dropdown-item" (click)="item.readied = true; item.stowed = false;" href="#">ready</a>
+        <a class="dropdown-item" (click)="item.readied = false; item.stowed = true;" href="#">stow</a>
+        <a class="dropdown-item" (click)="item.readied = false; item.stowed = false;" href="#">store</a>
+      </div>
+    </span>
+
     <span class="input-group-btn">
       <button class="btn btn-dark" type="button" data-toggle="collapse" [attr.data-target]="'#' + 'equipment-item' + index">
         detail

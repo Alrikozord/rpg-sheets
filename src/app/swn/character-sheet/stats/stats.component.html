@@ -34,89 +34,39 @@
       </div>
     </div>
 
-    <div *ngIf="character.isPsychic">
-      <div class="form-group row">
-        <h4 class="col-6" style="text-align:right;">Effort</h4>
-        <span *ngIf="!editMode"> max {{character.effort.max}}</span>
-
-        <div *ngIf="editMode" class="col-3 input-group">
-          <span class="input-group-addon">max</span>
-          <input type="number" class="form-control" id="input" [(ngModel)]="character.effort.max" name="effort max" placeholder="max">
-        </div>
-      </div>
-
-      <div class="row justify-content-md-center">
-        <div class="input-group col-6">
-          <span class="input-group-addon">scene</span>
-          <input type="number" class="form-control" id="input" [(ngModel)]="character.effort.scene" name="effort scene" placeholder="scene">
-
-          <span class="input-group-btn">
-            <button class="btn btn-dark" type="button" (click)="character.effort.scene = character.effort.scene + 1">
-              mark
-            </button>
-          </span>
-          <span class="input-group-btn">
-            <button class="btn btn-dark" type="button" (click)="character.effort.scene = 0">
-              reset
-            </button>
-          </span>
-        </div>
-      </div>
-      <div class="row justify-content-md-center">
-        <div class="input-group col-6">
-          <span class="input-group-addon">day</span>
-          <input type="number" class="form-control" id="input" [(ngModel)]="character.effort.day" name="effort day" placeholder="day">
-
-          <span class="input-group-btn">
-            <button class="btn btn-dark" type="button" (click)="character.effort.day = character.effort.day + 1">
-              mark
-            </button>
-          </span>
-          <span class="input-group-btn">
-            <button class="btn btn-dark" type="button" (click)="character.effort.day = 0">
-              reset
-            </button>
-          </span>
-        </div>
-      </div>
-      <div class="row justify-content-md-center">
-        <div class="input-group col-6">
-          <span class="input-group-addon">other</span>
-          <input type="number" class="form-control" id="input" [(ngModel)]="character.effort.other" name="effort other" placeholder="other">
-
-          <span class="input-group-btn">
-            <button class="btn btn-dark" type="button" (click)="character.effort.other = character.effort.other + 1">
-              mark
-            </button>
-          </span>
-          <span class="input-group-btn">
-            <button class="btn btn-dark" type="button" (click)="character.effort.other = 0">
-              reset
-            </button>
-          </span>
-        </div>
-      </div>
-      <!--  <div class="form-group row">
-        <div class="col">Scene Efford</div>
-        <div class="col">Day Efford</div>
-        <div class="col">Special Efford</div>
-      </div>
-      <div class="form-group row">
-        <input type="number" class="form-control col" id="input" [(ngModel)]="character.effort.scene" name="effort scene" placeholder="scene">
-        <input type="number" class="form-control col" id="input" [(ngModel)]="character.effort.day" name="effort day" placeholder="day">
-        <input type="number" class="form-control col" id="input" [(ngModel)]="character.effort.other" name="effort other" placeholder="special">
-      </div> -->
-      <br>
-      <div class="row justify-content-md-center">
-        <div *ngIf="isEffortLimitReached" class="alert alert-danger col-8">
-          <strong>Effort limit reached!</strong>
-        </div>
-      </div>
-    </div>
+    <app-effort [character]="character" [editMode]="editMode"></app-effort>
 
     <div class="form-group row justify-content-center">
       <label class="col-3 col-form-label" style="text-align:right;">Attack Bonus</label>
-      <label class="col-3 col-form-label" style="text-align:left;">{{character.derived.attackBonus}}</label>
+      <label class="col-1 col-form-label" style="text-align:left;">{{character.derived.attackBonus}}</label>
+
+    </div>
+    <div class="form-group row justify-content-center">
+      <label class="col-3 col-form-label" style="text-align:right;">max readied</label>
+      <label class="col-1 col-form-label" style="text-align:left;">{{character.derived.maxEncumbranceReadied}}</label>
+      <label class="col-3 col-form-label" style="text-align:right;">max stowed</label>
+      <label class="col-1 col-form-label" style="text-align:left;">{{character.derived.maxEncumbranceStowed}}</label>
+    </div>
+    <div class="form-group row justify-content-center">
+        <label class="col-3 col-form-label" style="text-align:right;">currently readied</label>
+        <label class="col-1 col-form-label" style="text-align:left;">{{character.derived.sumEncumbranceReadied}}</label>
+        <label class="col-3 col-form-label" style="text-align:right;">currently stowed</label>
+        <label class="col-1 col-form-label" style="text-align:left;">{{character.derived.sumEncumbranceStowed}}</label>
+      </div>
+    <div class="row justify-content-md-center">
+      <div *ngIf="character.derived.isEncumbered && !character.derived.isHeavylyEncumbered" class="alert alert-warning col-8">
+        lightly encumbered
+      </div>
+    </div>
+    <div class="row justify-content-md-center">
+      <div *ngIf="character.derived.isHeavylyEncumbered && !character.derived.isOverEncumbered" class="alert alert-warning col-8">
+        heavily encumbered
+      </div>
+    </div>
+    <div class="row justify-content-md-center">
+      <div *ngIf="character.derived.isOverEncumbered" class="alert alert-danger col-8">
+        <strong>Overburdened!</strong>
+      </div>
     </div>
 
     <div class="form-group row">
