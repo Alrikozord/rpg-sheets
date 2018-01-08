@@ -56,4 +56,14 @@ export class SerializableProperties {
     this.cyberware = new Array<Cyberware>();
     this.goals = new Array<Goal>();
   }
+
+  doDeserializationCleanup(): void {
+    // weired hack to convert the anonymous Objects from the
+    // deserialization to actual Attributes.
+    // see https://stackoverflow.com/questions/40421100/how-to-parse-a-json-object-to-a-typescript-object
+    const stats = new Attributes();
+    Object.assign(stats, this.stats);
+    this.stats = stats;
+    this.stats.doDeserializationCleanup();
+  }
 }

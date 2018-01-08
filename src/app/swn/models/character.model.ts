@@ -38,7 +38,11 @@ export class Character extends CharacterBase {
 
   private onloaded(e: ProgressEvent) {
     const json = (<FileReader>e.target).result;
-    this.serializables = JSON.parse(json);
+    const parsedObject = JSON.parse(json);
+    // necessary to actualy get an SerializableProperties from the parsed object.
+    // otherweise it would be an undefined Object.
+    Object.assign(this.serializables, parsedObject);
+    this.serializables.doDeserializationCleanup();
   }
 
   public save() {
