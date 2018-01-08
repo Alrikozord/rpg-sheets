@@ -3513,6 +3513,9 @@ tbody.collapse.in {
 .dropdown {
   position: relative;
 }
+.dropdown-item {
+  color: #818284;
+}
 .dropdown-toggle:focus {
   outline: 0;
 }
