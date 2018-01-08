@@ -9,7 +9,7 @@
 
     <input *ngIf="editMode" type="number" [ngClass]="editMode?'form-control col-3':'form-control'" id="xp" [(ngModel)]="item.tl"
       placeholder="tl">
-    <span *ngIf="!editMode" class="input-group-addon">tl {{item.encumbrance}}</span>
+    <span *ngIf="!editMode" class="input-group-addon">tl {{item.tl}}</span>
 
     <span class="input-group-btn">
       <button class="btn btn-dark" type="button" data-toggle="collapse" [attr.data-target]="'#' + 'equipment-item' + index">
