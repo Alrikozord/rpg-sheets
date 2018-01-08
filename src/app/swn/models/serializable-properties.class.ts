@@ -6,6 +6,7 @@ import { Weapon } from "./weapon.model";
 import { Cyberware } from "./cyberware.model";
 import { Goal } from "./goal.model";
 import { CharacterClass } from "./character-class.enum";
+import { EquipmentItem } from "./equipment-item.model";
 
 export class SerializableProperties {
   public name: string;
@@ -24,7 +25,7 @@ export class SerializableProperties {
   public finances: { credits: number; items: any[] };
   public armor: Armor[];
   public weapons: Weapon[];
-  public equipment: any[];
+  public equipment: EquipmentItem[];
   public cyberware: Cyberware[];
   public goals: Goal[];
   public notes: string;
@@ -50,7 +51,7 @@ export class SerializableProperties {
     this.finances = { credits: 0, items: new Array<any>() };
     this.armor = new Array<Armor>();
     this.weapons = new Array<Weapon>();
-    this.equipment = new Array<any>();
+    this.equipment = new Array<EquipmentItem>();
     this.cyberware = new Array<Cyberware>();
     this.goals = new Array<Goal>();
   }

@@ -1,0 +1,26 @@
+<div>
+  <div class="input-group">
+    <input [readonly]="!editMode" type="text" [ngClass]="editMode?'form-control col-6':'form-control'" id="name" [(ngModel)]="item.name"
+      placeholder="Name" [ngbTypeahead]="search" (selectItem)="onSelectItem($event)">
+
+    <input *ngIf="editMode" type="number" [ngClass]="editMode?'form-control col-3':'form-control'" id="xp" [(ngModel)]="item.encumbrance"
+      placeholder="enc">
+    <span *ngIf="!editMode" class="input-group-addon">enc {{item.encumbrance}}</span>
+
+    <input *ngIf="editMode" type="number" [ngClass]="editMode?'form-control col-3':'form-control'" id="xp" [(ngModel)]="item.tl"
+      placeholder="tl">
+    <span *ngIf="!editMode" class="input-group-addon">tl {{item.encumbrance}}</span>
+
+    <span class="input-group-btn">
+      <button class="btn btn-dark" type="button" data-toggle="collapse" [attr.data-target]="'#' + 'equipment-item' + index">
+        detail
+      </button>
+    </span>
+  </div>
+
+  <div class="collapse" [attr.id]="'equipment-item' + index">
+    <div class="input-group">
+      <textarea [readonly]="!editMode" class="col" rows="7" placeholder="Description" [(ngModel)]="item.details"></textarea>
+    </div>
+  </div>
+</div>

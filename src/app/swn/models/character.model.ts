@@ -10,6 +10,7 @@ import { Goal } from "./goal.model";
 import { SerializableProperties } from "./serializable-properties.class";
 import { CharacterClass } from "./character-class.enum";
 import { CharacterBase } from "../../basic-components/models/character-base.class";
+import { EquipmentItem } from "./equipment-item.model";
 
 export class Character extends CharacterBase {
   public serializables: SerializableProperties;
@@ -204,10 +205,10 @@ export class Character extends CharacterBase {
     this.serializables.weapons = value;
   }
 
-  public get equipment(): any[] {
+  public get equipment(): EquipmentItem[] {
     return this.serializables.equipment;
   }
-  public set equipment(value: any[]) {
+  public set equipment(value: EquipmentItem[]) {
     this.serializables.equipment = value;
   }
 

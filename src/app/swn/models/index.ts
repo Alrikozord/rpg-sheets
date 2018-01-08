@@ -4,6 +4,7 @@ export * from "./attribute.model";
 export * from "./character.model";
 export * from "./cyberware.model";
 export * from "./dynamic-character-data";
+export * from "./equipment-item.model";
 export * from "./focus.model";
 export * from "./goal.model";
 export * from "./skill.model";

@@ -36,6 +36,9 @@ import { CyberwaresComponent } from "./swn/character-sheet/cyberwares/cyberwares
 import { CyberwareComponent } from "./swn/character-sheet/cyberwares/cyberware/cyberware.component";
 import { FinancesComponent } from "./swn/character-sheet/finances/finances.component";
 import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
+import { EquipmentComponent } from "./swn/character-sheet/equipment/equipment.component";
+import { EquipmentItemComponent } from "./swn/character-sheet/equipment/equipment-item/equipment-item.component";
+import { EquipmentDataService } from "./swn/data-files/equipment-data-service";
 
 @NgModule({
   declarations: [
@@ -61,12 +64,15 @@ import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
     EditToggleButtonComponent,
     FinancesComponent,
     ListAddButtonComponent,
-    ListRemoveButtonComponent
+    ListRemoveButtonComponent,
+    EquipmentComponent,
+    EquipmentItemComponent
   ],
   imports: [BrowserModule, FormsModule, HttpClientModule, NgbModule.forRoot()],
   providers: [
     ArmorDataService,
     CyberwareDataService,
+    EquipmentDataService,
     FocusDataService,
     SkillDataService,
     WeaponDataService
