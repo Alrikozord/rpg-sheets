@@ -8,6 +8,7 @@ export * from "./equipment-item.model";
 export * from "./focus.model";
 export * from "./goal.model";
 export * from "./skill.model";
+export * from "./technique.model";
 export * from "./weapon.model";
 export * from "./serializable-properties.class";
 export * from "./character-class.enum";

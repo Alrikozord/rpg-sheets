@@ -7,6 +7,7 @@ import { Cyberware } from "./cyberware.model";
 import { Goal } from "./goal.model";
 import { CharacterClass } from "./character-class.enum";
 import { EquipmentItem } from "./equipment-item.model";
+import { Technique } from "./technique.model";
 
 export class SerializableProperties {
   public name: string;
@@ -21,7 +22,7 @@ export class SerializableProperties {
   public effort: { scene: number; day: number; other: number };
   public foci: Focus[];
   public skills: Skill[];
-  public techniques: any[];
+  public techniques: Technique[];
   public finances: { credits: number; items: any[] };
   public armor: Armor[];
   public weapons: Weapon[];
@@ -47,7 +48,7 @@ export class SerializableProperties {
     this.effort = { scene: 0, day: 0, other: 0 };
     this.foci = new Array<Focus>();
     this.skills = new Array<Skill>();
-    this.techniques = new Array<any>();
+    this.techniques = new Array<Technique>();
     this.finances = { credits: 0, items: new Array<any>() };
     this.armor = new Array<Armor>();
     this.weapons = new Array<Weapon>();

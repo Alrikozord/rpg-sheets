@@ -1,0 +1,15 @@
+<form>
+  <div class="container-4 well bs-component" style="text-align:center">
+
+    <h2>Techniques
+      <app-edit-toggle-button [(editMode)]="editMode" (click)="ToggleEditMode()"></app-edit-toggle-button>
+    </h2>
+
+    <div class="row" *ngFor="let technique of character.techniques; let i = index">
+      <app-technique [class.col-10]="editMode" [item]="technique" [index]="i" [editMode]="editMode"></app-technique>
+      <app-list-remove-button class="col-1" [(editMode)]="editMode" [index]="i" (click)="onRemove(i)"></app-list-remove-button>
+    </div>
+
+    <app-list-add-button [(editMode)]="editMode" (click)="onAdd()"></app-list-add-button>
+  </div>
+</form>

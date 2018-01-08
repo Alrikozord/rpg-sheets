@@ -39,6 +39,9 @@ import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
 import { EquipmentComponent } from "./swn/character-sheet/equipment/equipment.component";
 import { EquipmentItemComponent } from "./swn/character-sheet/equipment/equipment-item/equipment-item.component";
 import { EquipmentDataService } from "./swn/data-files/equipment-data-service";
+import { TechniquesComponent } from "./swn/character-sheet/techniques/techniques.component";
+import { TechniqueComponent } from "./swn/character-sheet/techniques/technique/technique.component";
+import { TechniqueDataService } from "./swn/data-files/technique-data-service";
 
 @NgModule({
   declarations: [
@@ -66,7 +69,9 @@ import { EquipmentDataService } from "./swn/data-files/equipment-data-service";
     ListAddButtonComponent,
     ListRemoveButtonComponent,
     EquipmentComponent,
-    EquipmentItemComponent
+    EquipmentItemComponent,
+    TechniquesComponent,
+    TechniqueComponent
   ],
   imports: [BrowserModule, FormsModule, HttpClientModule, NgbModule.forRoot()],
   providers: [
@@ -75,6 +80,7 @@ import { EquipmentDataService } from "./swn/data-files/equipment-data-service";
     EquipmentDataService,
     FocusDataService,
     SkillDataService,
+    TechniqueDataService,
     WeaponDataService
   ],
   bootstrap: [AppComponent]
