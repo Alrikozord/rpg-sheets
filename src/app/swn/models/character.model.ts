@@ -104,7 +104,9 @@ export class Character extends CharacterBase {
     return this.serializables.class;
   }
   public set class(value: CharacterClass) {
-    this.serializables.class = value;
+    // weird conversion is necessary to ensure the value is stored as an actual number, not a string
+    // representation of that number. If the string gets stored, comparison against enum values will not work
+    this.serializables.class = Number.parseInt(value.toString());
   }
 
   public get species(): string {
@@ -156,10 +158,20 @@ export class Character extends CharacterBase {
     this.serializables.systemstrain = value;
   }
 
-  public get effort(): { scene: number; day: number; other: number } {
+  public get effort(): {
+    scene: number;
+    day: number;
+    other: number;
+    max: number;
+  } {
     return this.serializables.effort;
   }
-  public set effort(value: { scene: number; day: number; other: number }) {
+  public set effort(value: {
+    scene: number;
+    day: number;
+    other: number;
+    max: number;
+  }) {
     this.serializables.effort = value;
   }
 

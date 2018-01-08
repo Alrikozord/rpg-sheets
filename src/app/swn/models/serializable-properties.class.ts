@@ -11,7 +11,7 @@ import { Technique } from "./technique.model";
 
 export class SerializableProperties {
   public name: string;
-  public class: CharacterClass;
+  public class: number;
   public species: string;
   public background: string;
   public homeworld: string;
@@ -19,7 +19,7 @@ export class SerializableProperties {
   public stats: Attributes = new Attributes();
   public hp: { current: number; max: number };
   public systemstrain: { current: number; max: number };
-  public effort: { scene: number; day: number; other: number };
+  public effort: { scene: number; day: number; other: number; max: number };
   public foci: Focus[];
   public skills: Skill[];
   public techniques: Technique[];
@@ -45,7 +45,7 @@ export class SerializableProperties {
     this.stats = new Attributes();
     this.hp = { current: 0, max: 0 };
     this.systemstrain = { current: 0, max: 0 };
-    this.effort = { scene: 0, day: 0, other: 0 };
+    this.effort = { scene: 0, day: 0, other: 0, max: 0 };
     this.foci = new Array<Focus>();
     this.skills = new Array<Skill>();
     this.techniques = new Array<Technique>();

@@ -32,7 +32,6 @@ export class InfoComponent extends EditToggleBaseComponent implements OnInit {
           return 0;
         }
       });
-      let x = 5;
   }
 
   prettyClassName(characterClass: CharacterClass): string {

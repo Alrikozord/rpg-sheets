@@ -19,16 +19,98 @@
         <span class="input-group-addon">
           <span class="glyphicon glyphicon-heart"></span>
         </span>
-        <input type="number" [class.col-6]="editMode" class="form-control" id="input" [(ngModel)]="character.hp.current" name="hp" placeholder="hp">
+        <input type="number" [class.col-6]="editMode" class="form-control" id="input" [(ngModel)]="character.hp.current" name="hp"
+          placeholder="hp">
         <span *ngIf="!editMode" class="input-group-addon">max {{character.hp.max}}</span>
         <input *ngIf="editMode" type="number" class="form-control col-6" id="input" [(ngModel)]="character.hp.max" name="hpmax" placeholder="max">
       </div>
       <div class="col-5 input-group">
         <span class="input-group-addon">strain</span>
-        <input type="number" [class.col-6]="editMode" class="form-control" id="input" [(ngModel)]="character.systemstrain.current" name="strain" placeholder="strain">
+        <input type="number" [class.col-6]="editMode" class="form-control" id="input" [(ngModel)]="character.systemstrain.current"
+          name="strain" placeholder="strain">
         <span *ngIf="!editMode" class="input-group-addon">max {{character.systemstrain.max}}</span>
         <input *ngIf="editMode" type="number" class="form-control col-6" id="input" [(ngModel)]="character.systemstrain.max" name="strainmax"
           placeholder="max">
+      </div>
+    </div>
+
+    <div *ngIf="character.isPsychic">
+      <div class="form-group row">
+        <h4 class="col-6" style="text-align:right;">Effort</h4>
+        <span *ngIf="!editMode"> max {{character.effort.max}}</span>
+
+        <div *ngIf="editMode" class="col-3 input-group">
+          <span class="input-group-addon">max</span>
+          <input type="number" class="form-control" id="input" [(ngModel)]="character.effort.max" name="effort max" placeholder="max">
+        </div>
+      </div>
+
+      <div class="row justify-content-md-center">
+        <div class="input-group col-6">
+          <span class="input-group-addon">scene</span>
+          <input type="number" class="form-control" id="input" [(ngModel)]="character.effort.scene" name="effort scene" placeholder="scene">
+
+          <span class="input-group-btn">
+            <button class="btn btn-dark" type="button" (click)="character.effort.scene = character.effort.scene + 1">
+              mark
+            </button>
+          </span>
+          <span class="input-group-btn">
+            <button class="btn btn-dark" type="button" (click)="character.effort.scene = 0">
+              reset
+            </button>
+          </span>
+        </div>
+      </div>
+      <div class="row justify-content-md-center">
+        <div class="input-group col-6">
+          <span class="input-group-addon">day</span>
+          <input type="number" class="form-control" id="input" [(ngModel)]="character.effort.day" name="effort day" placeholder="day">
+
+          <span class="input-group-btn">
+            <button class="btn btn-dark" type="button" (click)="character.effort.day = character.effort.day + 1">
+              mark
+            </button>
+          </span>
+          <span class="input-group-btn">
+            <button class="btn btn-dark" type="button" (click)="character.effort.day = 0">
+              reset
+            </button>
+          </span>
+        </div>
+      </div>
+      <div class="row justify-content-md-center">
+        <div class="input-group col-6">
+          <span class="input-group-addon">other</span>
+          <input type="number" class="form-control" id="input" [(ngModel)]="character.effort.other" name="effort other" placeholder="other">
+
+          <span class="input-group-btn">
+            <button class="btn btn-dark" type="button" (click)="character.effort.other = character.effort.other + 1">
+              mark
+            </button>
+          </span>
+          <span class="input-group-btn">
+            <button class="btn btn-dark" type="button" (click)="character.effort.other = 0">
+              reset
+            </button>
+          </span>
+        </div>
+      </div>
+      <!--  <div class="form-group row">
+        <div class="col">Scene Efford</div>
+        <div class="col">Day Efford</div>
+        <div class="col">Special Efford</div>
+      </div>
+      <div class="form-group row">
+        <input type="number" class="form-control col" id="input" [(ngModel)]="character.effort.scene" name="effort scene" placeholder="scene">
+        <input type="number" class="form-control col" id="input" [(ngModel)]="character.effort.day" name="effort day" placeholder="day">
+        <input type="number" class="form-control col" id="input" [(ngModel)]="character.effort.other" name="effort other" placeholder="special">
+      </div> -->
+      <br>
+      <div class="row justify-content-md-center">
+        <div *ngIf="isEffortLimitReached" class="alert alert-danger col-8">
+          <strong>Effort limit reached!</strong>
+        </div>
       </div>
     </div>
 
