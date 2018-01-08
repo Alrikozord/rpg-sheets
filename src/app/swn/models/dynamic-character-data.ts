@@ -130,15 +130,15 @@ export class DynamicCharacterValueProvider {
 
   public get isEncumbered(): boolean {
     return (
-      this.sumEncumbranceReadied - this.maxEncumbranceReadied >= 2 ||
-      this.sumEncumbranceStowed - this.maxEncumbranceStowed >= 4
+      this.sumEncumbranceReadied - this.maxEncumbranceReadied > 0 ||
+      this.sumEncumbranceStowed - this.maxEncumbranceStowed > 0
     );
   }
 
   public get isHeavylyEncumbered(): boolean {
     return (
-      this.sumEncumbranceReadied - this.maxEncumbranceReadied >= 4 ||
-      this.sumEncumbranceStowed - this.maxEncumbranceStowed >= 8
+      this.sumEncumbranceReadied - this.maxEncumbranceReadied > 2 ||
+      this.sumEncumbranceStowed - this.maxEncumbranceStowed > 4
     );
   }
 
