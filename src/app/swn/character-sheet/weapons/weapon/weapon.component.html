@@ -41,7 +41,7 @@
 
       <div class="col-4 input-group">
         <span class="input-group-addon" id="basic-addon1">enc</span>
-        <input [readonly]="!editMode" type="text" class="form-control" id="encumbrance" name="encumbrance" [(ngModel)]="item.encumbrance">
+        <input [readonly]="!editMode" type="number" class="form-control" id="encumbrance" name="encumbrance" [(ngModel)]="item.encumbrance">
       </div>
     </div>
 
@@ -53,9 +53,9 @@
 
       <div class="col-4 input-group">
         <span class="input-group-addon" id="basic-addon1">range</span>
-        <input [readonly]="!editMode" type="text" class="form-control" id="effectiv" name="effectiv" [(ngModel)]="item.range.effectiv">
+        <input [readonly]="!editMode" type="number" class="form-control" id="effectiv" name="effectiv" [(ngModel)]="item.range.effectiv">
       </div>
-      <input [readonly]="!editMode" type="text" class="col-2 form-control" id="max" name="max" [(ngModel)]="item.range.max">
+      <input [readonly]="!editMode" type="number" class="col-2 form-control" id="max" name="max" [(ngModel)]="item.range.max">
     </div>
 
     <div class="row" style="padding-bottom: 5px">
