@@ -30,7 +30,8 @@ export class CharacterSheetComponent implements OnInit {
 
   constructor(private cd: ChangeDetectorRef) {}
 
-  protected get isDevMode() {
+  get isDevMode() {
+    // forewarding so it is available in the html
     return isDevMode();
   }
 

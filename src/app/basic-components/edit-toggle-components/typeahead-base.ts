@@ -18,7 +18,7 @@ export abstract class TypeaheadBase<
     super();
   }
 
-  protected onSelectItem(eventItem: NgbTypeaheadSelectItemEvent) {
+  onSelectItem(eventItem: NgbTypeaheadSelectItemEvent) {
     this.dataService.getByName(eventItem.item).subscribe(
       data => {
         this.item.applyRemoteData(data);
