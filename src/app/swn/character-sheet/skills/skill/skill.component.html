@@ -1,10 +1,10 @@
 <div>
   <div class="input-group">
     <input *ngIf="editMode" type="text" class="col-9 form-control" name="name" placeholder="Skill Name" [(ngModel)]="skill.name"
-      [ngbTypeahead]="search">
+      [ngbTypeahead]="search" (selectItem)="onSelectItem($event)">
 
     <span *ngIf="!editMode" class="input-group-btn">
-      <button class="btn btn-dark btn-block" type="button" data-toggle="collapse" [attr.data-target]="'#' + 'skill' + index">
+      <button [ngClass]="skill.type==='psychic'?'btn btn-info btn-block':'btn btn-dark btn-block'" type="button" data-toggle="collapse" [attr.data-target]="'#' + 'skill' + index">
         {{skill.name}}
       </button>
     </span>

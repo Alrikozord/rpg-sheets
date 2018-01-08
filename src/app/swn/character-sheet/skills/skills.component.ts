@@ -26,4 +26,21 @@ export class SkillsComponent extends EditToggleListBase implements OnInit {
   public onRemove(index: number): void {
     this.character.skills.slice(index, 1);
   }
+
+  ToggleEditMode(){
+    super.ToggleEditMode();
+    this.character.skills.sort(this.customSkillSort);
+  }
+
+  protected customSkillSort(a: Skill, b: Skill): number {
+    if (a.type !== b.type) {
+      if (a.type === "normal" && b.type === "psychic") {
+        return -1;
+      } else {
+        return 1;
+      }
+    } else {
+      return a.name.localeCompare(b.name);
+    }
+  }
 }

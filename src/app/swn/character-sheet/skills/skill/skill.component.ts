@@ -12,6 +12,7 @@ import "rxjs/add/operator/map";
 import "rxjs/add/operator/switchMap";
 import "rxjs/add/operator/merge";
 import "rxjs/add/operator/concatMap";
+import { NgbTypeaheadSelectItemEvent } from "@ng-bootstrap/ng-bootstrap";
 
 @Component({
   selector: "app-skill",
@@ -26,12 +27,21 @@ export class SkillComponent extends EditToggleBaseComponent implements OnInit {
 
   constructor(private dataService: SkillDataService) {
     super();
-    /* dataService.getAll().forEach(array => (this.skillList = array));
-
-    dataService.getNames().forEach(element => console.log(element)); */
   }
 
   ngOnInit() {}
+
+  protected onSelectItem(eventItem: NgbTypeaheadSelectItemEvent) {
+    this.dataService.getByName(eventItem.item).subscribe(
+      data => {
+        this.skill.applyRemoteData(data);
+      },
+      (error: Error) => {
+        console.log(error.name);
+        console.log(error.message);
+      }
+    );
+  }
 
   search = (text$: Observable<string>) =>
     text$
