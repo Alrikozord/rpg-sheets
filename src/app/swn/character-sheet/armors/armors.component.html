@@ -5,7 +5,7 @@
     </h2>
 
     <div class="row" *ngFor="let armor of character.armor; let i = index">
-      <app-armor [class.col-10]="editMode" [armor]="armor" [index]="i" [editMode]="editMode"></app-armor>
+      <app-armor [class.col-10]="editMode" [item]="armor" [index]="i" [editMode]="editMode"></app-armor>
       <app-list-remove-button class="col-1" [(editMode)]="editMode" [index]="i" (click)="onRemove(i)"></app-list-remove-button>
     </div>
 

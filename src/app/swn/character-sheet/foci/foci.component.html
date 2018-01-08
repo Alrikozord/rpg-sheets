@@ -6,7 +6,7 @@
     </h2>
 
     <div class="row" *ngFor="let focus of character.foci; let i = index">
-      <app-focus [class.col-10]="editMode" [focus]="focus" [index]="i" [editMode]="editMode"></app-focus>
+      <app-focus [class.col-10]="editMode" [item]="focus" [index]="i" [editMode]="editMode"></app-focus>
       <app-list-remove-button class="col-1" [(editMode)]="editMode" [index]="i" (click)="onRemove(i)"></app-list-remove-button>
     </div>
 

@@ -1,9 +1,10 @@
 <div>
   <div class="input-group">
-    <input [readonly]="!editMode" type="text"  [ngClass]="editMode?'form-control col-9':'form-control'" [attr.name]="weapon.name" [(ngModel)]="weapon.name" placeholder="Name">
+    <input [readonly]="!editMode" type="text" [ngClass]="editMode?'form-control col-9':'form-control'" [attr.name]="item.name"
+      [(ngModel)]="item.name" placeholder="Name" [ngbTypeahead]="search" (selectItem)="onSelectItem($event)">
 
-    <span *ngIf="!editMode" class="input-group-addon">{{weapon.damage}}</span>
-    <input *ngIf="editMode" type="text" class="form-control col-3" [attr.name]="weapon.name" [(ngModel)]="weapon.damage" placeholder="Damage">
+    <span *ngIf="!editMode" class="input-group-addon">{{item.damage}}</span>
+    <input *ngIf="editMode" type="text" class="form-control col-3" [attr.name]="item.name" [(ngModel)]="item.damage" placeholder="Damage">
 
     <span class="input-group-btn">
       <button class="btn btn-dark" type="button" data-toggle="collapse" [attr.data-target]="'#' + 'weapon' + index">
@@ -17,35 +18,35 @@
     <div class="row">
       <div class="col-4  input-group">
         <span class="input-group-addon" id="basic-addon1">TL</span>
-        <input [readonly]="!editMode" type="number" class="form-control" id="tl" name="tl" [(ngModel)]="weapon.tl">
+        <input [readonly]="!editMode" type="number" class="form-control" id="tl" name="tl" [(ngModel)]="item.tl">
       </div>
 
       <div class="col-4 input-group">
         <span class="input-group-addon" id="basic-addon1">type</span>
-        <input [readonly]="!editMode" type="text" class="form-control" id="type" name="type" [(ngModel)]="weapon.type">
+        <input [readonly]="!editMode" type="text" class="form-control" id="type" name="type" [(ngModel)]="item.type">
       </div>
 
       <div class="col-4 input-group">
         <span class="input-group-addon" id="basic-addon1">enc</span>
-        <input [readonly]="!editMode" type="text" class="form-control" id="encumbrance" name="encumbrance" [(ngModel)]="weapon.encumbrance">
+        <input [readonly]="!editMode" type="text" class="form-control" id="encumbrance" name="encumbrance" [(ngModel)]="item.encumbrance">
       </div>
     </div>
 
     <div class="row">
       <div class="col-6 input-group">
         <span class="input-group-addon" id="basic-addon1">attribute</span>
-        <input [readonly]="!editMode" type="text" class="form-control" id="attribute" name="attribute" [(ngModel)]="weapon.attribute">
+        <input [readonly]="!editMode" type="text" class="form-control" id="attribute" name="attribute" [(ngModel)]="item.attribute">
       </div>
 
       <div class="col-4 input-group">
         <span class="input-group-addon" id="basic-addon1">range</span>
-        <input [readonly]="!editMode" type="text" class="form-control" id="effectiv" name="effectiv" [(ngModel)]="weapon.range.effectiv">
+        <input [readonly]="!editMode" type="text" class="form-control" id="effectiv" name="effectiv" [(ngModel)]="item.range.effectiv">
       </div>
-      <input [readonly]="!editMode" type="text" class="col-2 form-control" id="max" name="max" [(ngModel)]="weapon.range.max">
+      <input [readonly]="!editMode" type="text" class="col-2 form-control" id="max" name="max" [(ngModel)]="item.range.max">
     </div>
 
     <div class="row" style="padding-bottom: 5px">
-      <textarea [readonly]="!editMode" class="col" rows="3" id="details" name="details" [(ngModel)]="weapon.details"></textarea>
+      <textarea [readonly]="!editMode" class="col" rows="3" id="details" name="details" [(ngModel)]="item.details"></textarea>
     </div>
   </div>
 </div>

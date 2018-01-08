@@ -1,18 +1,18 @@
-import { Component, OnInit, Input } from "@angular/core";
+import { Component, OnInit } from "@angular/core";
 import { Cyberware } from "../../../models/index";
-import { EditToggleBaseComponent } from "../../../../basic-components/edit-toggle-components/index";
+import { CyberwareDataService } from "../../../data-files/index";
+import { TypeaheadBase } from "../../../../basic-components/edit-toggle-components/typeahead-base";
 
 @Component({
   selector: "app-cyberware",
   templateUrl: "./cyberware.component.html",
   styleUrls: ["./cyberware.component.css"]
 })
-export class CyberwareComponent extends EditToggleBaseComponent implements OnInit {
-  @Input() cyberware: Cyberware;
-  @Input() index: number;
+export class CyberwareComponent extends TypeaheadBase<Cyberware>
+  implements OnInit {
 
-  constructor() {
-    super();
+  constructor(dataService: CyberwareDataService) {
+    super(dataService);
   }
 
   ngOnInit() {}

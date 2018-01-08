@@ -3,8 +3,8 @@ import { Injectable } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
 import "rxjs/add/operator/map";
 import { ErrorHandler } from "@angular/core/src/error_handler";
-import { Observable } from "rxjs";
-import { DataFileObject } from "../models/data-file-object.interface";
+import { Observable } from "rxjs/Observable";
+import { DataFileObject } from "../models/data-file-object.class";
 import { observableToBeFn } from "rxjs/testing/TestScheduler";
 
 @Injectable()
