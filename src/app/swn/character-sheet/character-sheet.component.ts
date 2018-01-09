@@ -1,11 +1,4 @@
-import {
-  Component,
-  OnInit,
-  ApplicationRef,
-  NgZone,
-  ChangeDetectorRef,
-  isDevMode
-} from "@angular/core";
+import { Component, OnInit, ApplicationRef, isDevMode } from "@angular/core";
 import {
   Character,
   Attribute,
@@ -19,6 +12,9 @@ import {
   CharacterClass,
   Cyberware
 } from "../models/index";
+import { DropboxService } from "../../services/dropbox.service";
+import { ActivatedRoute, Params } from "@angular/router";
+import { PlatformLocation } from "@angular/common";
 
 @Component({
   selector: "app-character-sheet",
@@ -28,7 +24,12 @@ import {
 export class CharacterSheetComponent implements OnInit {
   public character: Character;
 
-  constructor(private cd: ChangeDetectorRef) {}
+  constructor(
+    platformLocation: PlatformLocation,
+    private dropbox: DropboxService
+  ) {
+    dropbox.parseRedirectHash((platformLocation as any).location.hash);
+  }
 
   get isDevMode() {
     // forewarding so it is available in the html
@@ -44,12 +45,12 @@ export class CharacterSheetComponent implements OnInit {
   }
 
   onLoad($event) {
-    const loadedChar = new Character();
+    const loadedChar = new Character(this.dropbox);
     loadedChar.load($event.target.files[0]);
     this.character = loadedChar;
   }
 
   private initCharacter() {
-    this.character = new Character();
+    this.character = new Character(this.dropbox);
   }
 }

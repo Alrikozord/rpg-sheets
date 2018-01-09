@@ -11,17 +11,20 @@ import { SerializableProperties } from "./serializable-properties.class";
 import { CharacterClass } from "./character-class.enum";
 import { CharacterBase } from "../../basic-components/models/character-base.class";
 import { EquipmentItem } from "./equipment-item.model";
+import { DropboxService } from "../../services/dropbox.service";
 
 export class Character extends CharacterBase {
   public serializables: SerializableProperties;
 
   public derived: DynamicCharacterValueProvider;
 
-  constructor(jsonString?: string) {
-    super();
+  constructor(dropbox: DropboxService, jsonString?: string) {
+    super(dropbox);
+
     this.serializables = new SerializableProperties();
     if (jsonString) {
       const jsonObj: any = JSON.parse(jsonString);
+      // tslint:disable-next-line:forin
       for (const prop in jsonObj) {
         this[prop] = jsonObj[prop];
       }
@@ -46,12 +49,18 @@ export class Character extends CharacterBase {
   }
 
   public save() {
+    this.dropbox.authorize();
+
     const date: string = new Date(Date.now()).toISOString();
 
-    super.generateDownload(
+    this.dropbox.upload(
       JSON.stringify(this.serializables),
       this.name + "_" + date + ".json"
     );
+    /*  super.generateDownload(
+      JSON.stringify(this.serializables),
+      this.name + "_" + date + ".json"
+    ); */
   }
 
   public get isPsychic(): boolean {

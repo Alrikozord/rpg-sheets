@@ -43,6 +43,15 @@ import { TechniquesComponent } from "./swn/character-sheet/techniques/techniques
 import { TechniqueComponent } from "./swn/character-sheet/techniques/technique/technique.component";
 import { TechniqueDataService } from "./swn/data-files/technique-data-service";
 import { EffortComponent } from "./swn/character-sheet/stats/effort/effort.component";
+import { DropboxService } from "./services/dropbox.service";
+import {
+  Router,
+  ActivatedRoute,
+  Params,
+  RouterModule,
+  Route
+} from "@angular/router";
+import { CookieModule } from "ngx-cookie";
 
 @NgModule({
   declarations: [
@@ -75,7 +84,15 @@ import { EffortComponent } from "./swn/character-sheet/stats/effort/effort.compo
     TechniqueComponent,
     EffortComponent
   ],
-  imports: [BrowserModule, FormsModule, HttpClientModule, NgbModule.forRoot()],
+  imports: [
+    BrowserModule,
+    FormsModule,
+    HttpClientModule,
+    NgbModule.forRoot(),
+    RouterModule.forRoot(new Array<Route>()),
+    CookieModule.forRoot()
+  ],
+  exports: [RouterModule],
   providers: [
     ArmorDataService,
     CyberwareDataService,
@@ -83,7 +100,8 @@ import { EffortComponent } from "./swn/character-sheet/stats/effort/effort.compo
     FocusDataService,
     SkillDataService,
     TechniqueDataService,
-    WeaponDataService
+    WeaponDataService,
+    DropboxService
   ],
   bootstrap: [AppComponent]
 })

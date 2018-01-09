@@ -1,4 +1,8 @@
+import { DropboxService } from "../../services/dropbox.service";
+
 export abstract class CharacterBase {
+  constructor(protected dropbox: DropboxService) {}
+
   public abstract save(): void;
 
   protected generateDownload(data, filename: string) {
