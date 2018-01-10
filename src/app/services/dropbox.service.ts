@@ -8,7 +8,7 @@ import { Observable } from "rxjs/Observable";
 
 @Injectable()
 export class DropboxService {
-  private authTokenCookieKey = "dbx_tkn";
+  private static readonly authTokenCookieKey = "dbx_tkn";
   private client_id = "lvs6n59sctp3vq1";
   private href: string;
   private _authToken: string;
@@ -18,18 +18,18 @@ export class DropboxService {
   }
   private set authToken(value: string) {
     this._authToken = value;
-    this._cookieService.put(this.authTokenCookieKey, this.authToken);
+    this.cookieService.put(DropboxService.authTokenCookieKey, this.authToken);
   }
 
   constructor(
-    private _cookieService: CookieService,
-    platformLocation: PlatformLocation,
-    private http: HttpClient
+    private cookieService: CookieService,
+    private http: HttpClient,
+    platformLocation: PlatformLocation
   ) {
     this.href = (platformLocation as any).location.origin;
     this.parseRedirectHash((platformLocation as any).location.hash);
 
-    this.authToken = this._cookieService.get(this.authTokenCookieKey);
+    this.authToken = this.cookieService.get(DropboxService.authTokenCookieKey);
   }
 
   public parseRedirectHash(hash: string) {

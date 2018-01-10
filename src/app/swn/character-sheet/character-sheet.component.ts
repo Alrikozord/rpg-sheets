@@ -17,6 +17,7 @@ import { ActivatedRoute, Params } from "@angular/router";
 import { PlatformLocation } from "@angular/common";
 import { Observable } from "rxjs/Observable";
 import { error } from "selenium-webdriver";
+import { CookieService } from "ngx-cookie";
 
 @Component({
   selector: "app-character-sheet",
@@ -24,11 +25,12 @@ import { error } from "selenium-webdriver";
   styleUrls: ["./character-sheet.component.css"]
 })
 export class CharacterSheetComponent implements OnInit {
+  private static readonly lastDropboxCharCookieKey = "lst_dbx_chr";
   public character: Character;
   charNames$: Observable<string[]>;
 
   constructor(
-    platformLocation: PlatformLocation,
+    private cookieService: CookieService,
     protected dropbox: DropboxService
   ) {}
 
@@ -51,6 +53,8 @@ export class CharacterSheetComponent implements OnInit {
     const charJson = this.character.save();
 
     this.generateDownload(charJson, fileName);
+
+    this.cookieService.remove(CharacterSheetComponent.lastDropboxCharCookieKey);
   }
 
   private getFileName() {
@@ -76,12 +80,16 @@ export class CharacterSheetComponent implements OnInit {
     const fileName = this.getFileName();
     const charJson = this.character.save();
 
-    this.dropbox
-      .upload(charJson, fileName)
-      .subscribe(
-        result => this.updateCharNames(),
-        err => this.dropbox.logError(err)
-      );
+    this.dropbox.upload(charJson, fileName).subscribe(
+      result => {
+        this.updateCharNames();
+        this.cookieService.put(
+          CharacterSheetComponent.lastDropboxCharCookieKey,
+          fileName
+        );
+      },
+      err => this.dropbox.logError(err)
+    );
   }
 
   onLoadFromDisk($event) {
@@ -99,6 +107,8 @@ export class CharacterSheetComponent implements OnInit {
     loadedChar.load(json);
 
     this.character = loadedChar;
+
+    this.cookieService.remove(CharacterSheetComponent.lastDropboxCharCookieKey);
   }
 
   onLoadFromDropbox(fileName: string) {
@@ -109,8 +119,13 @@ export class CharacterSheetComponent implements OnInit {
         loadedChar.load(JSON.stringify(result));
 
         this.character = loadedChar;
+
+        this.cookieService.put(
+          CharacterSheetComponent.lastDropboxCharCookieKey,
+          fileName
+        );
       },
-      error => this.dropbox.logError(error)
+      err => this.dropbox.logError(err)
     );
   }
 
@@ -119,11 +134,19 @@ export class CharacterSheetComponent implements OnInit {
       .listFolderContent()
       .map(
         response => response.entries.map(entry => entry.name),
-        error => this.dropbox.logError(error)
+        err => this.dropbox.logError(err)
       );
   }
 
   private initCharacter() {
+    const lastDropboxFileName = this.cookieService.get(
+      CharacterSheetComponent.lastDropboxCharCookieKey
+    );
+
     this.character = new Character();
+
+    if (lastDropboxFileName !== undefined && this.dropbox.isAuthorized) {
+      this.onLoadFromDropbox(lastDropboxFileName);
+    }
   }
 }
