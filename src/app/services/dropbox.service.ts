@@ -11,7 +11,15 @@ export class DropboxService {
   private authTokenCookieKey = "dbx_tkn";
   private client_id = "lvs6n59sctp3vq1";
   private href: string;
-  private authToken: string;
+  private _authToken: string;
+
+  private get authToken(): string {
+    return this._authToken;
+  }
+  private set authToken(value: string) {
+    this._authToken = value;
+    this._cookieService.put(this.authTokenCookieKey, this.authToken);
+  }
 
   constructor(
     private _cookieService: CookieService,
@@ -19,16 +27,21 @@ export class DropboxService {
     private http: HttpClient
   ) {
     this.href = (platformLocation as any).location.origin;
+    this.parseRedirectHash((platformLocation as any).location.hash);
+
     this.authToken = this._cookieService.get(this.authTokenCookieKey);
   }
 
   public parseRedirectHash(hash: string) {
-    if (hash === "") {
+    if (hash === "" || hash === undefined) {
       return;
     }
     const params = new DropboxAuthResponse(hash);
     this.authToken = params.getAccessToken();
-    this._cookieService.put(this.authTokenCookieKey, this.authToken);
+  }
+
+  public get isAuthorized(): boolean {
+    return this.authToken !== "" && this.authToken !== undefined;
   }
 
   public authorize() {
@@ -42,7 +55,7 @@ export class DropboxService {
       "https://www.dropbox.com/oauth2/authorize?" + parameters.toString();
   }
 
-  public upload(json: string, name) {
+  public upload(json: string, name): Observable<any> {
     const paramsJson = JSON.stringify({
       path: "/swn/" + name,
       mode: "add",
@@ -62,7 +75,14 @@ export class DropboxService {
     );
   }
 
-  public download(name: string): Observable<Object> {
+  public uploadIgnoreResponse(json: string, name): void {
+    this.upload(json, name).subscribe(
+      result => console.log(result),
+      error => this.logError(error)
+    );
+  }
+
+  public download(name: string): Observable<any> {
     const paramsJson = JSON.stringify({
       path: "/swn/" + name
     });
@@ -78,7 +98,7 @@ export class DropboxService {
     );
   }
 
-  public listFolderContent(): Observable<Object> {
+  public listFolderContent(): Observable<any> {
     const paramsJson = JSON.stringify({
       path: "/swn",
       recursive: false,

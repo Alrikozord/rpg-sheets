@@ -15,6 +15,8 @@ import {
 import { DropboxService } from "../../services/dropbox.service";
 import { ActivatedRoute, Params } from "@angular/router";
 import { PlatformLocation } from "@angular/common";
+import { Observable } from "rxjs/Observable";
+import { error } from "selenium-webdriver";
 
 @Component({
   selector: "app-character-sheet",
@@ -23,13 +25,12 @@ import { PlatformLocation } from "@angular/common";
 })
 export class CharacterSheetComponent implements OnInit {
   public character: Character;
+  charNames$: Observable<string[]>;
 
   constructor(
     platformLocation: PlatformLocation,
-    private dropbox: DropboxService
-  ) {
-    dropbox.parseRedirectHash((platformLocation as any).location.hash);
-  }
+    protected dropbox: DropboxService
+  ) {}
 
   get isDevMode() {
     // forewarding so it is available in the html
@@ -38,19 +39,91 @@ export class CharacterSheetComponent implements OnInit {
 
   ngOnInit() {
     this.initCharacter();
+    this.updateCharNames();
   }
 
-  onSave() {
-    this.character.save();
+  private updateCharNames() {
+    this.charNames$ = this.getDropboxFileNames();
   }
 
-  onLoad($event) {
-    const loadedChar = new Character(this.dropbox);
-    loadedChar.load($event.target.files[0]);
+  onSaveToDisc() {
+    const fileName = this.getFileName();
+    const charJson = this.character.save();
+
+    this.generateDownload(charJson, fileName);
+  }
+
+  private getFileName() {
+    const date = new Date(Date.now()).toISOString();
+    return this.character.name + "_" + date + ".json";
+  }
+
+  private generateDownload(data, filename: string) {
+    const blob = new Blob(["\ufeff" + data], {
+      type: "application/json;charset=utf-8;"
+    });
+    const dwldLink = document.createElement("a");
+    const url = URL.createObjectURL(blob);
+    dwldLink.setAttribute("href", url);
+    dwldLink.setAttribute("download", filename);
+    dwldLink.style.visibility = "hidden";
+    document.body.appendChild(dwldLink);
+    dwldLink.click();
+    document.body.removeChild(dwldLink);
+  }
+
+  onSaveToDropbox() {
+    const fileName = this.getFileName();
+    const charJson = this.character.save();
+
+    this.dropbox
+      .upload(charJson, fileName)
+      .subscribe(
+        result => this.updateCharNames(),
+        err => this.dropbox.logError(err)
+      );
+  }
+
+  onLoadFromDisk($event) {
+    const reader = new FileReader();
+    const file = $event.target.files[0];
+
+    reader.onloadend = e => this.onloaded(e);
+    reader.readAsText(file);
+  }
+
+  private onloaded(e: ProgressEvent) {
+    const json = (<FileReader>e.target).result;
+    const loadedChar = new Character();
+
+    loadedChar.load(json);
+
     this.character = loadedChar;
   }
 
+  onLoadFromDropbox(fileName: string) {
+    this.dropbox.download(fileName).subscribe(
+      result => {
+        const loadedChar = new Character();
+
+        loadedChar.load(JSON.stringify(result));
+
+        this.character = loadedChar;
+      },
+      error => this.dropbox.logError(error)
+    );
+  }
+
+  getDropboxFileNames(): Observable<string[]> {
+    return this.dropbox
+      .listFolderContent()
+      .map(
+        response => response.entries.map(entry => entry.name),
+        error => this.dropbox.logError(error)
+      );
+  }
+
   private initCharacter() {
-    this.character = new Character(this.dropbox);
+    this.character = new Character();
   }
 }
