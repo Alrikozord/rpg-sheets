@@ -44,13 +44,6 @@ import { TechniqueComponent } from "./swn/character-sheet/techniques/technique/t
 import { TechniqueDataService } from "./swn/data-files/technique-data-service";
 import { EffortComponent } from "./swn/character-sheet/stats/effort/effort.component";
 import { DropboxService } from "./services/dropbox.service";
-import {
-  Router,
-  ActivatedRoute,
-  Params,
-  RouterModule,
-  Route
-} from "@angular/router";
 import { CookieModule } from "ngx-cookie";
 
 @NgModule({
@@ -89,10 +82,8 @@ import { CookieModule } from "ngx-cookie";
     FormsModule,
     HttpClientModule,
     NgbModule.forRoot(),
-    RouterModule.forRoot(new Array<Route>()),
     CookieModule.forRoot()
   ],
-  exports: [RouterModule],
   providers: [
     ArmorDataService,
     CyberwareDataService,

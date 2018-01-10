@@ -31,7 +31,7 @@ export class CharacterSheetComponent implements OnInit {
 
   constructor(
     private cookieService: CookieService,
-    protected dropbox: DropboxService
+    public dropbox: DropboxService
   ) {}
 
   get isDevMode() {
