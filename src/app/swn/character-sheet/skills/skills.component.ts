@@ -24,7 +24,7 @@ export class SkillsComponent extends EditToggleListBase implements OnInit {
     this.character.skills.push(new Skill());
   }
   public onRemove(index: number): void {
-    this.character.skills.slice(index, 1);
+    this.character.skills.splice(index, 1);
   }
 
   ToggleEditMode(){

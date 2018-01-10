@@ -20,6 +20,6 @@ export class CyberwaresComponent extends EditToggleListBase implements OnInit {
     this.character.cyberware.push(new Cyberware());
   }
   public onRemove(index: number): void {
-    this.character.cyberware.slice(index, 1);
+    this.character.cyberware.splice(index, 1);
   }
 }
