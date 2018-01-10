@@ -49,18 +49,12 @@ export class Character extends CharacterBase {
   }
 
   public save() {
-    this.dropbox.authorize();
-
     const date: string = new Date(Date.now()).toISOString();
 
-    this.dropbox.upload(
+    super.generateDownload(
       JSON.stringify(this.serializables),
       this.name + "_" + date + ".json"
     );
-    /*  super.generateDownload(
-      JSON.stringify(this.serializables),
-      this.name + "_" + date + ".json"
-    ); */
   }
 
   public get isPsychic(): boolean {
