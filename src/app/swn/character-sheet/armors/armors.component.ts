@@ -20,6 +20,6 @@ export class ArmorsComponent extends EditToggleListBase implements OnInit {
     this.character.armor.push(new Armor());
   }
   public onRemove(index: number): void {
-    this.character.armor.slice(index, 1);
+    this.character.armor.splice(index, 1);
   }
 }
