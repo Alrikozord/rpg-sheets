@@ -30,7 +30,7 @@
             </button>
             <div class="dropdown-menu col" aria-labelledby="dropdownMenuSave">
               <button class="dropdown-item" type="button" (click)="onSaveToDisc()">to disc...</button>
-              <button [disabled]="dropbox.isAuthorized" class="dropdown-item" type="button" (click)="onSaveToDropbox()">to Dropbox</button>
+              <button [disabled]="!dropbox.isAuthorized" class="dropdown-item" type="button" (click)="onSaveToDropbox()">to Dropbox</button>
             </div>
           </div>
         </div>
