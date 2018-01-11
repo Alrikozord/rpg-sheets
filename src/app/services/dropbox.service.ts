@@ -26,7 +26,7 @@ export class DropboxService {
     private http: HttpClient,
     platformLocation: PlatformLocation
   ) {
-    this.href = (platformLocation as any).location.origin;
+    this.href = (platformLocation as any).location.origin + (platformLocation as any).location.pathname;
     this.parseRedirectHash((platformLocation as any).location.hash);
 
     this.authToken = this.cookieService.get(DropboxService.authTokenCookieKey);
