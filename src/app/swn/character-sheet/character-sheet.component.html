@@ -21,16 +21,55 @@
         <app-goals [character]="character"></app-goals>
         <app-notes [character]="character"></app-notes>
 
-        <button class="col-5 btn btn-dark" type="button" (click)="onSave()">
-          <span class="glyphicon glyphicon-floppy-disk"></span>
-        </button>
-        <label class="col-5 btn btn-dark">
-          <span class="glyphicon glyphicon-open"></span>
-          <input accept=".json" type="file" style="display: none;" (change)="onLoad($event)">
-        </label>
+        <div class="row">
+
+          <div class="dropdown col">
+            <button class="col btn btn-dark dropdown-toggle" type="button" id="dropdownMenuSave" data-toggle="dropdown" aria-haspopup="true"
+              aria-expanded="false">
+              <span class="glyphicon glyphicon-floppy-disk"></span>
+            </button>
+            <div class="dropdown-menu col" aria-labelledby="dropdownMenuSave">
+              <button class="dropdown-item" type="button" (click)="onSaveToDisc()">to disc...</button>
+              <button [disabled]="!dropbox.isAuthorized" class="dropdown-item" type="button" (click)="onSaveToDropbox()">to Dropbox</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="dropdown col">
+            <button class="col btn btn-dark dropdown-toggle" type="button" id="dropdownMenuLoad" data-toggle="dropdown" aria-haspopup="true"
+              aria-expanded="false">
+              <span class="glyphicon glyphicon-open"></span>
+            </button>
+            <div class="dropdown-menu col" aria-labelledby="dropdownMenuLoad">
+              <label class="dropdown-item">
+                from disc...
+                <input accept=".json" type="file" style="display: none;" (change)="onLoadFromDisk($event)">
+              </label>
+              <div class="dropdown-divider"></div>
+              <div *ngIf="dropbox.isAuthorized">
+                <button *ngFor="let item of charNames$ | async" class="dropdown-item" type="button" (click)="onLoadFromDropbox(item)">from Dropbox: {{item}}</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row justify-content-md-center">
+          <div *ngIf="dropbox.isAuthorized" class="alert alert-success col-8">
+            Authorized for Dropbox
+          </div>
+        </div>
+        <div class="row justify-content-md-center">
+          <div *ngIf="!dropbox.isAuthorized" class="alert alert-danger col-8" (click)="dropbox.authorize()">
+            not Authorized for Dropbox! Click to authenticate
+          </div>
+        </div>
 
       </div>
     </div>
   </div>
+  <ngb-alert *ngIf="successMessage" type="success" (close)="successMessage = null">{{ successMessage }}</ngb-alert>
+  <ngb-alert *ngIf="failureMessage" type="success" (close)="failureMessage = null">{{ failureMessage }}</ngb-alert>
+
   <pre *ngIf="isDevMode" align="left">{{character.serializables|json}}</pre>
 </div>
