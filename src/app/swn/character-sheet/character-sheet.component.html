@@ -1,34 +1,35 @@
 <div class="container-fluid" style="text-align:center">
   <div class="row">
-    <div class="col-4">
+    <div class="col-md-6 col-xl-4">
       <app-info [character]="character"></app-info>
       <app-stats [character]="character"></app-stats>
       <app-attributes [character]="character"></app-attributes>
     </div>
+    <div class="col-md-6 col-xl-8">
+      <div class="col-md-12 col-xl-6">
+        <app-weapons [character]="character"></app-weapons>
+        <app-armors [character]="character"></app-armors>
+        <app-foci [character]="character"></app-foci>
+        <app-equipment [character]="character"></app-equipment>
+        <app-cyberwares [character]="character"></app-cyberwares>
+      </div>
 
-    <div class="col-4">
-      <app-weapons [character]="character"></app-weapons>
-      <app-armors [character]="character"></app-armors>
-      <app-foci [character]="character"></app-foci>
-      <app-equipment [character]="character"></app-equipment>
-      <app-cyberwares [character]="character"></app-cyberwares>
-    </div>
+      <div class="col-md-12 col-xl-6">
+        <app-finances [character]="character"></app-finances>
+        <app-skills [character]="character"></app-skills>
+        <app-techniques [character]="character"></app-techniques>
+        <app-goals [character]="character"></app-goals>
+        <app-notes [character]="character"></app-notes>
 
-    <div class="col-4">
-      <app-finances [character]="character"></app-finances>
-      <app-skills [character]="character"></app-skills>
-      <app-techniques [character]="character"></app-techniques>
-      <app-goals [character]="character"></app-goals>
-      <app-notes [character]="character"></app-notes>
+        <button class="col-5 btn btn-dark" type="button" (click)="onSave()">
+          <span class="glyphicon glyphicon-floppy-disk"></span>
+        </button>
+        <label class="col-5 btn btn-dark">
+          <span class="glyphicon glyphicon-open"></span>
+          <input accept=".json" type="file" style="display: none;" (change)="onLoad($event)">
+        </label>
 
-      <button class="col-5 btn btn-dark" type="button" (click)="onSave()">
-        <span class="glyphicon glyphicon-floppy-disk"></span>
-      </button>
-      <label class="col-5 btn btn-dark">
-        <span class="glyphicon glyphicon-open"></span>
-        <input accept=".json" type="file" style="display: none;" (change)="onLoad($event)">
-      </label>
-
+      </div>
     </div>
   </div>
   <pre *ngIf="isDevMode" align="left">{{character.serializables|json}}</pre>
