@@ -11,6 +11,7 @@ import { SerializableProperties } from "./serializable-properties.class";
 import { CharacterClass } from "./character-class.enum";
 import { CharacterBase } from "../../basic-components/models/character-base.class";
 import { EquipmentItem } from "./equipment-item.model";
+import { Armature } from "./armature.model";
 
 export class Character extends CharacterBase {
   public serializables: SerializableProperties;
@@ -94,6 +95,13 @@ export class Character extends CharacterBase {
   }
   public get isPartialExpert(): boolean {
     return this.isExpert && !this.isFullExpert;
+  }
+
+  public get isAi(): boolean {
+    return (
+      this.class === CharacterClass.trueAi ||
+      this.class === CharacterClass.partialTrueAi
+    );
   }
 
   // SerializableProperties proxy
@@ -205,6 +213,13 @@ export class Character extends CharacterBase {
   }
   public set finances(value: { credits: number; items: any[] }) {
     this.serializables.finances = value;
+  }
+
+  public get armature(): Armature {
+    return this.serializables.armature;
+  }
+  public set armature(value: Armature) {
+    this.serializables.armature = value;
   }
 
   public get armor(): Armor[] {

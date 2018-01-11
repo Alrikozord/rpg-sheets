@@ -4,6 +4,7 @@
       <app-info [character]="character"></app-info>
       <app-stats [character]="character"></app-stats>
       <app-attributes [character]="character"></app-attributes>
+      <app-armature *ngIf="character.isAi" [character]="character"></app-armature>
     </div>
     <div class="col-md-6 col-xl-8">
       <div class="col-md-12 col-xl-6">
@@ -18,6 +19,7 @@
         <app-finances [character]="character"></app-finances>
         <app-skills [character]="character"></app-skills>
         <app-techniques [character]="character" *ngIf="character.isPsychic"></app-techniques>
+        <app-routines [character]="character" *ngIf="character.isAi"></app-routines>
         <app-goals [character]="character"></app-goals>
         <app-notes [character]="character"></app-notes>
 

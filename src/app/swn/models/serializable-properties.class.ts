@@ -8,6 +8,8 @@ import { Goal } from "./goal.model";
 import { CharacterClass } from "./character-class.enum";
 import { EquipmentItem } from "./equipment-item.model";
 import { Technique } from "./technique.model";
+import { Armature } from "./armature.model";
+import { Routine } from "./routine.model";
 
 export class SerializableProperties {
   public name: string;
@@ -20,9 +22,11 @@ export class SerializableProperties {
   public hp: { current: number; max: number };
   public systemstrain: { current: number; max: number };
   public effort: { scene: number; day: number; other: number; max: number };
+  public armature: Armature;
   public foci: Focus[];
   public skills: Skill[];
   public techniques: Technique[];
+  public routines: Routine[];
   public finances: { credits: number; items: any[] };
   public armor: Armor[];
   public weapons: Weapon[];
@@ -46,9 +50,11 @@ export class SerializableProperties {
     this.hp = { current: 0, max: 0 };
     this.systemstrain = { current: 0, max: 0 };
     this.effort = { scene: 0, day: 0, other: 0, max: 0 };
+    this.armature = new Armature();
     this.foci = new Array<Focus>();
     this.skills = new Array<Skill>();
     this.techniques = new Array<Technique>();
+    this.routines = new Array<Routine>();
     this.finances = { credits: 0, items: new Array<any>() };
     this.armor = new Array<Armor>();
     this.weapons = new Array<Weapon>();

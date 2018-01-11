@@ -10,6 +10,14 @@ import { Character } from "../../../models/index";
 export class EffortComponent extends EditToggleBaseComponent implements OnInit {
   @Input() character: Character;
 
+  get headline(): string {
+    if (this.character.isAi) {
+      return "Processing Power";
+    } else {
+      return "Effort";
+    }
+  }
+
   constructor() {
     super();
   }

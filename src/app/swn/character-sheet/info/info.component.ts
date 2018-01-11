@@ -42,6 +42,10 @@ export class InfoComponent extends EditToggleBaseComponent implements OnInit {
         return "warrior / expert";
       case CharacterClass.warriorPsychic:
         return "warrior / psychic";
+      case CharacterClass.trueAi:
+        return "true ai";
+      case CharacterClass.partialTrueAi:
+        return "partial true ai";
       default:
         return CharacterClass[characterClass];
     }

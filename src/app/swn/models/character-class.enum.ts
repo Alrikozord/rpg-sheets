@@ -4,5 +4,7 @@ export enum CharacterClass {
   psychic = 4,
   warriorExpert = 3,
   warriorPsychic = 5,
-  expertPsychic = 6
+  expertPsychic = 6,
+  trueAi = 12,
+  partialTrueAi = 24
 }

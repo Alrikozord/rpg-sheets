@@ -43,6 +43,11 @@ import { TechniquesComponent } from "./swn/character-sheet/techniques/techniques
 import { TechniqueComponent } from "./swn/character-sheet/techniques/technique/technique.component";
 import { TechniqueDataService } from "./swn/data-files/technique-data-service";
 import { EffortComponent } from "./swn/character-sheet/stats/effort/effort.component";
+import { RoutinesComponent } from "./swn/character-sheet/routines/routines.component";
+import { RoutineComponent } from "./swn/character-sheet/routines/routine/routine.component";
+import { RoutineDataService } from "./swn/data-files/routine-data-service";
+import { ArmatureComponent } from "./swn/character-sheet/armature/armature.component";
+import { ArmatureDataService } from "./swn/data-files/armature-data-service";
 
 @NgModule({
   declarations: [
@@ -73,14 +78,19 @@ import { EffortComponent } from "./swn/character-sheet/stats/effort/effort.compo
     EquipmentItemComponent,
     TechniquesComponent,
     TechniqueComponent,
-    EffortComponent
+    EffortComponent,
+    RoutinesComponent,
+    RoutineComponent,
+    ArmatureComponent
   ],
   imports: [BrowserModule, FormsModule, HttpClientModule, NgbModule.forRoot()],
   providers: [
+    ArmatureDataService,
     ArmorDataService,
     CyberwareDataService,
     EquipmentDataService,
     FocusDataService,
+    RoutineDataService,
     SkillDataService,
     TechniqueDataService,
     WeaponDataService

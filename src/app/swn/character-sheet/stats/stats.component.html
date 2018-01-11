@@ -34,7 +34,7 @@
       </div>
     </div>
 
-    <app-effort [character]="character" [editMode]="editMode"></app-effort>
+    <app-effort *ngIf="character.isPsychic || character.isAi" [character]="character" [editMode]="editMode"></app-effort>
 
     <div class="form-group row justify-content-center">
       <label class="col-3 col-form-label" style="text-align:right;">Attack Bonus</label>
@@ -48,11 +48,11 @@
       <label class="col-1 col-form-label" style="text-align:left;">{{character.derived.maxEncumbranceStowed}}</label>
     </div>
     <div class="form-group row justify-content-center">
-        <label class="col-3 col-form-label" style="text-align:right;">currently readied</label>
-        <label class="col-1 col-form-label" style="text-align:left;">{{character.derived.sumEncumbranceReadied}}</label>
-        <label class="col-3 col-form-label" style="text-align:right;">currently stowed</label>
-        <label class="col-1 col-form-label" style="text-align:left;">{{character.derived.sumEncumbranceStowed}}</label>
-      </div>
+      <label class="col-3 col-form-label" style="text-align:right;">currently readied</label>
+      <label class="col-1 col-form-label" style="text-align:left;">{{character.derived.sumEncumbranceReadied}}</label>
+      <label class="col-3 col-form-label" style="text-align:right;">currently stowed</label>
+      <label class="col-1 col-form-label" style="text-align:left;">{{character.derived.sumEncumbranceStowed}}</label>
+    </div>
     <div class="row justify-content-md-center">
       <div *ngIf="character.derived.isEncumbered && !character.derived.isHeavylyEncumbered" class="alert alert-success col-8">
         lightly encumbered

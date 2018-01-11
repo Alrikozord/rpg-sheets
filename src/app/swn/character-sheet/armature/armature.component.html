@@ -1,0 +1,25 @@
+<div class="container-4 well bs-component" style="text-align:center">
+
+    <h2>Armature
+        <app-edit-toggle-button [(editMode)]="editMode" (click)="ToggleEditMode()"></app-edit-toggle-button>
+      </h2>
+
+  <div class="input-group">
+    <input [readonly]="!editMode" type="text" class="form-control" name="name" [(ngModel)]="this.character.armature.name"
+      placeholder="Name" [ngbTypeahead]="search" (selectItem)="onSelectItem($event)">
+
+    <span class="input-group-btn">
+      <button class="btn btn-dark" type="button" data-toggle="collapse" [attr.data-target]="'#' + 'armature_details'">
+        details
+      </button>
+    </span>
+  </div>
+
+  <div class="collapse container-fluid" [attr.id]="'armature_details'">
+
+    <textarea [readonly]="!editMode" class="col" rows="7" placeholder="Description" [(ngModel)]="this.character.armature.details"></textarea>
+    <textarea [readonly]="!editMode" class="col" rows="7" placeholder="Basic Abilities" [(ngModel)]="this.character.armature.basicAbilities"></textarea>
+    <textarea [readonly]="!editMode" class="col" rows="7" placeholder="Affinity Abilities" [(ngModel)]="this.character.armature.affinityAbilities"></textarea>
+
+  </div>
+</div>

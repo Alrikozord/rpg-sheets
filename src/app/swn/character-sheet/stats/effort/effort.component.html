@@ -1,6 +1,6 @@
-<div *ngIf="character.isPsychic">
+<div>
   <div class="form-group row">
-    <h4 class="col-6" style="text-align:right;">Effort</h4>
+    <h4 class="col-6" style="text-align:right;">{{headline}}</h4>
     <span *ngIf="!editMode"> max {{character.effort.max}}</span>
 
     <div *ngIf="editMode" class="col-3 input-group">
@@ -72,7 +72,7 @@
   <br>
   <div class="row justify-content-md-center">
     <div *ngIf="isEffortLimitReached" class="alert alert-danger col-8">
-      <strong>Effort limit reached!</strong>
+      <strong>{{headline}} limit reached!</strong>
     </div>
   </div>
 </div>
