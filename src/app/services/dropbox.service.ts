@@ -55,6 +55,7 @@ export class DropboxService {
       "https://www.dropbox.com/oauth2/authorize?" + parameters.toString();
   }
 
+  // https://www.dropbox.com/developers/documentation/http/documentation#files-upload
   public upload(json: string, name): Observable<any> {
     const paramsJson = JSON.stringify({
       path: "/swn/" + name,
@@ -82,6 +83,7 @@ export class DropboxService {
     );
   }
 
+  // https://www.dropbox.com/developers/documentation/http/documentation#files-download
   public download(name: string): Observable<any> {
     const paramsJson = JSON.stringify({
       path: "/swn/" + name
@@ -98,6 +100,7 @@ export class DropboxService {
     );
   }
 
+  // https://www.dropbox.com/developers/documentation/http/documentation#files-list_folder
   public listFolderContent(): Observable<any> {
     const paramsJson = JSON.stringify({
       path: "/swn",

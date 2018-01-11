@@ -68,5 +68,8 @@
       </div>
     </div>
   </div>
+  <ngb-alert *ngIf="successMessage" type="success" (close)="successMessage = null">{{ successMessage }}</ngb-alert>
+  <ngb-alert *ngIf="failureMessage" type="success" (close)="failureMessage = null">{{ failureMessage }}</ngb-alert>
+
   <pre *ngIf="isDevMode" align="left">{{character.serializables|json}}</pre>
 </div>

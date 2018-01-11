@@ -18,6 +18,8 @@ import { PlatformLocation } from "@angular/common";
 import { Observable } from "rxjs/Observable";
 import { error } from "selenium-webdriver";
 import { CookieService } from "ngx-cookie";
+import { Subject } from "rxjs/Subject";
+import { debounceTime } from "rxjs/operator/debounceTime";
 
 @Component({
   selector: "app-character-sheet",
@@ -27,6 +29,10 @@ import { CookieService } from "ngx-cookie";
 export class CharacterSheetComponent implements OnInit {
   private static readonly lastDropboxCharCookieKey = "lst_dbx_chr";
   public character: Character;
+  private _dropBoxSaveSuccess = new Subject<string>();
+  private _dropBoxSaveFailure = new Subject<string>();
+  successMessage: string;
+  failureMessage: string;
   charNames$: Observable<string[]>;
 
   constructor(
@@ -42,10 +48,31 @@ export class CharacterSheetComponent implements OnInit {
   ngOnInit() {
     this.initCharacter();
     this.updateCharNames();
+
+    this.setupSaveSuccessMessage();
+    this.setupSaveFailureMessage();
   }
 
   private updateCharNames() {
     this.charNames$ = this.getDropboxFileNames();
+  }
+
+  private setupSaveSuccessMessage() {
+    this._dropBoxSaveSuccess.subscribe(
+      message => (this.successMessage = message)
+    );
+    debounceTime
+      .call(this._dropBoxSaveSuccess, 5000)
+      .subscribe(() => (this.successMessage = null));
+  }
+
+  private setupSaveFailureMessage() {
+    this._dropBoxSaveFailure.subscribe(
+      message => (this.failureMessage = message)
+    );
+    debounceTime
+      .call(this._dropBoxSaveFailure, 5000)
+      .subscribe(() => (this.failureMessage = null));
   }
 
   onSaveToDisc() {
@@ -87,8 +114,13 @@ export class CharacterSheetComponent implements OnInit {
           CharacterSheetComponent.lastDropboxCharCookieKey,
           fileName
         );
+
+        this._dropBoxSaveSuccess.next("save successful");
       },
-      err => this.dropbox.logError(err)
+      err => {
+        this.dropbox.logError(err);
+        this._dropBoxSaveFailure.next("save failed!");
+      }
     );
   }
 
@@ -130,12 +162,24 @@ export class CharacterSheetComponent implements OnInit {
   }
 
   getDropboxFileNames(): Observable<string[]> {
-    return this.dropbox
-      .listFolderContent()
-      .map(
-        response => response.entries.map(entry => entry.name),
-        err => this.dropbox.logError(err)
-      );
+    return this.dropbox.listFolderContent().map(
+      response =>
+        (<any[]>response.entries)
+          .sort((a: any, b: any) => {
+            const dateA = Date.parse(a.server_modified);
+            const dateB = Date.parse(b.server_modified);
+            if (dateA < dateB) {
+              return -1;
+            } else if (dateA > dateB) {
+              return 1;
+            } else {
+              return 0;
+            }
+          })
+          .reverse()
+          .map(entry => entry.name),
+      err => this.dropbox.logError(err)
+    );
   }
 
   private initCharacter() {
