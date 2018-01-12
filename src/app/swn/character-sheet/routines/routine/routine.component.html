@@ -8,7 +8,7 @@
     <span *ngIf="!editMode" class="input-group-addon">lvl {{item.level}}</span>
 
     <span class="input-group-btn">
-      <button class="btn btn-dark" type="button" data-toggle="collapse" [attr.data-target]="'#' + 'technique' + index">
+      <button  [ngClass]="item.type==='peripheral'?'btn btn-info':'btn btn-dark'"  type="button" data-toggle="collapse" [attr.data-target]="'#' + 'technique' + index">
         detail
       </button>
     </span>
