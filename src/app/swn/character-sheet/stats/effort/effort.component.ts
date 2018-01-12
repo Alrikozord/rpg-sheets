@@ -24,7 +24,7 @@ export class EffortComponent extends EditToggleBaseComponent implements OnInit {
 
   ngOnInit() {}
 
-  protected get isEffortLimitReached(): boolean {
+  get isEffortLimitReached(): boolean {
     return (
       this.character.effort.day +
         this.character.effort.scene +

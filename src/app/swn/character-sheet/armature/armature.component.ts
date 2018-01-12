@@ -19,7 +19,7 @@ export class ArmatureComponent extends EditToggleBaseComponent
 
   ngOnInit() {}
 
-  protected onSelectItem(eventItem: NgbTypeaheadSelectItemEvent) {
+  onSelectItem(eventItem: NgbTypeaheadSelectItemEvent) {
     this.dataService.getByName(eventItem.item).subscribe(
       data => {
         this.character.armature.applyRemoteData(data);
