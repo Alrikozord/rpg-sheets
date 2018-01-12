@@ -22,6 +22,7 @@ import { NgbTypeaheadSelectItemEvent } from "@ng-bootstrap/ng-bootstrap";
 export class SkillComponent extends EditToggleBaseComponent implements OnInit {
   @Input() skill: Skill;
   @Input() index: number;
+  @Input() includePsychics: boolean;
 
   skillList: Skill[];
 
@@ -47,5 +48,7 @@ export class SkillComponent extends EditToggleBaseComponent implements OnInit {
     text$
       .debounceTime(200)
       .distinctUntilChanged()
-      .switchMap(term => this.dataService.getFilteredNames(term));
+      .switchMap(term =>
+        this.dataService.getFilteredNames(term, this.includePsychics)
+      );
 }

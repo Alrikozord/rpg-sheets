@@ -48,6 +48,8 @@ import { RoutineComponent } from "./swn/character-sheet/routines/routine/routine
 import { RoutineDataService } from "./swn/data-files/routine-data-service";
 import { ArmatureComponent } from "./swn/character-sheet/armature/armature.component";
 import { ArmatureDataService } from "./swn/data-files/armature-data-service";
+import { DropboxService } from "./services/dropbox.service";
+import { CookieModule } from "ngx-cookie";
 
 @NgModule({
   declarations: [
@@ -83,7 +85,13 @@ import { ArmatureDataService } from "./swn/data-files/armature-data-service";
     RoutineComponent,
     ArmatureComponent
   ],
-  imports: [BrowserModule, FormsModule, HttpClientModule, NgbModule.forRoot()],
+  imports: [
+    BrowserModule,
+    FormsModule,
+    HttpClientModule,
+    NgbModule.forRoot(),
+    CookieModule.forRoot()
+  ],
   providers: [
     ArmatureDataService,
     ArmorDataService,
@@ -93,7 +101,8 @@ import { ArmatureDataService } from "./swn/data-files/armature-data-service";
     RoutineDataService,
     SkillDataService,
     TechniqueDataService,
-    WeaponDataService
+    WeaponDataService,
+    DropboxService
   ],
   bootstrap: [AppComponent]
 })

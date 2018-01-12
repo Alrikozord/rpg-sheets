@@ -12,6 +12,7 @@ import { CharacterClass } from "./character-class.enum";
 import { CharacterBase } from "../../basic-components/models/character-base.class";
 import { EquipmentItem } from "./equipment-item.model";
 import { Armature } from "./armature.model";
+import { DropboxService } from "../../services/dropbox.service";
 
 export class Character extends CharacterBase {
   public serializables: SerializableProperties;
@@ -20,9 +21,11 @@ export class Character extends CharacterBase {
 
   constructor(jsonString?: string) {
     super();
+
     this.serializables = new SerializableProperties();
     if (jsonString) {
       const jsonObj: any = JSON.parse(jsonString);
+      // tslint:disable-next-line:forin
       for (const prop in jsonObj) {
         this[prop] = jsonObj[prop];
       }
@@ -31,14 +34,7 @@ export class Character extends CharacterBase {
     this.derived = new DynamicCharacterValueProvider(this);
   }
 
-  public load(target: File) {
-    const reader = new FileReader();
-    reader.onloadend = e => this.onloaded(e);
-    reader.readAsText(target);
-  }
-
-  private onloaded(e: ProgressEvent) {
-    const json = (<FileReader>e.target).result;
+  public load(json: string) {
     const parsedObject = JSON.parse(json);
     // necessary to actualy get an SerializableProperties from the parsed object.
     // otherweise it would be an undefined Object.
@@ -47,12 +43,7 @@ export class Character extends CharacterBase {
   }
 
   public save() {
-    const date: string = new Date(Date.now()).toISOString();
-
-    super.generateDownload(
-      JSON.stringify(this.serializables),
-      this.name + "_" + date + ".json"
-    );
+    return JSON.stringify(this.serializables);
   }
 
   public get isPsychic(): boolean {
