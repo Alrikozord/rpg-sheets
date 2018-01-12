@@ -1,0 +1,190 @@
+[
+  {
+    "name": "Angel",
+    "type": "mechanical",
+    "details": "",
+    "attibutes": {
+      "strength": "12",
+      "dexterity": "12",
+      "constitution": "12"
+    },
+    "basicAbilities": "",
+    "affinityAbilities": ""
+  },
+  {
+    "name": "Box",
+    "type": "mechanical",
+    "details": "",
+    "attibutes": {
+      "strength": "12",
+      "dexterity": "8",
+      "constitution": "12"
+    },
+    "basicAbilities": "",
+    "affinityAbilities": ""
+  },
+  {
+    "name": "Falcon",
+    "type": "mechanical",
+    "details": "",
+    "attibutes": {
+      "strength": "8",
+      "dexterity": "14",
+      "constitution": "12"
+    },
+    "basicAbilities": "",
+    "affinityAbilities": ""
+  },
+  {
+    "name": "Jack",
+    "type": "mechanical",
+    "details": "",
+    "attibutes": {
+      "strength": "12",
+      "dexterity": "12",
+      "constitution": "12"
+    },
+    "basicAbilities": "",
+    "affinityAbilities": ""
+  },
+  {
+    "name": "Omen",
+    "type": "mechanical",
+    "details": "",
+    "attibutes": {
+      "strength": "18",
+      "dexterity": "14",
+      "constitution": "14"
+    },
+    "basicAbilities": "",
+    "affinityAbilities": ""
+  },
+  {
+    "name": "Sledge",
+    "type": "mechanical",
+    "details": "",
+    "attibutes": {
+      "strength": "18",
+      "dexterity": "8",
+      "constitution": "18"
+    },
+    "basicAbilities": "",
+    "affinityAbilities": ""
+  },
+  {
+    "name": "Synth",
+    "type": "mechanical",
+    "details": "",
+    "attibutes": {
+      "strength": "12",
+      "dexterity": "12",
+      "constitution": "12"
+    },
+    "basicAbilities": "",
+    "affinityAbilities": ""
+  },
+  {
+    "name": "Mentem",
+    "type": "organic",
+    "details": "",
+    "attibutes": {
+      "strength": "12",
+      "dexterity": "12",
+      "constitution": "12"
+    },
+    "basicAbilities": "",
+    "affinityAbilities": ""
+  },
+  {
+    "name": "Nat",
+    "type": "organic",
+    "details": "",
+    "attibutes": {
+      "strength": "12",
+      "dexterity": "12",
+      "constitution": "12"
+    },
+    "basicAbilities": "",
+    "affinityAbilities": ""
+  },
+  {
+    "name": "Pontifex",
+    "type": "organic",
+    "details": "",
+    "attibutes": {
+      "strength": "12",
+      "dexterity": "12",
+      "constitution": "14"
+    },
+    "basicAbilities": "",
+    "affinityAbilities": ""
+  },
+  {
+    "name": "Prime",
+    "type": "organic",
+    "details": "",
+    "attibutes": {
+      "strength": "14",
+      "dexterity": "14",
+      "constitution": "14"
+    },
+    "basicAbilities": "",
+    "affinityAbilities": ""
+  },
+  {
+    "name": "Scourge",
+    "type": "organic",
+    "details": [
+      "While an organic form lacks the durability and martial",
+      "efficiency of a warbot, the Scourge is popular among",
+      "martial polities that have an aversion to synthetic existence. These shells are built to allow for brief bursts",
+      "of tremendous combat performance, though extended operation exhausts them more quickly than their",
+      "mechanical peers. Most Scourges are human-like or",
+      "humanoid in appearance, though some models favor a",
+      "“war beast” appearance with manipulatory appendages."
+    ],
+    "attibutes": {
+      "strength": "14",
+      "dexterity": "14",
+      "constitution": "14"
+    },
+    "basicAbilities": "",
+    "affinityAbilities": ""
+  },
+  {
+    "name": "Terminus",
+    "type": "organic",
+    "details": "",
+    "attibutes": {
+      "strength": "18",
+      "dexterity": "18",
+      "constitution": "18"
+    },
+    "basicAbilities": "",
+    "affinityAbilities": ""
+  },
+  {
+    "name": "Uplift",
+    "type": "organic",
+    "details": "",
+    "attibutes": {
+      "strength": "14",
+      "dexterity": "14",
+      "constitution": "14"
+    },
+    "basicAbilities": "",
+    "affinityAbilities": ""
+  },
+  {
+    "name": "Vision",
+    "type": "organic",
+    "details": "",
+    "attibutes": {
+      "strength": "12",
+      "dexterity": "14",
+      "constitution": "8"
+    },
+    "basicAbilities": "",
+    "affinityAbilities": ""
+  }
+]

@@ -13,6 +13,8 @@ import { CharacterBase } from "../../basic-components/models/character-base.clas
 import { EquipmentItem } from "./equipment-item.model";
 import { Armature } from "./armature.model";
 import { DropboxService } from "../../services/dropbox.service";
+import { Routine } from "./routine.model";
+import { Technique } from "./index";
 
 export class Character extends CharacterBase {
   public serializables: SerializableProperties;
@@ -192,11 +194,18 @@ export class Character extends CharacterBase {
     this.serializables.skills = value;
   }
 
-  public get techniques(): any[] {
+  public get techniques(): Technique[] {
     return this.serializables.techniques;
   }
-  public set techniques(value: any[]) {
+  public set techniques(value: Technique[]) {
     this.serializables.techniques = value;
+  }
+
+  public get routines(): Routine[] {
+    return this.serializables.routines;
+  }
+  public set routines(value: Routine[]) {
+    this.serializables.routines = value;
   }
 
   public get finances(): { credits: number; items: any[] } {

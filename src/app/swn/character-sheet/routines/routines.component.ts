@@ -17,9 +17,26 @@ export class RoutinesComponent extends EditToggleListBase implements OnInit {
   ngOnInit() {}
 
   public onAdd(): void {
-    this.character.techniques.push(new Routine());
+    this.character.routines.push(new Routine());
   }
   public onRemove(index: number): void {
-    this.character.techniques.splice(index, 1);
+    this.character.routines.splice(index, 1);
+  }
+
+  ToggleEditMode(){
+    super.ToggleEditMode();
+    this.character.skills.sort(this.customSkillSort);
+  }
+
+  protected customSkillSort(a: Routine, b: Routine): number {
+    if (a.type !== b.type) {
+      if (a.type === "normal" && b.type === "peripheral") {
+        return -1;
+      } else {
+        return 1;
+      }
+    } else {
+      return a.name.localeCompare(b.name);
+    }
   }
 }

@@ -1,0 +1,144 @@
+[
+  {
+    "name": "Query Data",
+    "level": "1",
+    "type": "normal",
+    "details": [
+      "Commit Processing for the scene as a Main Action; ask one question about a database you have access to and get a reply as if you had virtually unlimited time to search and examine the database’s contents."
+    ]
+  },
+  {
+    "name": "Split Focus",
+    "level": "1",
+    "type": "normal",
+    "details": [
+      "Commit Processing as an On Turn to count as multiple people for operational purposes as long as the Processing remains committed. At first level, you are equivalent to three people, tripling with each successive character level. If additional Processing is Committed, this number can be boosted: x10 for the second point, x100 for the third, and so forth. If this Routine is made free by an artifact or ability, only the base cost is eliminated. This functionality is meant to mimic the AI’s control of a ship, a facility, a drone army, or some other general role rather than simply to make X additional copies of the character, and the GM is within their rights to prohibit the AI from bringing along a legion of themselves on any particular adventure."
+    ]
+  },
+  {
+    "name": "Defeat Security",
+    "level": "2",
+    "type": "normal",
+    "details": [""]
+  },
+  {
+    "name": "Drone Command",
+    "level": "2",
+    "type": "normal",
+    "details": [""]
+  },
+  {
+    "name": "Native Hacker",
+    "level": "2",
+    "type": "normal",
+    "details": [""]
+  },
+  {
+    "name": "Accelerated Deduction",
+    "level": "3",
+    "type": "normal",
+    "details": [""]
+  },
+  {
+    "name": "Cognitive Boost",
+    "level": "3",
+    "type": "normal",
+    "details": [""]
+  },
+  {
+    "name": "Pierce Quantum ECM",
+    "level": "4",
+    "type": "normal",
+    "details": [""]
+  },
+  {
+    "name": "Predictive Cognition",
+    "level": "4",
+    "type": "normal",
+    "details": [""]
+  },
+  {
+    "name": "Multifactor Prediction",
+    "level": "5",
+    "type": "normal",
+    "details": [""]
+  },
+  {
+    "name": "Will of the Machine",
+    "level": "5",
+    "type": "normal",
+    "details": [""]
+  },
+  {
+    "name": "Augmented Targeting",
+    "level": "1",
+    "type": "peripheral",
+    "details": [""]
+  },
+  {
+    "name": "Metadimensional Cognition Access",
+    "level": "1",
+    "type": "peripheral",
+    "details": [""]
+  },
+  {
+    "name": "Overclock Cognition",
+    "level": "1",
+    "type": "peripheral",
+    "details": [""]
+  },
+  {
+    "name": "Emergency Maintenance",
+    "level": "2",
+    "type": "peripheral",
+    "details": [""]
+  },
+  {
+    "name": "Sensor Ghost",
+    "level": "2",
+    "type": "peripheral",
+    "details": [""]
+  },
+  {
+    "name": "Augmented Cognition",
+    "level": "3",
+    "type": "peripheral",
+    "details": [""]
+  },
+  {
+    "name": "Hack Control",
+    "level": "3",
+    "type": "peripheral",
+    "details": [""]
+  },
+  {
+    "name": "Remote Power Sink",
+    "level": "3",
+    "type": "peripheral",
+    "details": [""]
+  },
+  {
+    "name": "Core Manifestation",
+    "level": "4",
+    "type": "peripheral",
+    "details": [""]
+  },
+  {
+    "name": "Regenerative Repair",
+    "level": "4",
+    "type": "peripheral",
+    "details": [""]
+  },
+  {
+    "name": "Predicted Preparation",
+    "level": "5",
+    "type": "peripheral",
+    "details": [""]
+  },
+  {
+    "name": "Quantum Location Recalculation",
+    "level": "5",
+    "type": "peripheral",
+    "details": [""]
+  }
+]

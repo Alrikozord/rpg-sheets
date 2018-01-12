@@ -1,12 +1,12 @@
 <div class="container-4 well bs-component" style="text-align:center">
 
-    <h2>Armature
-        <app-edit-toggle-button [(editMode)]="editMode" (click)="ToggleEditMode()"></app-edit-toggle-button>
-      </h2>
+  <h2>Armature
+    <app-edit-toggle-button [(editMode)]="editMode" (click)="ToggleEditMode()"></app-edit-toggle-button>
+  </h2>
 
   <div class="input-group">
-    <input [readonly]="!editMode" type="text" class="form-control" name="name" [(ngModel)]="this.character.armature.name"
-      placeholder="Name" [ngbTypeahead]="search" (selectItem)="onSelectItem($event)">
+    <input [readonly]="!editMode" type="text" class="form-control" name="name" [(ngModel)]="this.character.armature.name" placeholder="Name"
+      [ngbTypeahead]="search" (selectItem)="onSelectItem($event)">
 
     <span class="input-group-btn">
       <button class="btn btn-dark" type="button" data-toggle="collapse" [attr.data-target]="'#' + 'armature_details'">
@@ -16,6 +16,21 @@
   </div>
 
   <div class="collapse container-fluid" [attr.id]="'armature_details'">
+
+    <div class="row">
+      <div class="col-md-4 input-group">
+        <span class="input-group-addon">str</span>
+        <input [disabled]="!editMode" type="number" class="form-control" id="input" [(value)]="character.armature.attributes.strength">
+      </div>
+      <div class="col-md-4 input-group">
+        <span class="input-group-addon">dex</span>
+        <input [disabled]="!editMode" type="number" class="form-control" id="input" [(value)]="character.armature.attributes.dexterity">
+      </div>
+      <div class="col-md-4 input-group">
+        <span class="input-group-addon">con</span>
+        <input [disabled]="!editMode" type="number" class="form-control" id="input" [(value)]="character.armature.attributes.constitution">
+      </div>
+    </div>
 
     <textarea [readonly]="!editMode" class="col" rows="7" placeholder="Description" [(ngModel)]="this.character.armature.details"></textarea>
     <textarea [readonly]="!editMode" class="col" rows="7" placeholder="Basic Abilities" [(ngModel)]="this.character.armature.basicAbilities"></textarea>
