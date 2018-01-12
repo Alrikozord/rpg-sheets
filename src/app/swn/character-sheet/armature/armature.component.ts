@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from "@angular/core";
 import { EditToggleBaseComponent } from "../../../basic-components/edit-toggle-components/index";
-import { Character } from "../../models/index";
+import { Character, Armature } from "../../models/index";
 import { ArmatureDataService } from "../../data-files/armature-data-service";
 import { Observable } from "rxjs/Observable";
 import { NgbTypeaheadSelectItemEvent } from "@ng-bootstrap/ng-bootstrap";
@@ -22,6 +22,7 @@ export class ArmatureComponent extends EditToggleBaseComponent
   onSelectItem(eventItem: NgbTypeaheadSelectItemEvent) {
     this.dataService.getByName(eventItem.item).subscribe(
       data => {
+        this.character.armature = new Armature();
         this.character.armature.applyRemoteData(data);
       },
       (error: Error) => {

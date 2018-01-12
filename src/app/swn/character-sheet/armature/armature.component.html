@@ -8,6 +8,10 @@
     <input [readonly]="!editMode" type="text" class="form-control" name="name" [(ngModel)]="this.character.armature.name" placeholder="Name"
       [ngbTypeahead]="search" (selectItem)="onSelectItem($event)">
 
+    <span class="input-group-addon">
+      <span *ngIf="this.character.armature.type==='mechanical'" class="glyphicon glyphicon-cog"></span>
+      <span *ngIf="this.character.armature.type==='organic'" class="glyphicon glyphicon-leaf"></span>
+    </span>
     <span class="input-group-btn">
       <button class="btn btn-dark" type="button" data-toggle="collapse" [attr.data-target]="'#' + 'armature_details'">
         details
