@@ -45,7 +45,7 @@ export class InfoComponent extends EditToggleBaseComponent implements OnInit {
       case CharacterClass.trueAi:
         return "true ai";
       case CharacterClass.partialTrueAi:
-        return "partial true ai";
+        return "true ai partial";
       default:
         return CharacterClass[characterClass];
     }
