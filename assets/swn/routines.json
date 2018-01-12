@@ -1,0 +1,186 @@
+[
+  {
+    "name": "Query Data",
+    "level": "1",
+    "type": "normal",
+    "details": [
+      "Commit Processing for the scene as a Main Action; ask one question about a database you have access to and get a reply as if you had virtually unlimited time to search and examine the database’s contents."
+    ]
+  },
+  {
+    "name": "Split Focus",
+    "level": "1",
+    "type": "normal",
+    "details": [
+      "Commit Processing as an On Turn to count as multiple people for operational purposes as long as the Processing remains committed. At first level, you are equivalent to three people, tripling with each successive character level. If additional Processing is Committed, this number can be boosted: x10 for the second point, x100 for the third, and so forth. If this Routine is made free by an artifact or ability, only the base cost is eliminated. This functionality is meant to mimic the AI’s control of a ship, a facility, a drone army, or some other general role rather than simply to make X additional copies of the character, and the GM is within their rights to prohibit the AI from bringing along a legion of themselves on any particular adventure."
+    ]
+  },
+  {
+    "name": "Defeat Security",
+    "level": "2",
+    "type": "normal",
+    "details": [
+      "Commit Processing for the day as a Main Action to overcome any encryption or electronic lock that wasn’t put in place by another AI. In the latter case, roll opposing Program skill checks; on a failure, you cannot beat the security with this Routine. Successfully beating a security measure automatically negates any alarms"
+    ]
+  },
+  {
+    "name": "Drone Command",
+    "level": "2",
+    "type": "normal",
+    "details": [
+      "Commit Processing as an On Turn to function as if you had drone control rig cyberware while it remains committed. You can issue one free command to a controlled up. A drone can carry out one command per round."
+    ]
+  },
+  {
+    "name": "Native Hacker",
+    "level": "2",
+    "type": "normal",
+    "details": [
+      "Commit Processing for the day as an On Turn to automatically succeed at any hacking-based skill check not opposed by another AI or directed against AI-designed security. In the latter case, the skill check is rolled normally. You must trigger this Routine before the check."
+    ]
+  },
+  {
+    "name": "Accelerated Deduction",
+    "level": "3",
+    "type": "normal",
+    "details": [
+      "Commit Processing for the day as a Main Action and ask the GM a yes-or-no question about a current or past event. If there is any theoretical way you could have deduced the true answer through some Sherlockian feat of hyper-advanced deduction, the GM must answer truthfully, or else indicate that the question has invalid assumptions in it. The GM does not have to explain how you realize this, however, only that your subconscious processing routines indicate it. This Routine is very taxing and may be used only once per day"
+    ]
+  },
+  {
+    "name": "Cognitive Boost",
+    "level": "3",
+    "type": "normal",
+    "details": [
+      "Commit Processing for the scene as an On Turn to automatically succeed at any Know skill check if success is at all possible. If used to augment a skill check that is primarily mental and requires only basic physical actions, it grants a +2 bonus to the skill check. This Routine must be run before the roll is made."
+    ]
+  },
+  {
+    "name": "Pierce Quantum ECM",
+    "level": "4",
+    "type": "normal",
+    "details": [
+      "Commit Processing for the day as an On Turn. For one scene, you or a device you are operating functions as if no quantum ECM was functional in the vicinity. Thus, you can access remote processing clusters, use a guided weapon on a target within one scene’s flight, or pilot a drone into an ECM field outside your line of sight"
+    ]
+  },
+  {
+    "name": "Predictive Cognition",
+    "level": "4",
+    "type": "normal",
+    "details": [
+      "Commit Processing for the day as an Instant. All events since the beginning of your last turn have not actually taken place; they were merely modeled by your predictive analysis. Events and other peoples’ conditions reset to the beginning of your most recent turn, and you may act differently if you so wish. You may use this Routine only once per day."
+    ]
+  },
+  {
+    "name": "Multifactor Prediction",
+    "level": "5",
+    "type": "normal",
+    "details": [
+      "Commit Processing for the day as an On Turn and predict events up to ten minutes in the future. Unless your prediction is physically impossible or the people involved in it would not conceivably behave in that way, they will carry out your prediction to the letter. If used in combat or a situation of physical danger, the increased chaos limits the prediction to one round into the future. This Routine can be run only once per scene"
+    ]
+  },
+  {
+    "name": "Will of the Machine",
+    "level": "5",
+    "type": "normal",
+    "details": [
+      "Commit Processing as an On Turn and target a visible or wirelessly-accessible vehicle or machine no larger than a gravflyer. While you maintain your Commitment you have complete control over the device and can use its sensors as if they were your own. Issuing it a command takes up a Move action on your part."
+    ]
+  },
+  {
+    "name": "Augmented Targeting",
+    "level": "1",
+    "type": "peripheral",
+    "details": [
+      "Commit Processing for the scene as an On Turn before attacking a non-sentient target. Your ability to integrate physical predictions with environmental readings ensures that your attack will inevitably hit the target for maximum damage. Note that animals and vehicles piloted by sentient pilots are not valid targets."
+    ]
+  },
+  {
+    "name": "Metadimensional Cognition Access",
+    "level": "1",
+    "type": "peripheral",
+    "details": [
+      "You’ve learned how to adjust your metadimensional cognitive patterns to cooperate with allied telepaths. You are now a valid target for the Telepathy discipline from friendly psychics. You need not Commit Processing to use this ability, as it is always in effect"
+    ]
+  },
+  {
+    "name": "Overclock Cognition",
+    "level": "1",
+    "type": "peripheral",
+    "details": [
+      "Commit Processing for the day as an On Turn. For the rest of the scene, either your Wisdom or Intelligence modifier is increased by +1, up to a maximum of +3. A given attribute can be boosted only once in any scene. This doesn’t alter your maximum Processing score"
+    ]
+  },
+  {
+    "name": "Emergency Maintenance",
+    "level": "2",
+    "type": "peripheral",
+    "details": [
+      "Commit Processing for the day as an On Turn to immediately recover 2 hit points per character level as you engage emergency repair functionality. You can use this ability only once per round."
+    ]
+  },
+  {
+    "name": "Sensor Ghost",
+    "level": "2",
+    "type": "peripheral",
+    "details": [
+      "Commit Processing for the scene as an On Turn. For the rest of the scene, you are invisible to “dumb” sensor hardware such as motion detectors, laser tripwires, radar, or other automated sensors. A sentient creature watching a monitor or otherwise actually studying readings can realize that something is wrong, however."
+    ]
+  },
+  {
+    "name": "Augmented Cognition",
+    "level": "3",
+    "type": "peripheral",
+    "details": [
+      "Commit Processing for the day as an On Turn. Your Intelligence attribute becomes 18 for the rest of the day, but your maximum Processing is unaffected"
+    ]
+  },
+  {
+    "name": "Hack Control",
+    "level": "3",
+    "type": "peripheral",
+    "details": [
+      "Commit Processing for the scene as a Move action and target a visible expert system robot, drone, vehicle, or automated device no larger than a gravflyer. Give it one command it is physically capable of carrying out even if it violates its programming. The device will carry out this command on its next available action. If you acquire the Will of the Machine Routine, you are refunded this Routine purchase"
+    ]
+  },
+  {
+    "name": "Remote Power Sink",
+    "level": "3",
+    "type": "peripheral",
+    "details": [
+      "Commit Processing for the scene as a Main Action and target a visible piece of equipment powered by a Type A cell or the equivalent. Its power is immediately drained. Only the most professional targets will realize that their device is powerless before they next try to use it, unless the depowering has obvious results."
+    ]
+  },
+  {
+    "name": "Core Manifestation",
+    "level": "4",
+    "type": "peripheral",
+    "details": [
+      "Commit Processing for the day as a Main Action to create a forcefield construct equivalent to a Box armature using only your intrinsic quantum core power, manifesting it at full hit points. This ability can only be used when your core is not attached to a functioning armature, and if the force construct is reduced to zero hit points, you must make a Mental saving throw or your core is destroyed as well."
+    ]
+  },
+  {
+    "name": "Regenerative Repair",
+    "level": "4",
+    "type": "peripheral",
+    "details": [
+      "Commit Processing as an On Turn. While it remains Committed, you regenerate one lost hit point every minute as your quantum core realigns your armature. This ability won’t work if you are Badly Damaged."
+    ]
+  },
+  {
+    "name": "Predicted Preparation",
+    "level": "5",
+    "type": "peripheral",
+    "details": [
+      "Commit Processing for the day as a Main Action and make one statement about your current situation that you could have conceivably made true with full advanced knowledge of the circumstances. Thus, if the party is lost in a desert, you could declare that you parked a gravcar over the next dune several months ago. Assuming you could have afforded the gravcar and had the time to do so, this statement is true. Statements cannot cause direct damage to sentient creatures, such as declaring that you detonate explosives where a nemesis is now standing, but they can enable you to cause damage indirectly, such as declaring that you hid a grenade. This Routine can be run only once a scene"
+    ]
+  },
+  {
+    "name": "Quantum Location Recalculation",
+    "level": "5",
+    "type": "peripheral",
+    "details": [
+      "Commit Processing for the day as a Main Action as you recalculate the position of you and your allies at a quantum level. You and up to six willing allies within ten meters can teleport to any desired location within one kilometer, with each missing ally replaceable by one hundred kilos of unattended inanimate cargo. You must make an Int/Program skill check after using this ability; the difficulty is 8 if you have been to the target location before, or 12 if you have not. On a failure, you and all teleported allies suffer 1d6 damage for every hundred meters traveled, and 10% of any inanimate cargo is ruined for every 100 meters of displacement. This translocation is not psychic teleportation and cannot be blocked by pretech anti-teleportation shields"
+    ]
+  }
+]

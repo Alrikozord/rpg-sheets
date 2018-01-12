@@ -1,0 +1,272 @@
+[
+  {
+    "name": "Angel",
+    "type": "mechanical",
+    "details": [
+      "As a combination medic and repair shell, the Angel is designed to get damaged shells back up and running, whether they’re organic or mechanical in nature. Most are humanoid in form, though often with multipl smaller appendages for stim application and repairs"
+    ],
+    "attibutes": {
+      "strength": "12",
+      "dexterity": "12",
+      "constitution": "12"
+    },
+    "basicAbilities": [
+      "An Angel is equipped with an effectively inexhaustible medkit and an unending supply of Lift, Bezoar, and lazarus patch stims. It can very rapidly repair damaged adjacent mechanical shells, fixing up to the operating soul’s level plus their Heal skill in lost hit points as a Main Action at the cost of one unit of spare parts. Salvage and synthesis units on the Angel allow it to create spare parts as part of this repair action; it can generate up to ten “free” units of spare parts per scene. It can remove the Badly Damaged quality from a shell with one hour of repair work. Angels have a base Armor Class of 13 and 5 extra hit points."
+    ],
+    "affinityAbilities": [
+      "Veteran Angel operators can maximize the effectiveness of their repair functionality. They do not fail Heal skill checks to stabilize organic subjects, assuming a lazarus patch could save them. Damage repaired on mechanical shells with each action is doubled and damage healed by Lift stims is increased by an additional 1d8 points per stim. Repurposed injector units allow stims and mechanical repair to be applied at up to 30 meters distance, assuming the operator has a clear shot at their target"
+    ]
+  },
+  {
+    "name": "Box",
+    "type": "mechanical",
+    "details": [
+      "The humblest and cheapest of the standard shells use in most sectors, the Box is little more than a basic soul core equipped with minimal manipulatory appendages and sensor arrays. Boxes usually unfold into generally humanoid shapes in order to better function in human-designed environments, but there’s nothing preventing habitats of more exotic nature from building Boxes in less humanoid shapes"
+    ],
+    "attibutes": {
+      "strength": "12",
+      "dexterity": "8",
+      "constitution": "12"
+    },
+    "basicAbilities": [
+      "A Box is more difficult to casually damage than most organic shapes, and has a base Armor Class of 15."
+    ],
+    "affinityAbilities": [
+      "Those forced to gain extensive experience in operating a standard Box learn how to cope with the limited sensory feedback and structural limits of the hull. Their Strength attribute becomes 14 and their Dexterity becomes 12, as well as gaining 10 bonus hit points."
+    ]
+  },
+  {
+    "name": "Falcon",
+    "type": "mechanical",
+    "details": [
+      "These shells are usually entirely non-humanoid in shape, appearing as flat discs or multi-jet platforms of roughly a meter’s width, with several manipulator appendages attached. Falcons have advanced anti-grav tech embedded in them to allow for easier transit in hazardous space environments or as quiet scouting units when remote drones are impractical."
+    ],
+    "attibutes": {
+      "strength": "8",
+      "dexterity": "14",
+      "constitution": "12"
+    },
+    "basicAbilities": [
+      "A Falcon has a Move rate of 20 meters per action, and can silently fly or hover freely even in the absence of an atmosphere. It’s barely strong enough to lift and carry one other human-sized shell in standard gravity but can do nothing else while carrying them. Falcons have advanced sensor arrays that allow them to observe objects up to two kilometers distant, ignore darkness, and avoid long-range penalties with any weapons they may be using. Falcons have a base Armor Class of 15 and 5 extra hit points."
+    ],
+    "affinityAbilities": [
+      "Falcon operators with extensive experience in the shell learn how to extend and alter the gravitic field the disc utilizes. They can remotely manipulate unattended objects or cooperative persons up to 30 meters distant as if using their own Strength. Facility with gravitic shields and sudden maneuver jinks also grant it a +3 Armor Class bonus and a bonus of 10 extra hit points instead of 5"
+    ]
+  },
+  {
+    "name": "Jack",
+    "type": "mechanical",
+    "details": [
+      "A flexible and relatively cheap platform designed for technical work in environments that would be difficult for an organic shell to survive, the Jack is equipped with a wide range of integral tools. Most are humanoid in outline, though many have several additional manipulatory appendages or tendrils in order to aid in the repair of complex devices."
+    ],
+    "attibutes": {
+      "strength": "12",
+      "dexterity": "12",
+      "constitution": "12"
+    },
+    "basicAbilities": [
+      "A Jack has a built-in postech toolkit and hand tools that can be used as the equivalent of Small Advanced melee weapons. It gains a +1 bonus to all Fix and Program skill checks, and has a durable structure with a base Armor Class of 15 and 10 bonus hit points."
+    ],
+    "affinityAbilities": [
+      "An experienced Jack operator knows how to improvise with the shell’s integral hardware. They can jury-rig any portable TL4 technology of 1 Encumbrance or less with a Main Action and one unit of spare parts, except for consumables such as power cells or stims. Items that require power are rigged with one cell’s worth of energy. This jury-rigged tech only works for the rest of the scene. The Jack’s improvised weaponry now counts as a Large Advanced melee weapon or a rifle with no ammunition requirements, either usable as needed"
+    ]
+  },
+  {
+    "name": "Omen",
+    "type": "mechanical",
+    "details": [
+      "The Omen mechanical shell is meant for combat and combat alone. Most are sufficiently humanoid to operate in human-oriented environments, but none of them could ever be mistaken for a normal human being, with their studding of weapons, reinforcement plates, and reactive armor. Omens are often forbidden on space habitats due to their ready ability to tear through most barriers."
+    ],
+    "attibutes": {
+      "strength": "18",
+      "dexterity": "14",
+      "constitution": "14"
+    },
+    "basicAbilities": [
+      "An Omen’s integral weaponry is equivalent to a Large Advanced melee weapon and a plasma projector that requires no ammunition. They gain +4 to hit with all attack rolls, +2 on all damage and Shock values, and have an effective base Armor Class of 18 and 15 bonus hit points. An Omen’s built-in cutting torches and ripper bars can cut through a standard interior hatch or reinforced door in five rounds and can bore through normal exterior ship plating or external hatches in five minutes. Its integral sensors allow it to operate in darkness at no penalty and it has low-gee microjets that allow it to fly at its normal Move rate in microgravity or less."
+    ],
+    "affinityAbilities": [
+      "The shell’s Strength attribute bonus is treated as +3 and it becomes immune to Shock damage. Skilled Omen operators can run the system “hot” to improve damage output at the risk of progressively degrading its internal systems. Once per round as an On Turn action they can choose to accept 1d6 damage in order to attack twice with a single Main Action, targeting the same subject or splitting the attack between available targets. The overheating damage is applied after the attacks are rolled."
+    ]
+  },
+  {
+    "name": "Sledge",
+    "type": "mechanical",
+    "details": [
+      "A heavy industrial work shell, the Sledge is slow but extremely tough. Most resemble gorillas or other hulking humanoid shapes, though some are tracked or wheeled to save on construction complexity."
+    ],
+    "attibutes": {
+      "strength": "18",
+      "dexterity": "8",
+      "constitution": "18"
+    },
+    "basicAbilities": [
+      "A Sledge is extraordinarily strong if it has time to carefully set its manipulators. If it has time to work, it can break through anything short of reinforced structural material at a rate of one meter every thirty seconds and can lift and manipulate up to two metric tons with the aid of gravitic stabilizers. It has a base Armor Class of 15, including its Dexterity penalty, and 15 extra hit points. A Sledge has onboard tools equivalent to a postech tool kit."
+    ],
+    "affinityAbilities": [
+      "The expert operator knows how to quickly engage the shell’s strength actuators and can treat its effective Strength modifier as +3. When it moves, it can burst through any standard interior-grade wall or light external construction as part of its movement. Its effective hit point bonus is 25 instead of 15."
+    ]
+  },
+  {
+    "name": "Synth",
+    "type": "mechanical",
+    "details": [
+      "Some mechanical shells are built to be almost indistinguishable from more organic shapes, and the Synth is one such android form. A Synth is indistinguishable from a human without a medical examination or significant physical trauma to reveal its artificial workings. While a normal human shape is the baseline for a Synth, it is possible to build models with far more exotic and fanciful configurations that still appear organic."
+    ],
+    "attibutes": {
+      "strength": "12",
+      "dexterity": "12",
+      "constitution": "12"
+    },
+    "basicAbilities": [
+      "A Synth does not suffer the usual mechanical shell penalty on Charisma skill checks, and can pass in areas where overtly mechanical shells might draw unwelcome attention. Their base Armor Class is only 10, however. A Synth’s artificial nature becomes obvious if it is reduced to zero hit points."
+    ],
+    "affinityAbilities": [
+      "A practiced Synth user can maximize their mechanical advantages, raising both Strength and Dexterity scores to 14, and gains a bonus 5 hit points."
+    ]
+  },
+  {
+    "name": "Mentem",
+    "type": "organic",
+    "details": [
+      "An avant-garde shell designed for improved perception and cognition, the Mentem sacrifices some of the physical capacity of the Prime in exchange for denser neural networks and upgraded sense organs"
+    ],
+    "attibutes": {
+      "strength": "12",
+      "dexterity": "12",
+      "constitution": "12"
+    },
+    "basicAbilities": [
+      "A Mentem shell improves the Intelligence and Wisdom modifiers of the soul occupying it by +1 each, up to a maximum of +3. Mentem shells gain an additional +1 bonus on Notice checks"
+    ],
+    "affinityAbilities": [
+      "The expert user knows how to interpret low-level Mentem sensory input, allowing them vision even in lightless condition, clear recognition of details at up to a kilometer’s distance, the olfactory ability to track like a bloodhound, and hearing sensitive enough to pick up any sound within a hundred meters as if they were standing next to it. They cannot be surprised and roll Notice checks on 3d6 instead of 2d6, taking the two highest dice"
+    ]
+  },
+  {
+    "name": "Nat",
+    "type": "organic",
+    "details": [
+      "Short for “natural”, a Nat is a baseline human body, one cultivated for soul transfer but otherwise identical to a standard human. Most cultures insert basic modifications to eliminate congenital diseases or serious physiological defects, but these subtle changes are indistinguishable from mere good genetics. The only way to distinguish a Nat from a “wild” human body is the usual presence of a soulstone implant at the base of their brainstem. Souls going undercover in societies that forbid shells sometimes use Nats without these implants, risking the loss of memories if they die without a recent backup."
+    ],
+    "attibutes": {
+      "strength": "12",
+      "dexterity": "12",
+      "constitution": "12"
+    },
+    "basicAbilities": [
+      "Most Nats are grown to be healthy; when created, one physical attribute may be raised to 14."
+    ],
+    "affinityAbilities": [
+      "Those with exceptional experience at operating in Nat bodies know how to wring every ounce of performance from a baseline human form. The attribute that was originally raised to 14 is treated as 18, and the other two physical attributes are raised to 14."
+    ]
+  },
+  {
+    "name": "Pontifex",
+    "type": "organic",
+    "details": [
+      "An experimental and highly specialized organic shell, the Pontifex is built to provide an improved bridge between a psychic soul and the currents of metadimensional energy that fuel their powers. Most Pontifexes appear as normal human shells, though an unavoidable need for energy venting causes small plumes of light, glowing eyes, bristling hair, or other visible physiological changes to occur when their psychic powers are used. Psychics with a need for discretion in their abilities are thus often reluctant to don a Pontifex."
+    ],
+    "attibutes": {
+      "strength": "12",
+      "dexterity": "12",
+      "constitution": "14"
+    },
+    "basicAbilities": [
+      "A Pontifex grants a psychic soul an additional two points of maximum Effort while using the shell. Any powers that require Effort to be committed cause a visible change or energy emission from the shell, though it’s not necessarily obvious what the target of the power is."
+    ],
+    "affinityAbilities": [
+      "Experienced Pontifex users can adjust the shell’s intrinsic metadimensional energy feeds to fuel one technique of their choosing, eliminating any Effort cost it may have. The technique chosen can be changed, but it requires an hour."
+    ]
+  },
+  {
+    "name": "Prime",
+    "type": "organic",
+    "details": [
+      "The most common shell in the more traditional polities, the Prime is an optimized and improved human form, one with numerous small augmentations. Truly dramatic improvements would require a different fundamental form, but the Prime is a comfortable and familiar upgrade from the standard human body."
+    ],
+    "attibutes": {
+      "strength": "14",
+      "dexterity": "14",
+      "constitution": "14"
+    },
+    "basicAbilities": [
+      "Primes are immune to conventional diseases and natural toxins, and can only be afflicted by military bioweapons. They are designed to be more resilient than a natural human body, granting them a basic Armor Class of 12 and 5 extra hit points. Prime bodies automatically stabilize at zero hit points unless downed by Heavy weapons or similar massive, instantly-lethal trauma."
+    ],
+    "affinityAbilities": [
+      "Expert Prime operators know how to push the limits of the shell precisely when they are most needed. By accepting 2 System Strain points as an Instant action, the operator can raise any one physical attribute to 18 for the rest of the scene, though improved Constitution does not raise their hit points. This can be done for more than one attribute."
+    ]
+  },
+  {
+    "name": "Scourge",
+    "type": "organic",
+    "details": [
+      "While an organic form lacks the durability and martial efficiency of a warbot, the Scourge is popular among martial polities that have an aversion to synthetic existence. These shells are built to allow for brief bursts of tremendous combat performance, though extended operation exhausts them more quickly than their mechanical peers. Most Scourges are human-like or humanoid in appearance, though some models favor a “war beast” appearance with manipulatory appendages."
+    ],
+    "attibutes": {
+      "strength": "14",
+      "dexterity": "14",
+      "constitution": "14"
+    },
+    "basicAbilities": [
+      "A Scourge has natural weapons equivalent to a large advanced melee weapon and makes all attack rolls at a +2 bonus. It has a natural Armor Class of 15 and 10 extra hit points. By spending 2 System Strain points, it can go into a combat frenzy for the rest of the scene, improving Strength and Dexterity to 18, gaining a Move rate of 15 meters per action, and gaining an additional +2 bonus to hit roll"
+    ],
+    "affinityAbilities": [
+      "The expert Scourge user can improve the efficiency of its combat frenzy. While active, whenever they spend a Main Action to attack, they can make two attack rolls. These rolls may either be aimed at the same target or at two different targets in range. Each attack is resolved normally, inflicting damage or Shock separately."
+    ]
+  },
+  {
+    "name": "Terminus",
+    "type": "organic",
+    "details": [
+      "Both a boundary and an endpoint for a certain type of human development, the Terminus shell includes sophisticated integral nanofacs and hybridized tissue components to create the “ultimate” human form. They are notoriously difficult to create, with multiple failure points in their construction, and provide a level of performance that is more theoretically impressive than practically useful for most purposes."
+    ],
+    "attibutes": {
+      "strength": "18",
+      "dexterity": "18",
+      "constitution": "18"
+    },
+    "basicAbilities": [
+      "A Terminus is immune to conventional diseases and toxins, has a base Armor Class of 15, and grants 10 extra hit points to the soul operating it. A Terminus can tolerate any temperature found on Earth and can survive hard vacuum or airless conditions without difficulty for ten minutes. Cognitive improvements grant a +1 to either their Charisma, Intelligence, or Wisdom modifiers, the attribute chosen being alterable with fiv minutes of concentration. This bonus cannot increase the modifier above +2. Terminus shells auto-stabilize at zero hit points."
+    ],
+    "affinityAbilities": [
+      "Expert operators gain a +1 bonus on all skill rolls and +2 on hit rolls. By accepting 2 System Strain as an Instant action, the user can gain a bonus turn of action in a round, taken at the end of the round after everyone else has acted. Only one bonus turn can be taken each round."
+    ]
+  },
+  {
+    "name": "Uplift",
+    "type": "organic",
+    "details": [
+      "A general name for a wide range of genetically uplifted animal forms, some of these usually-humanoid shells are occupied by actual cognitively-boosted animals, while others are used by souls that prefer a more feral form. This form reflects an Uplift designed for a large predator; other shells might be drawn from different types of beasts, and might grant integral flight, aquatic functionality, or other animal-derived perks."
+    ],
+    "attibutes": {
+      "strength": "14",
+      "dexterity": "14",
+      "constitution": "14"
+    },
+    "basicAbilities": [
+      "Predator Uplifts are equipped with natural weapons equal to a Medium Advanced melee weapon and a base Armor Class of 13."
+    ],
+    "affinityAbilities": [
+      "Experienced Uplift operators can bring out the subtle advantages of a bestial frame. One physical attribute appropriate to the Uplift type is improved to 18. Their base Move is improved from 10 to 15 meters. The shell now grants 10 bonus hit points."
+    ]
+  },
+  {
+    "name": "Vision",
+    "type": "organic",
+    "details": [
+      "These humanoid shells are designed with an array of pheromones and body harmonics designed to trigger instinctive responses in human-cognitive viewers. Despite the exotic appearance of many of them, these shells are almost invariably seen as remarkably beautiful or imposing. The body harmonics required to produce this effect sometimes come at a cost in durability, but social prowess is often far more useful in a polity than a body’s brute power."
+    ],
+    "attibutes": {
+      "strength": "12",
+      "dexterity": "14",
+      "constitution": "8"
+    },
+    "basicAbilities": [
+      "Visions improve the soul’s Charisma modifier by +1, up to a maximum of +3. In addition, any social skill checks toward human minds gain a +1 bonus, or a +2 bonus if the interaction involves intimate physical contact"
+    ],
+    "affinityAbilities": [
+      " Practiced Vision users can refine the shape’s natural grace into superlative speed and precision, improving their Dexterity score to 18. By accepting 1 System Strain, forcing pheromone production and enacting nuanced imprinting gestures and motion patterns they can issue subtle commands to a specific organic human in their presence. The target must make a Mental saving throw or comply with any request that isn’t particularly distasteful to them and won’t take them more than a scene. This compulsion is almost impossible for most subjects to distinguish from simple personal persuasiveness on the Vision’s part."
+    ]
+  }
+]
