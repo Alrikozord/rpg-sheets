@@ -6,7 +6,7 @@
     </h2>
 
     <div class="row" *ngFor="let skill of character.skills; let i = index;">
-      <app-skill [class.col-10]="editMode" [skill]="skill" [index]="i" [editMode]="editMode"></app-skill>
+      <app-skill [class.col-10]="editMode" [skill]="skill" [includePsychics]="character.isPsychic" [index]="i" [editMode]="editMode"></app-skill>
       <app-list-remove-button class="col-1" [(editMode)]="editMode" [index]="i" (click)="onRemove(i)"></app-list-remove-button>
     </div>
 
