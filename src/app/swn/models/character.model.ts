@@ -194,6 +194,13 @@ export class Character extends CharacterBase {
     this.serializables.skills = value;
   }
 
+  public get remainingSkillPoints(): number {
+    return this.serializables.remainingSkillPoints;
+  }
+  public set remainingSkillPoints(value: number) {
+    this.serializables.remainingSkillPoints = value;
+  }
+
   public get techniques(): Technique[] {
     return this.serializables.techniques;
   }

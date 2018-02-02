@@ -25,6 +25,7 @@ export class SerializableProperties {
   public armature: Armature;
   public foci: Focus[];
   public skills: Skill[];
+  public remainingSkillPoints: number;
   public techniques: Technique[];
   public routines: Routine[];
   public finances: { credits: number; items: any[] };
@@ -53,6 +54,7 @@ export class SerializableProperties {
     this.armature = new Armature();
     this.foci = new Array<Focus>();
     this.skills = new Array<Skill>();
+    this.remainingSkillPoints = 0;
     this.techniques = new Array<Technique>();
     this.routines = new Array<Routine>();
     this.finances = { credits: 0, items: new Array<any>() };

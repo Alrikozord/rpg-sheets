@@ -12,5 +12,11 @@
 
     <app-list-add-button [(editMode)]="editMode" (click)="onAdd()"></app-list-add-button>
 
+    <br>
+
+    <div *ngIf="editMode" class="input-group">
+      <span class="input-group-addon">remaining skill points</span>
+      <input type="number" class="form-control" name="remaining" placeholder="remaining" [(ngModel)]="character.remainingSkillPoints">
+    </div>
   </div>
 </form>
