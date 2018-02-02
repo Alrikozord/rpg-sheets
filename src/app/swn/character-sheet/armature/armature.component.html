@@ -1,8 +1,8 @@
 <div class="container-4 well bs-component" style="text-align:center">
 
-  <h2>Armature
+  <h3>Armature
     <app-edit-toggle-button [(editMode)]="editMode" (click)="ToggleEditMode()"></app-edit-toggle-button>
-  </h2>
+  </h3>
 
   <div class="input-group">
     <input [readonly]="!editMode" type="text" class="form-control" name="name" [(ngModel)]="this.character.armature.name" placeholder="Name"

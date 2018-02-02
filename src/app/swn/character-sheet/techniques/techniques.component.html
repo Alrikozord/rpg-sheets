@@ -1,9 +1,9 @@
 <form>
   <div class="container-4 well bs-component" style="text-align:center">
 
-    <h2>Techniques
+    <h3>Techniques
       <app-edit-toggle-button [(editMode)]="editMode" (click)="ToggleEditMode()"></app-edit-toggle-button>
-    </h2>
+    </h3>
 
     <div class="row" *ngFor="let technique of character.techniques; let i = index">
       <app-technique [class.col-10]="editMode" [item]="technique" [index]="i" [editMode]="editMode"></app-technique>

@@ -1,8 +1,8 @@
 <form>
   <div class="container-4 well bs-component" style="text-align:center">
-    <h2>Attributes
+    <h3>Attributes
       <app-edit-toggle-button [(editMode)]="editMode" (click)="ToggleEditMode()"></app-edit-toggle-button>
-    </h2>
+    </h3>
     <app-attribute label="Strength" [(attribute)]="character.stats.str" [editMode]="editMode"></app-attribute>
     <app-attribute label="Dexterity" [(attribute)]="character.stats.dex" [editMode]="editMode"></app-attribute>
     <app-attribute label="Constitution" [(attribute)]="character.stats.con" [editMode]="editMode"></app-attribute>

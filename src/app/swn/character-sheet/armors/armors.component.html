@@ -1,8 +1,8 @@
 <form>
   <div class="container-4 well bs-component" style="text-align:center">
-    <h2>Armor
+    <h3>Armor
       <app-edit-toggle-button [(editMode)]="editMode" (click)="ToggleEditMode()"></app-edit-toggle-button>
-    </h2>
+    </h3>
 
     <div class="row" *ngFor="let armor of character.armor; let i = index">
       <app-armor [class.col-10]="editMode" [item]="armor" [index]="i" [editMode]="editMode"></app-armor>

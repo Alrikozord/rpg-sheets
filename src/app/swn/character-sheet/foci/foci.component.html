@@ -1,9 +1,9 @@
 <form>
   <div class="container-4 well bs-component" style="text-align:center">
 
-    <h2>Foci
+    <h3>Foci
       <app-edit-toggle-button [(editMode)]="editMode" (click)="ToggleEditMode()"></app-edit-toggle-button>
-    </h2>
+    </h3>
 
     <div class="row" *ngFor="let focus of character.foci; let i = index">
       <app-focus [class.col-10]="editMode" [item]="focus" [index]="i" [editMode]="editMode"></app-focus>
