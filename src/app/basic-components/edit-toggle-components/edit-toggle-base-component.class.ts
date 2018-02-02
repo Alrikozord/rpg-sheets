@@ -1,9 +1,11 @@
 import { Output, Input } from "@angular/core";
+import { GuidIdentifiable } from "./guid-identifiable.class";
 
-export abstract class EditToggleBaseComponent {
+export abstract class EditToggleBaseComponent extends GuidIdentifiable {
   protected _editMode: boolean;
 
   constructor() {
+    super();
     this._editMode = false;
   }
 

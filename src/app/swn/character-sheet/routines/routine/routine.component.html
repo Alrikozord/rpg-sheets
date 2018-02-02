@@ -8,13 +8,13 @@
     <span *ngIf="!editMode" class="input-group-addon">lvl {{item.level}}</span>
 
     <span class="input-group-btn">
-      <button  [ngClass]="item.type==='peripheral'?'btn btn-info':'btn btn-dark'"  type="button" data-toggle="collapse" [attr.data-target]="'#' + 'technique' + index">
+      <button  [ngClass]="item.type==='peripheral'?'btn btn-info':'btn btn-dark'"  type="button" data-toggle="collapse" [attr.data-target]="'#' + _guid">
         detail
       </button>
     </span>
   </div>
 
-  <div class="collapse" [attr.id]="'technique' + index">
+  <div class="collapse" [attr.id]="_guid">
     <div class="input-group">
       <textarea [readonly]="!editMode" class="col" rows="7" placeholder="Description" [(ngModel)]="item.details"></textarea>
     </div>

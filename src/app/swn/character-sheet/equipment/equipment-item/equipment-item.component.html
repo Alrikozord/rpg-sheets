@@ -25,13 +25,13 @@
     </span>
 
     <span class="input-group-btn">
-      <button class="btn btn-dark" type="button" data-toggle="collapse" [attr.data-target]="'#' + 'equipment-item' + index">
+      <button class="btn btn-dark" type="button" data-toggle="collapse" [attr.data-target]="'#' + _guid">
         detail
       </button>
     </span>
   </div>
 
-  <div class="collapse" [attr.id]="'equipment-item' + index">
+  <div class="collapse" [attr.id]="_guid">
     <div class="input-group">
       <textarea [readonly]="!editMode" class="col" rows="7" placeholder="Description" [(ngModel)]="item.details"></textarea>
     </div>

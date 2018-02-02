@@ -4,7 +4,7 @@
       [ngbTypeahead]="search" (selectItem)="onSelectItem($event)">
 
     <span *ngIf="!editMode" class="input-group-btn">
-      <button [ngClass]="skill.type==='psychic'?'btn btn-info btn-block':'btn btn-dark btn-block'" type="button" data-toggle="collapse" [attr.data-target]="'#' + 'skill' + index">
+      <button [ngClass]="skill.type==='psychic'?'btn btn-info btn-block':'btn btn-dark btn-block'" type="button" data-toggle="collapse" [attr.data-target]="'#' + _guid">
         {{skill.name}}
       </button>
     </span>
@@ -14,5 +14,5 @@
     <span *ngIf="!editMode" class="input-group-addon">lvl {{skill.level}}</span>
   </div>
 
-  <p class="col collapse" [attr.id]=" 'skill' + index" style="text-align:center;">{{skill.details}}</p>
+  <p class="col collapse" [attr.id]="_guid" style="text-align:center;">{{skill.details}}</p>
 </div>

@@ -6,13 +6,13 @@
     <span *ngIf="!editMode" class="input-group-addon">{{goal.xp}} xp</span>
 
     <span class="input-group-btn">
-      <button class="btn btn-dark" type="button" data-toggle="collapse" [attr.data-target]="'#' + 'goal' + index">
+      <button class="btn btn-dark" type="button" data-toggle="collapse" [attr.data-target]="'#' + _guid">
         detail
       </button>
     </span>
   </div>
 
-  <div class="collapse" [attr.id]="'goal' + index">
+  <div class="collapse" [attr.id]="_guid">
     <div class="input-group">
       <textarea [readonly]="!editMode" class="col" rows="5" placeholder="Goal" [(ngModel)]="goal.details"></textarea>
     </div>

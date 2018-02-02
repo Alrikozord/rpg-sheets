@@ -13,13 +13,13 @@
       <span *ngIf="this.character.armature.type==='organic'" class="glyphicon glyphicon-leaf"></span>
     </span>
     <span class="input-group-btn">
-      <button class="btn btn-dark" type="button" data-toggle="collapse" [attr.data-target]="'#' + 'armature_details'">
+      <button class="btn btn-dark" type="button" data-toggle="collapse" [attr.data-target]="'#' + _guid">
         details
       </button>
     </span>
   </div>
 
-  <div class="collapse container-fluid" [attr.id]="'armature_details'">
+  <div class="collapse container-fluid" [attr.id]="_guid">
 
     <div class="row">
       <div class="col-md-4 input-group">

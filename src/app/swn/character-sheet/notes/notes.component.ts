@@ -1,18 +1,18 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input } from "@angular/core";
 import { Character } from "../../models/index";
+import { GuidIdentifiable } from "../../../basic-components/edit-toggle-components/guid-identifiable.class";
 
 @Component({
-  selector: 'app-notes',
-  templateUrl: './notes.component.html',
-  styleUrls: ['./notes.component.css']
+  selector: "app-notes",
+  templateUrl: "./notes.component.html",
+  styleUrls: ["./notes.component.css"]
 })
-export class NotesComponent implements OnInit {
-
+export class NotesComponent extends GuidIdentifiable implements OnInit {
   @Input() character: Character;
-  
-  constructor() { }
 
-  ngOnInit() {
+  constructor() {
+    super();
   }
 
+  ngOnInit() {}
 }

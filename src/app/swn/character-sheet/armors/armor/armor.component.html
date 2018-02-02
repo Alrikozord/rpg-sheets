@@ -21,13 +21,13 @@
     </span>
 
     <span class="input-group-btn">
-      <button class="btn btn-dark" type="button" data-toggle="collapse" [attr.data-target]="'#' + 'armor' + index">
+      <button class="btn btn-dark" type="button" data-toggle="collapse" [attr.data-target]="'#' + _guid">
         details
       </button>
     </span>
   </div>
 
-  <div class="collapse container-fluid" [attr.id]="'armor' + index">
+  <div class="collapse container-fluid" [attr.id]="_guid">
 
     <div class="row">
       <div class="col-4 input-group">

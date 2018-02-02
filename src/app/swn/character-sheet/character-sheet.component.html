@@ -1,77 +1,113 @@
 <div class="container-fluid" style="text-align:center">
-  <div class="row">
-    <div class="col-md-6 col-xl-4">
+
+  <div class="col-xs-12 hidden-md hidden-lg">
+    <app-info [character]="character"></app-info>
+    <app-stats [character]="character"></app-stats>
+    <app-attributes [character]="character"></app-attributes>
+    <app-finances [character]="character"></app-finances>
+    <app-armature *ngIf="character.isAi" [character]="character"></app-armature>
+    <app-skills [character]="character"></app-skills>
+    <app-techniques [character]="character" *ngIf="character.isPsychic"></app-techniques>
+    <app-routines [character]="character" *ngIf="character.isAi"></app-routines>
+    <app-foci [character]="character"></app-foci>
+    <app-equipment [character]="character"></app-equipment>
+    <app-weapons [character]="character"></app-weapons>
+    <app-armors [character]="character"></app-armors>
+    <app-cyberwares [character]="character"></app-cyberwares>
+    <app-goals [character]="character"></app-goals>
+    <app-notes [character]="character"></app-notes>
+  </div>
+
+  <div class="hidden-xs hidden-sm col-md-12 hidden-lg">
+    <div class="col-md-6">
+      <app-info [character]="character"></app-info>
+      <app-stats [character]="character"></app-stats>
+      <app-attributes [character]="character"></app-attributes>
+      <app-armature *ngIf="character.isAi" [character]="character"></app-armature>
+      <app-routines [character]="character" *ngIf="character.isAi"></app-routines>
+      <app-weapons [character]="character"></app-weapons>
+      <app-armors [character]="character"></app-armors>
+      <app-cyberwares [character]="character"></app-cyberwares>
+    </div>
+    <div class="col-md-6">
+      <app-finances [character]="character"></app-finances>
+      <app-skills [character]="character"></app-skills>
+      <app-techniques [character]="character" *ngIf="character.isPsychic"></app-techniques>
+      <app-foci [character]="character"></app-foci>
+      <app-equipment [character]="character"></app-equipment>
+      <app-goals [character]="character"></app-goals>
+      <app-notes [character]="character"></app-notes>
+    </div>
+  </div>
+
+  <div class="hidden-xs hidden-sm hidden-md col-lg-12">
+    <div class="col-lg-4">
       <app-info [character]="character"></app-info>
       <app-stats [character]="character"></app-stats>
       <app-attributes [character]="character"></app-attributes>
       <app-armature *ngIf="character.isAi" [character]="character"></app-armature>
     </div>
-    <div class="col-md-6 col-xl-8">
-      <div class="col-md-12 col-xl-6">
-        <app-weapons [character]="character"></app-weapons>
-        <app-armors [character]="character"></app-armors>
-        <app-foci [character]="character"></app-foci>
-        <app-equipment [character]="character"></app-equipment>
-        <app-cyberwares [character]="character"></app-cyberwares>
-      </div>
-
-      <div class="col-md-12 col-xl-6">
-        <app-finances [character]="character"></app-finances>
-        <app-skills [character]="character"></app-skills>
-        <app-techniques [character]="character" *ngIf="character.isPsychic"></app-techniques>
-        <app-routines [character]="character" *ngIf="character.isAi"></app-routines>
-        <app-goals [character]="character"></app-goals>
-        <app-notes [character]="character"></app-notes>
-
-        <ngb-alert *ngIf="successMessage" type="success" (close)="successMessage = null">{{ successMessage }}</ngb-alert>
-        <ngb-alert *ngIf="failureMessage" type="success" (close)="failureMessage = null">{{ failureMessage }}</ngb-alert>
-
-        <div class="row">
-          <div class="dropdown col">
-            <button class="col btn btn-dark dropdown-toggle" type="button" id="dropdownMenuSave" data-toggle="dropdown" aria-haspopup="true"
-              aria-expanded="false">
-              <span class="glyphicon glyphicon-floppy-disk"></span>
-            </button>
-            <div class="dropdown-menu col" aria-labelledby="dropdownMenuSave">
-              <button class="dropdown-item" type="button" (click)="onSaveToDisc()">to disc...</button>
-              <button [disabled]="!dropbox.isAuthorized" class="dropdown-item" type="button" (click)="onSaveToDropbox()">to Dropbox</button>
-            </div>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="dropdown col">
-            <button class="col btn btn-dark dropdown-toggle" type="button" id="dropdownMenuLoad" data-toggle="dropdown" aria-haspopup="true"
-              aria-expanded="false">
-              <span class="glyphicon glyphicon-open"></span>
-            </button>
-            <div class="dropdown-menu col" aria-labelledby="dropdownMenuLoad">
-              <label class="dropdown-item">
-                from disc...
-                <input accept=".json" type="file" style="display: none;" (change)="onLoadFromDisk($event)">
-              </label>
-              <div class="dropdown-divider"></div>
-              <div *ngIf="dropbox.isAuthorized">
-                <button *ngFor="let item of charNames$ | async" class="dropdown-item" type="button" (click)="onLoadFromDropbox(item)">from Dropbox: {{item}}</button>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="row justify-content-md-center">
-          <div *ngIf="dropbox.isAuthorized" class="alert alert-success col-8">
-            Authorized for Dropbox
-          </div>
-        </div>
-        <div class="row justify-content-md-center">
-          <div *ngIf="!dropbox.isAuthorized" class="alert alert-danger col-8" (click)="dropbox.authorize()">
-            not Authorized for Dropbox! Click to authenticate
-          </div>
-        </div>
-
-      </div>
+    <div class="col-lg-4">
+      <app-equipment [character]="character"></app-equipment>
+      <app-weapons [character]="character"></app-weapons>
+      <app-armors [character]="character"></app-armors>
+      <app-cyberwares [character]="character"></app-cyberwares>
+    </div>
+    <div class="col-lg-4">
+      <app-finances [character]="character"></app-finances>
+      <app-skills [character]="character"></app-skills>
+      <app-techniques [character]="character" *ngIf="character.isPsychic"></app-techniques>
+      <app-routines [character]="character" *ngIf="character.isAi"></app-routines>
+      <app-foci [character]="character"></app-foci>
+      <app-goals [character]="character"></app-goals>
+      <app-notes [character]="character"></app-notes>
     </div>
   </div>
 
-  <pre *ngIf="isDevMode" align="left">{{character.serializables|json}}</pre>
+  <div class="col-xs-12 col-md-6 col-lg-4 pull-right">
+    <ngb-alert *ngIf="successMessage" type="success" (close)="successMessage = null">{{ successMessage }}</ngb-alert>
+    <ngb-alert *ngIf="failureMessage" type="success" (close)="failureMessage = null">{{ failureMessage }}</ngb-alert>
+
+    <div class="dropdown col">
+      <button class="col btn btn-dark dropdown-toggle" type="button" id="dropdownMenuSave" data-toggle="dropdown" aria-haspopup="true"
+        aria-expanded="false">
+        <span class="glyphicon glyphicon-floppy-disk"></span>
+      </button>
+      <div class="dropdown-menu col" aria-labelledby="dropdownMenuSave">
+        <button class="dropdown-item" type="button" (click)="onSaveToDisc()">to disc...</button>
+        <button [disabled]="!dropbox.isAuthorized" class="dropdown-item" type="button" (click)="onSaveToDropbox()">to Dropbox</button>
+      </div>
+    </div>
+
+    <div class="dropdown col">
+      <button class="col btn btn-dark dropdown-toggle" type="button" id="dropdownMenuLoad" data-toggle="dropdown" aria-haspopup="true"
+        aria-expanded="false">
+        <span class="glyphicon glyphicon-open"></span>
+      </button>
+      <div class="dropdown-menu col" aria-labelledby="dropdownMenuLoad">
+        <label class="dropdown-item">
+          from disc...
+          <input accept=".json" type="file" style="display: none;" (change)="onLoadFromDisk($event)">
+        </label>
+        <div class="dropdown-divider"></div>
+        <div *ngIf="dropbox.isAuthorized">
+          <button *ngFor="let item of charNames$ | async" class="dropdown-item" type="button" (click)="onLoadFromDropbox(item)">from Dropbox: {{item}}</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="row justify-content-md-center">
+      <div *ngIf="dropbox.isAuthorized" class="alert alert-success col-8">
+        Authorized for Dropbox
+      </div>
+    </div>
+    <div class="row justify-content-md-center">
+      <div *ngIf="!dropbox.isAuthorized" class="alert alert-danger col-8" (click)="dropbox.authorize()">
+        not Authorized for Dropbox! Click to authenticate
+      </div>
+    </div>
+  </div>
 </div>
+
+
+<pre *ngIf="isDevMode" align="left">{{character.serializables|json}}</pre>

@@ -1,9 +1,13 @@
 <form>
   <div class="container-4 well bs-component" style="text-align:center">
-    <h3>Notes <button class="btn btn-dark" type="button" data-toggle="collapse" data-target="#notes"><span class="glyphicon glyphicon-edit"></span></button></h3>
+    <h3>Notes
+      <button class="btn btn-dark" type="button" data-toggle="collapse" [attr.data-target]="'#' + _guid">
+        <span class="glyphicon glyphicon-edit"></span>
+      </button>
+    </h3>
 
-    <div class="collapse" id="notes">
-      <textarea class="col" rows="10" name="notes" [(ngModel)]="character.notes"></textarea>
+    <div class="collapse" [attr.id]="_guid">
+      <textarea class="col" rows="10" name="_guid" [(ngModel)]="character.notes"></textarea>
     </div>
 
   </div>
