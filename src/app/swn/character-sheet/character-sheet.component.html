@@ -23,8 +23,10 @@
         <app-goals [character]="character"></app-goals>
         <app-notes [character]="character"></app-notes>
 
-        <div class="row">
+        <ngb-alert *ngIf="successMessage" type="success" (close)="successMessage = null">{{ successMessage }}</ngb-alert>
+        <ngb-alert *ngIf="failureMessage" type="success" (close)="failureMessage = null">{{ failureMessage }}</ngb-alert>
 
+        <div class="row">
           <div class="dropdown col">
             <button class="col btn btn-dark dropdown-toggle" type="button" id="dropdownMenuSave" data-toggle="dropdown" aria-haspopup="true"
               aria-expanded="false">
@@ -70,8 +72,6 @@
       </div>
     </div>
   </div>
-  <ngb-alert *ngIf="successMessage" type="success" (close)="successMessage = null">{{ successMessage }}</ngb-alert>
-  <ngb-alert *ngIf="failureMessage" type="success" (close)="failureMessage = null">{{ failureMessage }}</ngb-alert>
 
   <pre *ngIf="isDevMode" align="left">{{character.serializables|json}}</pre>
 </div>
